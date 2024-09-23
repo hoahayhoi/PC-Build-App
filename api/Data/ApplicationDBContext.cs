@@ -15,10 +15,12 @@ namespace api.Data
             
         }
 
-        public DbSet<Stock> Stocks { get; set; }
+        public DbSet<Component> Components { get; set; }
 
-        public DbSet<Comment> Comments { get; set; }
-
-
+        public DbSet<Configuration> Configurations { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
     }
 }
