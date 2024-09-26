@@ -28,6 +28,8 @@ namespace api.Controllers
 
 
         [HttpGet]
+        [Authorize]
+
         // [Authorize]
         // public async Task<IActionResult> GetAll([FromQuery] QueryObject query)
         public async Task<IActionResult> GetAll()
@@ -43,6 +45,8 @@ namespace api.Controllers
         }
 
         [HttpGet("{id:int}")]
+        [Authorize]
+
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             if (!ModelState.IsValid)
@@ -59,6 +63,8 @@ namespace api.Controllers
         }
 
         [HttpPost]
+        [Authorize]
+
         public async Task<IActionResult> Create([FromBody] CreateSupplierRequestDto stockDto)
         {
             if (!ModelState.IsValid)
@@ -73,6 +79,8 @@ namespace api.Controllers
 
         [HttpPut]
         [Route("{id:int}")]
+        [Authorize]
+
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateSupplierRequestDto updateDto)
         {
             if (!ModelState.IsValid)
@@ -90,6 +98,8 @@ namespace api.Controllers
 
         [HttpDelete]
         [Route("{id:int}")]
+        [Authorize]
+
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             if (!ModelState.IsValid)
