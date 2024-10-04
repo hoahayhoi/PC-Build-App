@@ -14,11 +14,8 @@ namespace api.Models
         public Customer? Customer { get; set; }
 
         // public int? SalesStaffID { get; set; }
-        // public Customer? Customer { get; set; }
-
         // public int? TechnicianID { get; set; }
         // public Customer? Customer { get; set; }
-
 
         public DateTime CreatedOn { get; set; } = DateTime.Now;
 

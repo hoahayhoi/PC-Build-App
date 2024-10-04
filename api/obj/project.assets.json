@@ -4380,11 +4380,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Document\\PTrienPMUD-ThongMinh\\PC-Build-App\\api\\api.csproj",
+      "projectUniqueName": "D:\\Document\\PTrienPMUD-ThongMinh\\PC-Build-App\\api\\api.csproj",
       "projectName": "api",
-      "projectPath": "d:\\Document\\PTrienPMUD-ThongMinh\\PC-Build-App\\api\\api.csproj",
+      "projectPath": "D:\\Document\\PTrienPMUD-ThongMinh\\PC-Build-App\\api\\api.csproj",
       "packagesPath": "C:\\Users\\MY PC\\.nuget\\packages\\",
-      "outputPath": "d:\\Document\\PTrienPMUD-ThongMinh\\PC-Build-App\\api\\obj\\",
+      "outputPath": "D:\\Document\\PTrienPMUD-ThongMinh\\PC-Build-App\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MY PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4395,6 +4395,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "D:\\AppOfD\\OpenText2\\UFT One\\SDK\\DotNet\\nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

@@ -87,6 +87,7 @@ builder.Services.AddAuthentication(options => {
 // Register Interfaces for DI 
 builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
 builder.Services.AddScoped<ITokenService, TokenSevice>();
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 
 var app = builder.Build();
 

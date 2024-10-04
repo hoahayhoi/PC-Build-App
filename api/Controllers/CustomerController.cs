@@ -3,29 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using api.Data;
-using api.Dtos.Supplier;
+using api.Dtos.Customer;
 using api.Interfaces;
 using api.Mappers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace api.Controllers
 {
-    [Route("api/supplier")]
+    [Route("api/customer")]
     [ApiController]
-    public class SupplierController : ControllerBase
+    public class CustomerController : ControllerBase
     {
         private readonly ApplicationDBContext _context;
 
-        private readonly ISupplierRepository _supplierRepo;
+        private readonly ICustomerRepository _customerRepo;
 
-        public SupplierController(ApplicationDBContext context, ISupplierRepository supplierRepo)
+        public CustomerController(ApplicationDBContext context, ICustomerRepository customerRepo)
         {
-            _supplierRepo = supplierRepo;
+            _customerRepo = customerRepo;
             _context = context;
         }
-
 
         [HttpGet]
         [Authorize]
@@ -37,11 +35,11 @@ namespace api.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var suppliers = await _supplierRepo.GetAllAsync();
+            var customers = await _customerRepo.GetAllAsync();
 
-            var supplierDto = suppliers.Select(s => s.ToSupplierDto()).ToList();
+            var customerDto = customers.Select(s => s.ToCustomerDto()).ToList();
 
-            return Ok(supplierDto);
+            return Ok(customerDto);
         }
 
         [HttpGet("{id:int}")]
@@ -52,47 +50,47 @@ namespace api.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var supplier = await _supplierRepo.GetByIdAsync(id);
+            var customer = await _customerRepo.GetByIdAsync(id);
 
-            if (supplier == null)
+            if (customer == null)
             {
                 return NotFound();
             }
 
-            return Ok(supplier.ToSupplierDto());
+            return Ok(customer.ToCustomerDto());
         }
 
         [HttpPost("create")]
         [Authorize]
 
-        public async Task<IActionResult> Create([FromBody] CreateSupplierRequestDto stockDto)
+        public async Task<IActionResult> Create([FromBody] CreateCustomerRequestDto customerDto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var supplierModel = stockDto.ToSupplierFromCreateDTO();
+            var customerModel = customerDto.ToCustomerFromCreateDTO();
 
-            await _supplierRepo.CreateAsync(supplierModel);
+            await _customerRepo.CreateAsync(customerModel);
 
-            return CreatedAtAction(nameof(GetById), new { id = supplierModel.Id }, supplierModel.ToSupplierDto());
+            return CreatedAtAction(nameof(GetById), new { id = customerModel.Id }, customerModel.ToCustomerDto());
         }
 
         [HttpPut("edit/{id:int}")]
         [Authorize]
 
-        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateSupplierRequestDto updateDto)
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateCustomerRequestDto updateDto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var supplierModel = await _supplierRepo.UpdateAsync(id, updateDto);
+            var customerModel = await _customerRepo.UpdateAsync(id, updateDto);
 
-            if (supplierModel == null)
+            if (customerModel == null)
             {
                 return NotFound();
             }
 
-            return Ok(supplierModel.ToSupplierDto());
+            return Ok(customerModel.ToCustomerDto());
         }
 
         [HttpDelete("delete/{id:int}")]
@@ -103,9 +101,9 @@ namespace api.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var supplierModel = await _supplierRepo.DeleteAsync(id);
+            var customerModel = await _customerRepo.DeleteAsync(id);
 
-            if (supplierModel == null)
+            if (customerModel == null)
             {
                 return NotFound();
             }
