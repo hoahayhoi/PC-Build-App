@@ -20,6 +20,5 @@ namespace api.Models
         public int? SupplierID { get; set; }
         public Supplier? Supplier { get; set; }
         public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
-
     }
 }
