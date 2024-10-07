@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
-    [Route("api/component")]
+    [Route("api/components")]
     [ApiController]
     public class ComponentController : ControllerBase
     {
@@ -26,7 +26,7 @@ namespace api.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        // [Authorize]
 
         // [Authorize]
         // public async Task<IActionResult> GetAll([FromQuery] QueryObject query)

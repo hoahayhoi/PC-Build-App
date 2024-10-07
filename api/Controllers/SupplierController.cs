@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api.Controllers
 {
-    [Route("api/supplier")]
+    [Route("api/suppliers")]
     [ApiController]
     public class SupplierController : ControllerBase
     {

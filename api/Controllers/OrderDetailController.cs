@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
-    [Route("api/orderDetail")]
+    [Route("api/orderDetails")]
     [ApiController]
     public class OrderDetailController : ControllerBase
     {

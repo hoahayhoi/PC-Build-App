@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
-    [Route("api/configuration")]
+    [Route("api/configurations")]
     [ApiController]
     public class ConfigurationController : ControllerBase
     {
