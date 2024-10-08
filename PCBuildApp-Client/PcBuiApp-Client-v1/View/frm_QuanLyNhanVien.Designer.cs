@@ -32,14 +32,14 @@
             btn_CloseLogin = new Button();
             pictureBox1 = new PictureBox();
             roundedUserControl1 = new UserControlCustom.RoundedUserControl();
+            pictureBox2 = new PictureBox();
+            label1 = new Label();
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
-            label1 = new Label();
-            pictureBox2 = new PictureBox();
             panel3 = new Panel();
             roundedUserControl2 = new UserControlCustom.RoundedUserControl();
             label2 = new Label();
@@ -100,6 +100,27 @@
             roundedUserControl1.Name = "roundedUserControl1";
             roundedUserControl1.Size = new Size(345, 836);
             roundedUserControl1.TabIndex = 15;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(21, 174);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(84, 66);
+            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.AppWorkspace;
+            label1.Location = new Point(115, 193);
+            label1.Name = "label1";
+            label1.Size = new Size(162, 17);
+            label1.TabIndex = 1;
+            label1.Text = "homykim@gmail.com.vn";
             // 
             // button6
             // 
@@ -184,27 +205,6 @@
             button1.TabIndex = 1;
             button1.Text = "Quản Lý Tài Khoản";
             button1.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.AppWorkspace;
-            label1.Location = new Point(115, 193);
-            label1.Name = "label1";
-            label1.Size = new Size(143, 17);
-            label1.TabIndex = 1;
-            label1.Text = "homykim@gmail.com";
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(21, 174);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(84, 66);
-            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
             // 
             // panel3
             // 
