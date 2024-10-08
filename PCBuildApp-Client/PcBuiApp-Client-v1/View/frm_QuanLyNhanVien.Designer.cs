@@ -252,7 +252,7 @@
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.Location = new Point(3, 14);
             textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Tìm kiếm ...";
+            textBox1.PlaceholderText = "Tìm kiếm...";
             textBox1.Size = new Size(341, 22);
             textBox1.TabIndex = 0;
             // 
