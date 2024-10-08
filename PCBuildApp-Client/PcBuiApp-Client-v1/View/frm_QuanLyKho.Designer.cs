@@ -1,6 +1,6 @@
 ﻿namespace PcBuiApp_Client_v1.View
 {
-    partial class frm_QuanLyNhanVien
+    partial class frm_QuanLyKho
     {
         /// <summary>
         /// Required designer variable.
@@ -37,10 +37,10 @@
             roundedUserControl4 = new UserControlCustom.RoundedUserControl();
             label3 = new Label();
             dataGridView1 = new DataGridView();
+            panel1 = new Panel();
             Column_ListAccountSTT = new DataGridViewTextBoxColumn();
             Column_ListAccountName = new DataGridViewTextBoxColumn();
             Column_ListAccountAction = new DataGridViewTextBoxColumn();
-            panel1 = new Panel();
             roundedUserControl2.SuspendLayout();
             roundedUserControl3.SuspendLayout();
             roundedUserControl4.SuspendLayout();
@@ -83,9 +83,9 @@
             label2.ForeColor = SystemColors.ActiveCaption;
             label2.Location = new Point(6, 21);
             label2.Name = "label2";
-            label2.Size = new Size(332, 21);
+            label2.Size = new Size(106, 21);
             label2.TabIndex = 0;
-            label2.Text = "Quản Lý Tài Khoản \\ Danh Sách Nhân Viên";
+            label2.Text = "Quản Lý Kho";
             // 
             // roundedUserControl3
             // 
@@ -126,9 +126,9 @@
             label3.ForeColor = SystemColors.ActiveCaption;
             label3.Location = new Point(12, 34);
             label3.Name = "label3";
-            label3.Size = new Size(176, 21);
+            label3.Size = new Size(171, 21);
             label3.TabIndex = 1;
-            label3.Text = "Danh Sách Nhân Viên";
+            label3.Text = "Danh Sách Hàng Hóa";
             // 
             // dataGridView1
             // 
@@ -145,22 +145,6 @@
             dataGridView1.Size = new Size(1012, 574);
             dataGridView1.TabIndex = 0;
             // 
-            // Column_ListAccountSTT
-            // 
-            Column_ListAccountSTT.FillWeight = 20F;
-            Column_ListAccountSTT.HeaderText = "STT";
-            Column_ListAccountSTT.Name = "Column_ListAccountSTT";
-            // 
-            // Column_ListAccountName
-            // 
-            Column_ListAccountName.HeaderText = "Tên Tài Khoản";
-            Column_ListAccountName.Name = "Column_ListAccountName";
-            // 
-            // Column_ListAccountAction
-            // 
-            Column_ListAccountAction.HeaderText = "Hành Động";
-            Column_ListAccountAction.Name = "Column_ListAccountAction";
-            // 
             // panel1
             // 
             panel1.Controls.Add(roundedUserControl4);
@@ -173,7 +157,23 @@
             panel1.Size = new Size(1018, 836);
             panel1.TabIndex = 20;
             // 
-            // frm_QuanLyNhanVien
+            // Column_ListAccountSTT
+            // 
+            Column_ListAccountSTT.FillWeight = 20F;
+            Column_ListAccountSTT.HeaderText = "STT";
+            Column_ListAccountSTT.Name = "Column_ListAccountSTT";
+            // 
+            // Column_ListAccountName
+            // 
+            Column_ListAccountName.HeaderText = "Tên Hàng Hóa";
+            Column_ListAccountName.Name = "Column_ListAccountName";
+            // 
+            // Column_ListAccountAction
+            // 
+            Column_ListAccountAction.HeaderText = "Hành Động";
+            Column_ListAccountAction.Name = "Column_ListAccountAction";
+            // 
+            // frm_QuanLyKho
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -183,7 +183,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
-            Name = "frm_QuanLyNhanVien";
+            Name = "frm_QuanLyKho";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             roundedUserControl2.ResumeLayout(false);
@@ -206,10 +206,10 @@
         private TextBox textBox1;
         private UserControlCustom.RoundedUserControl roundedUserControl4;
         private DataGridView dataGridView1;
+        private Label label3;
+        private Panel panel1;
         private DataGridViewTextBoxColumn Column_ListAccountSTT;
         private DataGridViewTextBoxColumn Column_ListAccountName;
         private DataGridViewTextBoxColumn Column_ListAccountAction;
-        private Label label3;
-        private Panel panel1;
     }
 }
