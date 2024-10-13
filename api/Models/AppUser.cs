@@ -12,6 +12,7 @@ namespace api.Models
 
         public string Phone { get; set; } = string.Empty;
 
-        
+        public List<Order> OrdersSalesStaff { get; set; } = new List<Order>();
+        public List<Order> OrdersTechnician { get; set; } = new List<Order>();
     }
 }

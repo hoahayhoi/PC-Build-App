@@ -8,13 +8,13 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace api.Data
-{ 
+{
     public class ApplicationDBContext : IdentityDbContext<AppUser>
     {
-        public ApplicationDBContext(DbContextOptions dbContextOptions) 
+        public ApplicationDBContext(DbContextOptions dbContextOptions)
         : base(dbContextOptions)
         {
-            
+
         }
 
         public DbSet<Component> Components { get; set; }
@@ -25,10 +25,26 @@ namespace api.Data
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
 
+        public DbSet<AppUser> AppUsers { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            
+            builder.Entity<Order>()
+                .HasOne(o => o.SalesStaff)
+                .WithMany(u => u.OrdersSalesStaff) 
+                .HasForeignKey(o => o.SalesStaffID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            
+            builder.Entity<Order>()
+                .HasOne(o => o.Technician)
+                .WithMany(u => u.OrdersTechnician) 
+                .HasForeignKey(o => o.TechnicianID)
+                .OnDelete(DeleteBehavior.Restrict);
 
             List<IdentityRole> roles = new List<IdentityRole>
             {

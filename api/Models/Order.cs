@@ -13,9 +13,10 @@ namespace api.Models
         public int? CustomerID { get; set; }
         public Customer? Customer { get; set; }
 
-        // public int? SalesStaffID { get; set; }
-        // public int? TechnicianID { get; set; }
-        // public Customer? Customer { get; set; }
+        public string? SalesStaffID { get; set; }
+        public AppUser? SalesStaff { get; set; }
+        public string? TechnicianID { get; set; }
+        public AppUser? Technician { get; set; }
 
         public DateTime CreatedOn { get; set; } = DateTime.Now;
 
