@@ -11,7 +11,11 @@ namespace PcBuiApp_Client_v1
 		static void Main()
 		{
 			ApplicationConfiguration.Initialize();
+<<<<<<< HEAD
 			Application.Run(new frm_QuanLyNhanVien());
+=======
+			Application.Run(new frm_DSLapRap());
+>>>>>>> 979f04a4ba366dd54bb297f334457efbfec561e7
 		}
 	}
 }

@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\PC-Build-App-Frontend\\PC-Build-App\\PCBuildApp-Client\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\pc-build-app-frontend\\pc-build-app\\pcbuildapp-client\\pcbuiapp-client-v1\\frm_dslaprap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|solutionrelative:pcbuiapp-client-v1\\frm_dslaprap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\pc-build-app-frontend\\pc-build-app\\pcbuildapp-client\\pcbuiapp-client-v1\\frm_dslaprap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|solutionrelative:pcbuiapp-client-v1\\frm_dslaprap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frm_DSLapRap.cs",
+              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\PC-Build-App-Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\frm_DSLapRap.cs",
+              "RelativeDocumentMoniker": "PcBuiApp-Client-v1\\frm_DSLapRap.cs",
+              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\PC-Build-App-Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\frm_DSLapRap.cs",
+              "RelativeToolTip": "PcBuiApp-Client-v1\\frm_DSLapRap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T16:08:16.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frm_DSLapRap.cs [Design]",
+              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\PC-Build-App-Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\frm_DSLapRap.cs",
+              "RelativeDocumentMoniker": "PcBuiApp-Client-v1\\frm_DSLapRap.cs",
+              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\PC-Build-App-Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\frm_DSLapRap.cs [Design]",
+              "RelativeToolTip": "PcBuiApp-Client-v1\\frm_DSLapRap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T15:57:14.222Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
