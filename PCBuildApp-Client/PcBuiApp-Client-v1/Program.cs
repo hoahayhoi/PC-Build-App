@@ -1,3 +1,5 @@
+using PcBuiApp_Client_v1.View;
+
 namespace PcBuiApp_Client_v1
 {
 	internal static class Program
@@ -9,7 +11,7 @@ namespace PcBuiApp_Client_v1
 		static void Main()
 		{
 			ApplicationConfiguration.Initialize();
-			Application.Run(new frm_QuanLiSanPham());
+			Application.Run(new frm_QuanLyNhanVien());
 		}
 	}
 }
