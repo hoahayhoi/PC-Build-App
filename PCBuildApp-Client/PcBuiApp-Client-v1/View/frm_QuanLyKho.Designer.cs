@@ -37,10 +37,10 @@
             roundedUserControl4 = new UserControlCustom.RoundedUserControl();
             label3 = new Label();
             dataGridView1 = new DataGridView();
-            panel1 = new Panel();
             Column_ListAccountSTT = new DataGridViewTextBoxColumn();
             Column_ListAccountName = new DataGridViewTextBoxColumn();
             Column_ListAccountAction = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
             roundedUserControl2.SuspendLayout();
             roundedUserControl3.SuspendLayout();
             roundedUserControl4.SuspendLayout();
@@ -73,7 +73,7 @@
             roundedUserControl2.CornerRadius = 20;
             roundedUserControl2.Location = new Point(0, 76);
             roundedUserControl2.Name = "roundedUserControl2";
-            roundedUserControl2.Size = new Size(1016, 66);
+            roundedUserControl2.Size = new Size(1182, 66);
             roundedUserControl2.TabIndex = 0;
             // 
             // label2
@@ -94,7 +94,7 @@
             roundedUserControl3.CornerRadius = 20;
             roundedUserControl3.Location = new Point(3, 12);
             roundedUserControl3.Name = "roundedUserControl3";
-            roundedUserControl3.Size = new Size(344, 50);
+            roundedUserControl3.Size = new Size(389, 50);
             roundedUserControl3.TabIndex = 18;
             // 
             // textBox1
@@ -105,7 +105,7 @@
             textBox1.Location = new Point(10, 14);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Tìm kiếm...";
-            textBox1.Size = new Size(334, 22);
+            textBox1.Size = new Size(379, 22);
             textBox1.TabIndex = 0;
             // 
             // roundedUserControl4
@@ -116,7 +116,7 @@
             roundedUserControl4.CornerRadius = 50;
             roundedUserControl4.Location = new Point(1, 169);
             roundedUserControl4.Name = "roundedUserControl4";
-            roundedUserControl4.Size = new Size(1015, 667);
+            roundedUserControl4.Size = new Size(1181, 667);
             roundedUserControl4.TabIndex = 19;
             // 
             // label3
@@ -139,23 +139,12 @@
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column_ListAccountSTT, Column_ListAccountName, Column_ListAccountAction });
-            dataGridView1.Location = new Point(3, 93);
+            dataGridView1.Dock = DockStyle.Bottom;
+            dataGridView1.Location = new Point(0, 87);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1012, 574);
+            dataGridView1.Size = new Size(1181, 580);
             dataGridView1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(roundedUserControl4);
-            panel1.Controls.Add(roundedUserControl2);
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(roundedUserControl3);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1018, 836);
-            panel1.TabIndex = 20;
             // 
             // Column_ListAccountSTT
             // 
@@ -173,12 +162,24 @@
             Column_ListAccountAction.HeaderText = "Hành Động";
             Column_ListAccountAction.Name = "Column_ListAccountAction";
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(roundedUserControl4);
+            panel1.Controls.Add(roundedUserControl2);
+            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(roundedUserControl3);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1194, 836);
+            panel1.TabIndex = 20;
+            // 
             // frm_QuanLyKho
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1018, 836);
+            ClientSize = new Size(1194, 836);
             Controls.Add(btn_CloseLogin);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;

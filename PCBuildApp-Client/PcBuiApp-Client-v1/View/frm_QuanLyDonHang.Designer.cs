@@ -1,6 +1,6 @@
 ﻿namespace PcBuiApp_Client_v1.View
 {
-    partial class frm_QuanLyLapRap
+    partial class frm_QuanLyDonHang
     {
         /// <summary>
         /// Required designer variable.
@@ -82,9 +82,9 @@
             label2.ForeColor = SystemColors.ActiveCaption;
             label2.Location = new Point(6, 21);
             label2.Name = "label2";
-            label2.Size = new Size(136, 21);
+            label2.Size = new Size(153, 21);
             label2.TabIndex = 0;
-            label2.Text = "Quản Lý Lắp Ráp";
+            label2.Text = "Quản Lý Đơn Hàng";
             // 
             // roundedUserControl3
             // 
@@ -125,9 +125,9 @@
             label3.ForeColor = SystemColors.ActiveCaption;
             label3.Location = new Point(12, 34);
             label3.Name = "label3";
-            label3.Size = new Size(166, 21);
+            label3.Size = new Size(172, 21);
             label3.TabIndex = 1;
-            label3.Text = "Danh Sách Linh Kiện";
+            label3.Text = "Danh Sách Đơn Hàng";
             // 
             // dataGridView1
             // 
@@ -173,7 +173,7 @@
             panel1.Size = new Size(1194, 836);
             panel1.TabIndex = 20;
             // 
-            // frm_QuanLyLapRap
+            // frm_QuanLyDonHang
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -183,7 +183,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
-            Name = "frm_QuanLyLapRap";
+            Name = "frm_QuanLyDonHang";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             roundedUserControl2.ResumeLayout(false);

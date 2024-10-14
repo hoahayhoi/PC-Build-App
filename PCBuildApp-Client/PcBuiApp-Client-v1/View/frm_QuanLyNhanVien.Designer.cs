@@ -73,7 +73,7 @@
             roundedUserControl2.CornerRadius = 20;
             roundedUserControl2.Location = new Point(0, 76);
             roundedUserControl2.Name = "roundedUserControl2";
-            roundedUserControl2.Size = new Size(1016, 66);
+            roundedUserControl2.Size = new Size(1182, 66);
             roundedUserControl2.TabIndex = 0;
             // 
             // label2
@@ -116,7 +116,7 @@
             roundedUserControl4.CornerRadius = 50;
             roundedUserControl4.Location = new Point(1, 169);
             roundedUserControl4.Name = "roundedUserControl4";
-            roundedUserControl4.Size = new Size(1015, 667);
+            roundedUserControl4.Size = new Size(1181, 667);
             roundedUserControl4.TabIndex = 19;
             // 
             // label3
@@ -139,10 +139,11 @@
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column_ListAccountSTT, Column_ListAccountName, Column_ListAccountAction });
-            dataGridView1.Location = new Point(3, 93);
+            dataGridView1.Dock = DockStyle.Bottom;
+            dataGridView1.Location = new Point(0, 93);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1012, 574);
+            dataGridView1.Size = new Size(1181, 574);
             dataGridView1.TabIndex = 0;
             // 
             // Column_ListAccountSTT
@@ -170,7 +171,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1018, 836);
+            panel1.Size = new Size(1194, 836);
             panel1.TabIndex = 20;
             // 
             // frm_QuanLyNhanVien
@@ -178,7 +179,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1018, 836);
+            ClientSize = new Size(1194, 836);
             Controls.Add(btn_CloseLogin);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
