@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PcBuiApp_Client_v1.UserControl
+namespace PcBuiApp_Client_v1.UserControlCustom
 {
-    public partial class Navbar_Left : Form
+    public partial class Navbar_Left : UserControl
     {
         public Navbar_Left()
         {
