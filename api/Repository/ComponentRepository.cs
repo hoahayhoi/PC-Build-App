@@ -75,5 +75,12 @@ namespace api.Repository
 
             return existingComponent;
         }
+
+        public async Task<List<Component>> GetComponentsByNameAsync(string name)
+        {
+            return await _context.Components
+                                .Where(c => c.Name.ToLower().Contains(name.ToLower()))
+                                .ToListAsync();
+        }
     }
 }

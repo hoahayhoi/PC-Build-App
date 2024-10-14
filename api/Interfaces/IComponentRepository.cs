@@ -9,6 +9,7 @@ namespace api.Interfaces
 {
     public interface IComponentRepository
     {
+        Task<List<Component>> GetComponentsByNameAsync(string name);
         Task<List<Component>> GetAllAsync();
         Task<Component?> GetByIdAsync(int id);
         Task<Component> CreateAsync(Component componentModel);

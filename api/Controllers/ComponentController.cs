@@ -25,6 +25,27 @@ namespace api.Controllers
             _context = context;
         }
 
+
+        [HttpGet("GetComponentsByName")]
+        [Authorize]
+        public async Task<IActionResult> GetComponentsByName([FromQuery] string name)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var components = await _componentRepo.GetComponentsByNameAsync(name);
+
+            if (components == null)
+            {
+                return NotFound();
+            }
+
+            var componentDto = components.Select(s => s.ToComponentDto()).ToList();
+
+            return Ok(componentDto);
+        }
+
+
         [HttpGet]
         // [Authorize]
 
