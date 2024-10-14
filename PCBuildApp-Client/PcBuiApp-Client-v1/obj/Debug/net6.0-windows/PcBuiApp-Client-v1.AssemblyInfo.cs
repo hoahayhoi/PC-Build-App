@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PcBuiApp-Client-v1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a9ee3f409c255fbae04c4e29f4eb09e80ffca4b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1363b240e72458caef755dd99b05cec11ad12a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("PcBuiApp-Client-v1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PcBuiApp-Client-v1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

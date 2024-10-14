@@ -1,4 +1,4 @@
-﻿namespace PcBuiApp_Client_v1
+﻿namespace PcBuiApp_Client_v1.View
 {
     partial class frm_DSLapRap
     {
@@ -182,7 +182,7 @@
             mLV_DSDHCLR.Size = new Size(958, 395);
             mLV_DSDHCLR.TabIndex = 9;
             mLV_DSDHCLR.UseCompatibleStateImageBehavior = false;
-            mLV_DSDHCLR.View = View.Details;
+            //mLV_DSDHCLR.View = View.Details;
             // 
             // statusStrip1
             // 

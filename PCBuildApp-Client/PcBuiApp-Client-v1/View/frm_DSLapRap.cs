@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PcBuiApp_Client_v1
+namespace PcBuiApp_Client_v1.View
 {
     public partial class frm_DSLapRap : MaterialForm
     {
@@ -121,14 +121,15 @@ namespace PcBuiApp_Client_v1
         {
             if (materialTabControl1.SelectedIndex == 1)
             {
-                frm_QuanLiSanPham frm = new frm_QuanLiSanPham();
-                frm.Show();
-                this.Hide();
+                //frm_QuanLiSanPham frm = new frm_QuanLiSanPham();
+                //frm.Show();
+                //this.Hide();
             }
             if (materialTabControl1.SelectedIndex == 5)
             {
-                // Trả về form Đăng Nhập
-                
+                frm_DangNhap frm = new frm_DangNhap();
+                frm.Show();
+                this.Hide();
             }
         }
     }

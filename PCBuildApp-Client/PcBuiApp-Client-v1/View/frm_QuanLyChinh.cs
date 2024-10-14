@@ -28,40 +28,55 @@ namespace PcBuiApp_Client_v1.View
         public frm_QuanLyChinh()
         {
             InitializeComponent();
+
+            navbar_Left1.QuanLyLapRapClicked += Navbar_Left1_QuanLyLapRapClicked;
+            navbar_Left1.QuanLyKhoClicked += Navbar_Left1_QuanLyKhoClicked;
+            navbar_Left1.QuanLyTaiKhoanClicked += Navbar_Left1_QuanLyTaiKhoanClicked;
+            navbar_Left1.QuanLyDonHangClicked += navbar_Left1_QuanLyDonHangClicked;
         }
 
+        // Phương thức hiển thị form trong panel
         private void ShowFormInPanel(Form form)
         {
-            panelMain.Controls.Clear(); // Xóa các control cũ trong panel
-            form.TopLevel = false; // Set form không phải là top-level
-            form.FormBorderStyle = FormBorderStyle.None; // Ẩn viền form
-            form.Dock = DockStyle.Fill; // Đổ form vào toàn bộ panel
-            panelMain.Controls.Add(form); // Thêm form vào panel
-            form.Show(); // Hiển thị form
+            panelMain.Controls.Clear();
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(form);
+            form.Show();
+        }
+
+        // Xử lý sự kiện khi click vào nút "Quản Lý Lắp Ráp"
+        private void Navbar_Left1_QuanLyLapRapClicked(object sender, EventArgs e)
+        {
+            var lapRapForm = new frm_QuanLyLapRap();
+            ShowFormInPanel(lapRapForm);
+        }
+
+        // Xử lý sự kiện khi click vào nút "Quản Lý Đơn hàng"
+        private void navbar_Left1_QuanLyDonHangClicked(object sender, EventArgs e)
+        {
+            var donhangForm = new frm_QuanLyDonHang();
+            ShowFormInPanel(donhangForm);
+        }
+        // Xử lý sự kiện khi click vào nút "Quản Lý Kho"
+        private void Navbar_Left1_QuanLyKhoClicked(object sender, EventArgs e)
+        {
+            var khoForm = new frm_QuanLyKho();
+            ShowFormInPanel(khoForm);
+        }
+
+        // Xử lý sự kiện khi click vào nút "Quản Lý Tài Khoản"
+        private void Navbar_Left1_QuanLyTaiKhoanClicked(object sender, EventArgs e)
+        {
+            var taiKhoanForm = new frm_QuanLyNhanVien();
+            ShowFormInPanel(taiKhoanForm);
         }
 
 
         private void btn_CloseLogin_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btn_QuanLyKho_Click(object sender, EventArgs e)
-        {
-            var formKho = new frm_QuanLyKho(); // Tạo instance của form
-            ShowFormInPanel(formKho); // Hiển thị form vào panel
-        }
-
-        private void btn_QuanLyTaiKhoan_Click(object sender, EventArgs e)
-        {
-            var formQuanLyTaiKhoan = new frm_QuanLyNhanVien(); // Tạo instance của form
-            ShowFormInPanel(formQuanLyTaiKhoan); // Hiển thị form vào panel
-        }
-
-        private void btn_QuanLyLapRap_Click(object sender, EventArgs e)
-        {
-            var formQuanLyLapRap = new frm_QuanLyLapRap(); // Tạo instance của form
-            ShowFormInPanel(formQuanLyLapRap); // Hiển thị form vào panel
         }
     }
 }
