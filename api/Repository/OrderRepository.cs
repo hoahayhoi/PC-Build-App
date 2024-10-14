@@ -14,7 +14,7 @@ namespace api.Repository
     {
         private readonly ApplicationDBContext _context;
 
-        public OrderRepository(ApplicationDBContext context) 
+        public OrderRepository(ApplicationDBContext context)
         {
             _context = context;
         }
@@ -47,6 +47,17 @@ namespace api.Repository
         public async Task<Order?> GetByIdAsync(int id)
         {
             return await _context.Orders.FirstOrDefaultAsync(i => i.Id == id);
+        }
+
+        public async Task<List<Order>> GetOrdersByTechIdAsync(string techId)
+        {
+            if (!string.IsNullOrEmpty(techId))
+            {
+                return await _context.Orders
+                                    .Where(order => order.TechnicianID == techId)                                    
+                                    .ToListAsync();
+            }
+            return new List<Order>();
         }
 
         public Task<bool> OrderExists(int id)

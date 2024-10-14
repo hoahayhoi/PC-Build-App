@@ -26,9 +26,9 @@ namespace api.Controllers
         }
 
 
-        [HttpGet("GetComponentsByName")]
+        [HttpGet("GetComponentsByQuery")]
         [Authorize]
-        public async Task<IActionResult> GetComponentsByName([FromQuery] string? name = null, [FromQuery] string? category = null)
+        public async Task<IActionResult> GetComponentsByQuery([FromQuery] string? name = null, [FromQuery] string? category = null)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -37,7 +37,7 @@ namespace api.Controllers
             {
                 return BadRequest("Either 'name' or 'category' must be provided.");
             }
-            var components = await _componentRepo.GetComponentsByNameAsync(name, category);
+            var components = await _componentRepo.GetComponentsByQueryAsync(name, category);
 
             if (components == null || components.Count == 0)
             {

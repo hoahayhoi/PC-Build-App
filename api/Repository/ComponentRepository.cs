@@ -76,7 +76,7 @@ namespace api.Repository
             return existingComponent;
         }
 
-        public async Task<List<Component>> GetComponentsByNameAsync(string? name, string? category)
+        public async Task<List<Component>> GetComponentsByQueryAsync(string? name, string? category)
         {
             var query = _context.Components.AsQueryable();
 

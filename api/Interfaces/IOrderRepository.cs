@@ -9,6 +9,7 @@ namespace api.Interfaces
 {
     public interface IOrderRepository
     {
+        Task<List<Order>> GetOrdersByTechIdAsync(string techId);
         Task<List<Order>> GetAllAsync();
         Task<Order?> GetByIdAsync(int id);
         Task<Order> CreateAsync(Order orderModel);

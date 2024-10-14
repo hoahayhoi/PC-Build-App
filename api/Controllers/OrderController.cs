@@ -25,6 +25,23 @@ namespace api.Controllers
             _context = context;
         }
 
+
+        [HttpGet("GetOrdersByTechId/{techId}")]
+        [Authorize]
+        public async Task<IActionResult> GetOrdersByTechId([FromRoute] string? techId)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var orders = await _orderRepo.GetOrdersByTechIdAsync(techId);
+
+            var orderDto = orders.Select(s => s.ToOrderDto()).ToList();
+
+            return Ok(orderDto);
+        }
+
+
+
         [HttpGet]
         [Authorize]
 
