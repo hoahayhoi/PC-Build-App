@@ -29,5 +29,8 @@ namespace api.Models
 
         public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 
+        public int? ConfigurationID { get; set; }
+        public Configuration? Configuration { get; set; }
+
     }
 }

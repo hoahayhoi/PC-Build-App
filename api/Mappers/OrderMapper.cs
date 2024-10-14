@@ -15,6 +15,9 @@ namespace api.Mappers
             {
                 Id = orderModel.Id,
                 CustomerID = orderModel.CustomerID,
+                SalesStaffID = orderModel.SalesStaffID,
+                TechnicianID = orderModel.TechnicianID,
+                ConfigurationID = orderModel.ConfigurationID,
                 CreatedOn = orderModel.CreatedOn,
                 DateCompleted = orderModel.DateCompleted,
                 TotalPrice = orderModel.TotalPrice,

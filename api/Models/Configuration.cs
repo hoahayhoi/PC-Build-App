@@ -14,6 +14,6 @@ namespace api.Models
         public DateTime CreatedOn { get; set; } = DateTime.Now;
         public string Feedback { get; set; } = string.Empty;    
         public int? CustomerID { get; set; }
-        public Customer? Customer { get; set; }             
+        public Customer? Customer { get; set; }       
     }
 }

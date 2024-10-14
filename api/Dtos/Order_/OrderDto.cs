@@ -9,6 +9,9 @@ namespace api.Dtos.Order_
     {
         public int Id { get; set; }
         public int? CustomerID { get; set; }
+        public string? SalesStaffID { get; set; }
+        public string? TechnicianID { get; set; }
+        public int? ConfigurationID { get; set; }
         public DateTime CreatedOn { get; set; } = DateTime.Now;
         public DateTime DateCompleted { get; set; }
         public decimal TotalPrice { get; set; }
