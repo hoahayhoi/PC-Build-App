@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PcBuiApp_Client_v1
+namespace PcBuiApp_Client_v1.View
 {
-	public partial class NavBarLeft : UserControl
-	{
-		public NavBarLeft()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class frm_QuanLyDonHang : Form
+    {
+        public frm_QuanLyDonHang()
+        {
+            InitializeComponent();
+        }
+    }
 }
