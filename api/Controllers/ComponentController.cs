@@ -28,14 +28,18 @@ namespace api.Controllers
 
         [HttpGet("GetComponentsByName")]
         [Authorize]
-        public async Task<IActionResult> GetComponentsByName([FromQuery] string name)
+        public async Task<IActionResult> GetComponentsByName([FromQuery] string? name = null, [FromQuery] string? category = null)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var components = await _componentRepo.GetComponentsByNameAsync(name);
+            if (string.IsNullOrEmpty(name) && string.IsNullOrEmpty(category)) 
+            {
+                return BadRequest("Either 'name' or 'category' must be provided.");
+            }
+            var components = await _componentRepo.GetComponentsByNameAsync(name, category);
 
-            if (components == null)
+            if (components == null || components.Count == 0)
             {
                 return NotFound();
             }

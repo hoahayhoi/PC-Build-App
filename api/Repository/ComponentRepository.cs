@@ -76,11 +76,22 @@ namespace api.Repository
             return existingComponent;
         }
 
-        public async Task<List<Component>> GetComponentsByNameAsync(string name)
+        public async Task<List<Component>> GetComponentsByNameAsync(string? name, string? category)
         {
-            return await _context.Components
-                                .Where(c => c.Name.ToLower().Contains(name.ToLower()))
-                                .ToListAsync();
+            var query = _context.Components.AsQueryable();
+
+            if (!string.IsNullOrEmpty(name))
+            {
+                query = query.Where(c => c.Name.ToLower().Contains(name.ToLower()));
+            }
+
+            if (!string.IsNullOrEmpty(category))
+            {
+                query = query.Where(c => c.Category.ToLower().Contains(category.ToLower()));
+            }
+
+            return await query.ToListAsync();
         }
+
     }
 }
