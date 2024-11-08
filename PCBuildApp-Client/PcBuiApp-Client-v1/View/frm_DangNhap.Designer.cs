@@ -76,6 +76,7 @@
             btn_Login.TabIndex = 7;
             btn_Login.Text = "Đăng Nhập";
             btn_Login.UseVisualStyleBackColor = false;
+            btn_Login.Click += btn_Login_Click;
             // 
             // label1
             // 
@@ -111,13 +112,14 @@
             // 
             // btn_CloseLogin
             // 
-            btn_CloseLogin.Location = new Point(1139, 14);
+            btn_CloseLogin.Location = new Point(1101, 12);
             btn_CloseLogin.Margin = new Padding(4, 3, 4, 3);
             btn_CloseLogin.Name = "btn_CloseLogin";
             btn_CloseLogin.Size = new Size(34, 27);
             btn_CloseLogin.TabIndex = 12;
             btn_CloseLogin.Text = "X";
             btn_CloseLogin.UseVisualStyleBackColor = true;
+            btn_CloseLogin.Click += btn_CloseLogin_Click;
             // 
             // pictureBox4
             // 
@@ -184,6 +186,7 @@
             Name = "frm_DangNhap";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += frm_DangNhap_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
