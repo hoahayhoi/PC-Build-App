@@ -28,7 +28,7 @@ namespace api.Controllers
 
 
         [HttpGet("GetOrdersByTechId/{techId}")]
-        [Authorize]
+        // [Authorize]
         public async Task<IActionResult> GetOrdersByTechId([FromRoute] string? techId)
         {
             if (!ModelState.IsValid)
@@ -44,7 +44,7 @@ namespace api.Controllers
 
 
         [HttpGet]
-        [Authorize]
+        // [Authorize]
 
         // [Authorize]
         // public async Task<IActionResult> GetAll([FromQuery] QueryObject query)
@@ -61,7 +61,7 @@ namespace api.Controllers
         }
 
         [HttpGet("{id:int}")]
-        [Authorize]
+        // [Authorize]
 
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
@@ -79,7 +79,7 @@ namespace api.Controllers
         }
 
         [HttpPost("create")]
-        [Authorize]
+        // [Authorize]
 
         public async Task<IActionResult> Create([FromBody] CreateOrderRequestDto stockDto)
         {
@@ -94,7 +94,7 @@ namespace api.Controllers
         }
 
         [HttpPut("edit/{id:int}")]
-        [Authorize]
+        // [Authorize]
 
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateOrderRequestDto updateDto)
         {
@@ -112,7 +112,7 @@ namespace api.Controllers
         }
 
         [HttpDelete("delete/{id:int}")]
-        [Authorize]
+        // [Authorize]
 
         public async Task<IActionResult> Delete([FromRoute] int id)
         {

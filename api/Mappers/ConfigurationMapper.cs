@@ -15,6 +15,7 @@ namespace api.Mappers
             {
                 Id = configurationModel.Id,
                 SuggestedComponents = configurationModel.SuggestedComponents,
+                Purpose = configurationModel.Purpose,
                 CreatedOn = configurationModel.CreatedOn,
                 Feedback = configurationModel.Feedback,
                 CustomerID = configurationModel.CustomerID,

@@ -25,7 +25,7 @@ namespace api.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        // [Authorize]
 
         // [Authorize]
         // public async Task<IActionResult> GetAll([FromQuery] QueryObject query)
@@ -93,7 +93,7 @@ namespace api.Controllers
         }
 
         [HttpDelete("delete/{id:int}")]
-        [Authorize]
+        // [Authorize]
 
         public async Task<IActionResult> Delete([FromRoute] int id)
         {

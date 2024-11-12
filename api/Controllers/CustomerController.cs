@@ -26,7 +26,7 @@ namespace api.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        // [Authorize]
 
         // [Authorize]
         // public async Task<IActionResult> GetAll([FromQuery] QueryObject query)

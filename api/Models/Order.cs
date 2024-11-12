@@ -31,6 +31,5 @@ namespace api.Models
 
         public int? ConfigurationID { get; set; }
         public Configuration? Configuration { get; set; }
-
     }
 }
