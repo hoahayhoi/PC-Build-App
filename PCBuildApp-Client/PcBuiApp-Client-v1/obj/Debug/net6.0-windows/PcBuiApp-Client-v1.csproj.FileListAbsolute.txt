@@ -45,3 +45,34 @@ D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\PC-Build-App-Frontend\PC-Build-App\PCBu
 D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\PC-Build-App-Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\ref\PcBuiApp-Client-v1.dll
 D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\PC-Build-App-Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\MaterialSkin.dll
 D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\PC-Build-App-Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.frm_DSLapRap.resources
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\PcBuiApp-Client-v1.exe
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\PcBuiApp-Client-v1.deps.json
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\PcBuiApp-Client-v1.runtimeconfig.json
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\PcBuiApp-Client-v1.dll
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\PcBuiApp-Client-v1.pdb
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\MaterialSkin.dll
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.csproj.AssemblyReference.cache
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.Properties.Resources.resources
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.UserControlCustom.Navbar_Left.resources
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.UserControlCustom.RoundedUserControl.resources
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_AddUser.resources
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_DangNhap.resources
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_DSLapRap.resources
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_EditUser.resources
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_QuanLyChinh.resources
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_QuanLyDonHang.resources
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_QuanLyKho.resources
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_QuanLyLapRap.resources
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_QuanLyNhanVien.resources
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.csproj.GenerateResource.cache
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.AssemblyInfoInputs.cache
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.AssemblyInfo.cs
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.csproj.CoreCompileInputs.cache
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.csproj.CopyComplete
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.dll
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\refint\PcBuiApp-Client-v1.dll
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.pdb
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.genruntimeconfig.cache
+D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\ref\PcBuiApp-Client-v1.dll

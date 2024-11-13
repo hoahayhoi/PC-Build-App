@@ -1,12 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
-namespace PcBuiApp_Client_v1.Model
+namespace PcBuiApp_Client_v1.Models
 {
-    internal class Orders
-    {
-    }
+	public class Orders
+	{
+		public int Id { get; set; }
+		public int? CustomerID { get; set; }
+		public int? SalesStaffID { get; set; }
+		public int? TechnicianID { get; set; }
+		public int ConfigurationID { get; set; }
+		public DateTime CreatedOn { get; set; }
+		public DateTime? DateCompleted { get; set; }
+		public decimal TotalPrice { get; set; }
+		public string Status { get; set; }
+	}
+
+
 }

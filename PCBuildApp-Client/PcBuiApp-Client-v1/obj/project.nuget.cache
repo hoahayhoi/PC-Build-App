@@ -1,15 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "vuL16thdUhc=",
+  "dgSpecHash": "GA7EL6NGtFI7j1ePVwKwCdLfMOysPKpAV6LmMXQz50lmR5LhPWcjeNygFVd+nAmMqHoBcqJqYMk9oMjaVfzxRA==",
   "success": true,
-  "projectFilePath": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\PC-Build-App-Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj",
+  "projectFilePath": "D:\\Exercise File\\Code\\C#\\ƯDTM\\FrontEnd\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\materialskin.2\\2.3.1\\materialskin.2.2.3.1.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.33\\microsoft.windowsdesktop.app.ref.6.0.33.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.33\\microsoft.netcore.app.ref.6.0.33.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.33\\microsoft.aspnetcore.app.ref.6.0.33.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.33\\microsoft.netcore.app.host.win-x64.6.0.33.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\materialskin.2\\2.3.1\\materialskin.2.2.3.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
