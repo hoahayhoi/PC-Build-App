@@ -1,6 +1,6 @@
 ﻿namespace PcBuiApp_Client_v1.View
 {
-    partial class frm_QuanLyKho
+    partial class frm_QuanLyChiTietDonHang
     {
         /// <summary>
         /// Required designer variable.
@@ -174,7 +174,7 @@
             panel1.Size = new Size(1194, 836);
             panel1.TabIndex = 20;
             // 
-            // frm_QuanLyKho
+            // frm_QuanLyChiTietDonHang
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -184,7 +184,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
-            Name = "frm_QuanLyKho";
+            Name = "frm_QuanLyChiTietDonHang";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             roundedUserControl2.ResumeLayout(false);

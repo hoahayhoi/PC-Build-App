@@ -15,13 +15,13 @@ using System.Windows.Forms;
 
 namespace PcBuiApp_Client_v1.View
 {
-    public partial class frm_DSLapRap : MaterialForm
+    public partial class frm_DSLapRap : Form
     {
         public frm_DSLapRap()
         {
             InitializeComponent();
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
+            //materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey900, Primary.Blue900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
 

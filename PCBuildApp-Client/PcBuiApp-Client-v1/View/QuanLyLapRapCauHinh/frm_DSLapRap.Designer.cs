@@ -590,8 +590,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1082, 692);
             Controls.Add(materialTabControl1);
-            DrawerShowIconsWhenHidden = true;
-            DrawerTabControl = materialTabControl1;
+            //DrawerShowIconsWhenHidden = true;
+            //DrawerTabControl = materialTabControl1;
             Margin = new Padding(4, 3, 4, 3);
             Name = "frm_DSLapRap";
             Padding = new Padding(4, 74, 4, 3);

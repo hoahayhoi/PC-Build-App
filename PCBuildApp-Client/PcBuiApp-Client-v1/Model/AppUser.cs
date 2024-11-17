@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Models/AppUser.cs
+using System.Configuration;
 
-// Models/AppUser.cs
 namespace PcBuiApp_Client_v1.Models
 {
     public class AppUser
     {
-        public string Id { get; set; }          // ID của người dùng
-        public string UserName { get; set; }    // Tên đăng nhập
-        public string Email { get; set; }       // Email
-        public string PhoneNumber { get; set; } // Số điện thoại
-        public string Name { get; set; }        // Tên đầy đủ
-        public string Role { get; set; }        // Vai trò (Admin, SalesStaff, Technician)
-        public string Password { get; set; }        // Vai trò (Admin, SalesStaff, Technician)
+        public int id { get; set; }                     // ID của người dùng
+        public string name { get; set; }                // Tên người dùng
+        public string email { get; set; }               // Email
+        public string phone { get; set; }               // Số điện thoại
+        public string address { get; set; }             // Địa chỉ
+        public List<Configuration> configurations { get; set; } // Danh sách cấu hình (nếu cần)
+        public List<Order> orders { get; set; }         // Danh sách đơn hàng (nếu cần)
     }
 }

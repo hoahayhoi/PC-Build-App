@@ -14,7 +14,7 @@ namespace PcBuiApp_Client_v1.Controllers
         // Lấy danh sách người dùng
         public async Task<List<AppUser>> GetUsersAsync()
         {
-            string url = "api/users"; // Endpoint của API để lấy danh sách người dùng
+            string url = "api/customers"; // Endpoint của API để lấy danh sách người dùng
 
             using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
             {
@@ -32,35 +32,32 @@ namespace PcBuiApp_Client_v1.Controllers
         }
 
         // Controllers/UserController.cs
+        // Controllers/UserController.cs
         public async Task AddUserAsync(AppUser user)
         {
-            string url = "api/account/register"; // Endpoint để đăng ký người dùng
-            var registerDto = new
+            string url = "api/customers/create"; // Endpoint để tạo người dùng mới
+
+            var userDto = new
             {
-                Username = user.UserName,
-                Email = user.Email,
-                Password = user.Password
+                name = user.name,
+                email = user.email,
+                phone = user.phone,
+                address = user.address
             };
 
-            var json = JsonConvert.SerializeObject(registerDto);
+            var json = JsonConvert.SerializeObject(userDto);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
 
             using (HttpResponseMessage response = await ApiHelper.ApiClient.PostAsync(url, data))
             {
-                if (response.IsSuccessStatusCode)
-                {
-                    // Thêm thành công
-                }
-                else
+                if (!response.IsSuccessStatusCode)
                 {
                     var error = await response.Content.ReadAsStringAsync();
                     throw new Exception("Không thể thêm người dùng: " + error);
                 }
             }
-
-            // Sau khi đăng ký thành công, cập nhật thông tin khác như Role
-            await AssignRoleToUserAsync(user.UserName, user.Role);
         }
+
 
         private async Task AssignRoleToUserAsync(string username, string role)
         {
@@ -96,35 +93,48 @@ namespace PcBuiApp_Client_v1.Controllers
 
         public async Task UpdateUserAsync(AppUser user)
         {
-            string url = $"api/users/{user.UserName}";
+            string url = $"api/customers/edit/{user.id}"; // Endpoint để cập nhật người dùng
 
-            // Tạo đối tượng chứa thông tin cần cập nhật
-            var updateDto = new
+            var userDto = new
             {
-                Email = user.Email,
-                PhoneNumber = user.PhoneNumber,
-                Name = user.Name
+                name = user.name,
+                email = user.email,
+                phone = user.phone,
+                address = user.address
             };
 
-            var json = JsonConvert.SerializeObject(updateDto);
+            var json = JsonConvert.SerializeObject(userDto);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
 
             using (HttpResponseMessage response = await ApiHelper.ApiClient.PutAsync(url, data))
             {
+                if (!response.IsSuccessStatusCode)
+                {
+                    var error = await response.Content.ReadAsStringAsync();
+                    throw new Exception("Không thể cập nhật người dùng: " + error);
+                }
+            }
+        }
+
+        public async Task<AppUser> GetUserByIdAsync(int id)
+        {
+            string url = $"api/customers/{id}";
+
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
+            {
                 if (response.IsSuccessStatusCode)
                 {
-                    // Cập nhật thành công
+                    var result = await response.Content.ReadAsStringAsync();
+                    var user = JsonConvert.DeserializeObject<AppUser>(result);
+                    return user;
                 }
                 else
                 {
-                    var error = await response.Content.ReadAsStringAsync();
-                    throw new System.Exception("Không thể cập nhật người dùng: " + error);
+                    throw new Exception("Không thể lấy thông tin người dùng.");
                 }
             }
-
-            // Cập nhật vai trò nếu có thay đổi
-            await UpdateUserRoleAsync(user.UserName, user.Role);
         }
+
 
         private async Task UpdateUserRoleAsync(string username, string role)
         {
@@ -145,23 +155,20 @@ namespace PcBuiApp_Client_v1.Controllers
             }
         }
 
-        public async Task DeleteUserAsync(string username)
+        public async Task DeleteUserAsync(int id)
         {
-            string url = $"api/users/{username}";
+            string url = $"api/customers/delete/{id}";
 
             using (HttpResponseMessage response = await ApiHelper.ApiClient.DeleteAsync(url))
             {
-                if (response.IsSuccessStatusCode)
-                {
-                    // Xóa thành công
-                }
-                else
+                if (!response.IsSuccessStatusCode)
                 {
                     var error = await response.Content.ReadAsStringAsync();
                     throw new Exception("Không thể xóa người dùng: " + error);
                 }
             }
         }
+
 
     }
 }
