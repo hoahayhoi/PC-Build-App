@@ -18,6 +18,9 @@ namespace PcBuiApp_Client_v1.UserControlCustom
         public event EventHandler QuanLyKhoClicked;
         public event EventHandler QuanLyTaiKhoanClicked;
         public event EventHandler QuanLyDonHangClicked;
+        public event EventHandler DeXuatCauHinhClicked;
+        public event EventHandler QuanLySanPhamClicked;
+        public event EventHandler LichSuGiaoDichClicked;
 
 
         public Navbar_Left()
@@ -43,6 +46,21 @@ namespace PcBuiApp_Client_v1.UserControlCustom
         private void btn_QuanLyDonHang_Click(object sender, EventArgs e)
         {
             QuanLyDonHangClicked?.Invoke(this, e);
+        }
+
+        private void btn_DeXuatCauHinh_Click(object sender, EventArgs e)
+        {
+            DeXuatCauHinhClicked?.Invoke(this, e);
+        }
+
+        private void btn_QuanLySanPham_Click(object sender, EventArgs e)
+        {
+            QuanLySanPhamClicked?.Invoke(this, e);
+        }
+
+        private void btn_LichSuGiaoDich_Click(object sender, EventArgs e)
+        {
+            LichSuGiaoDichClicked?.Invoke(this, e);
         }
     }
 }

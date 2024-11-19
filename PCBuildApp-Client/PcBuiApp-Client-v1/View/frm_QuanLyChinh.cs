@@ -33,6 +33,9 @@ namespace PcBuiApp_Client_v1.View
             navbar_Left1.QuanLyKhoClicked += Navbar_Left1_QuanLyKhoClicked;
             navbar_Left1.QuanLyTaiKhoanClicked += Navbar_Left1_QuanLyTaiKhoanClicked;
             navbar_Left1.QuanLyDonHangClicked += navbar_Left1_QuanLyDonHangClicked;
+            navbar_Left1.DeXuatCauHinhClicked += navbar_Left1_DeXuatCauHinhClicked;
+            navbar_Left1.QuanLySanPhamClicked += navbar_Left1_QuanLySanPhamClicked;
+            navbar_Left1.LichSuGiaoDichClicked += navbar_Left1_LichSuGiaoDichClicked;
         }
 
         // Phương thức hiển thị form trong panel
@@ -73,10 +76,36 @@ namespace PcBuiApp_Client_v1.View
             ShowFormInPanel(taiKhoanForm);
         }
 
+        // Xử lý sự kiện khi click vào nút "Đề Xuất Cấu Hình"
+        private void navbar_Left1_DeXuatCauHinhClicked(object sender, EventArgs e)
+        {
+            var deXuatCauHinhForm = new frm_DeXuatCauHinh();
+            ShowFormInPanel(deXuatCauHinhForm);
+        }
+
+        // Xử lý sự kiện khi click vào nút "Quan Ly San Pham"
+        private void navbar_Left1_QuanLySanPhamClicked(object sender, EventArgs e)
+        {
+            var quanLySanPhamForm = new frm_QuanLySanPham();
+            ShowFormInPanel(quanLySanPhamForm);
+        }
+
+        // Xử lý sự kiện khi click vào nút "Lich Su Giao Dich"
+        private void navbar_Left1_LichSuGiaoDichClicked(object sender, EventArgs e)
+        {
+            var lichSuGiaoDichForm = new frm_QuanLyLSGD();
+            ShowFormInPanel(lichSuGiaoDichForm);
+        }
+
 
         private void btn_CloseLogin_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void navbar_Left1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

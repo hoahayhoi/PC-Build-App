@@ -41,6 +41,7 @@
             Column_ListAccountName = new DataGridViewTextBoxColumn();
             Column_ListAccountAction = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
+            btn_ThemSanPham = new Button();
             roundedUserControl2.SuspendLayout();
             roundedUserControl3.SuspendLayout();
             roundedUserControl4.SuspendLayout();
@@ -111,6 +112,7 @@
             // roundedUserControl4
             // 
             roundedUserControl4.BackColor = Color.White;
+            roundedUserControl4.Controls.Add(btn_ThemSanPham);
             roundedUserControl4.Controls.Add(label3);
             roundedUserControl4.Controls.Add(dataGridView1);
             roundedUserControl4.CornerRadius = 50;
@@ -174,6 +176,15 @@
             panel1.Size = new Size(1194, 836);
             panel1.TabIndex = 20;
             // 
+            // btn_ThemSanPham
+            // 
+            btn_ThemSanPham.Location = new Point(1033, 27);
+            btn_ThemSanPham.Name = "btn_ThemSanPham";
+            btn_ThemSanPham.Size = new Size(129, 38);
+            btn_ThemSanPham.TabIndex = 21;
+            btn_ThemSanPham.Text = "Thêm";
+            btn_ThemSanPham.UseVisualStyleBackColor = true;
+            // 
             // frm_QuanLySanPham
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -212,5 +223,6 @@
         private DataGridViewTextBoxColumn Column_ListAccountSTT;
         private DataGridViewTextBoxColumn Column_ListAccountName;
         private DataGridViewTextBoxColumn Column_ListAccountAction;
+        private Button btn_ThemSanPham;
     }
 }

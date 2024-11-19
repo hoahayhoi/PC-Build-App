@@ -30,17 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Navbar_Left));
             roundedUserControl1 = new RoundedUserControl();
-            button7 = new Button();
             button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
+            btn_QuanLySanPham = new Button();
+            btn_LichSuGiaoDich = new Button();
             pictureBox2 = new PictureBox();
             label1 = new Label();
             btn_QuanLyTaiKhoan = new Button();
             btn_QuanLyKho = new Button();
             btn_QuanLyLapRap = new Button();
             btn_QuanLyDonHang = new Button();
-            button2 = new Button();
+            btn_DeXuatCauHinh = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
             roundedUserControl1.SuspendLayout();
@@ -53,17 +52,16 @@
             roundedUserControl1.AutoScroll = true;
             roundedUserControl1.AutoScrollMinSize = new Size(361, 0);
             roundedUserControl1.BackColor = Color.White;
-            roundedUserControl1.Controls.Add(button7);
             roundedUserControl1.Controls.Add(button4);
-            roundedUserControl1.Controls.Add(button5);
-            roundedUserControl1.Controls.Add(button6);
+            roundedUserControl1.Controls.Add(btn_QuanLySanPham);
+            roundedUserControl1.Controls.Add(btn_LichSuGiaoDich);
             roundedUserControl1.Controls.Add(pictureBox2);
             roundedUserControl1.Controls.Add(label1);
             roundedUserControl1.Controls.Add(btn_QuanLyTaiKhoan);
             roundedUserControl1.Controls.Add(btn_QuanLyKho);
             roundedUserControl1.Controls.Add(btn_QuanLyLapRap);
             roundedUserControl1.Controls.Add(btn_QuanLyDonHang);
-            roundedUserControl1.Controls.Add(button2);
+            roundedUserControl1.Controls.Add(btn_DeXuatCauHinh);
             roundedUserControl1.Controls.Add(button1);
             roundedUserControl1.Controls.Add(pictureBox1);
             roundedUserControl1.CornerRadius = 50;
@@ -73,27 +71,13 @@
             roundedUserControl1.Size = new Size(361, 929);
             roundedUserControl1.TabIndex = 16;
             // 
-            // button7
-            // 
-            button7.BackColor = SystemColors.ButtonFace;
-            button7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.ImageAlign = ContentAlignment.MiddleLeft;
-            button7.Location = new Point(21, 738);
-            button7.Name = "button7";
-            button7.Padding = new Padding(20, 0, 0, 0);
-            button7.Size = new Size(296, 48);
-            button7.TabIndex = 20;
-            button7.Text = "Chi Tiết Đơn Hàng";
-            button7.UseVisualStyleBackColor = false;
-            // 
             // button4
             // 
             button4.BackColor = SystemColors.ButtonFace;
             button4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button4.Image = (Image)resources.GetObject("button4.Image");
             button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(21, 971);
+            button4.Location = new Point(21, 876);
             button4.Name = "button4";
             button4.Padding = new Padding(20, 0, 0, 0);
             button4.Size = new Size(296, 48);
@@ -101,33 +85,35 @@
             button4.Text = "Báo Cáo Thống Kê";
             button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btn_QuanLySanPham
             // 
-            button5.BackColor = SystemColors.ButtonFace;
-            button5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(21, 891);
-            button5.Name = "button5";
-            button5.Padding = new Padding(20, 0, 0, 0);
-            button5.Size = new Size(296, 48);
-            button5.TabIndex = 18;
-            button5.Text = "Quản Lý Sản Phẩm";
-            button5.UseVisualStyleBackColor = false;
+            btn_QuanLySanPham.BackColor = SystemColors.ButtonFace;
+            btn_QuanLySanPham.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_QuanLySanPham.Image = (Image)resources.GetObject("btn_QuanLySanPham.Image");
+            btn_QuanLySanPham.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_QuanLySanPham.Location = new Point(21, 805);
+            btn_QuanLySanPham.Name = "btn_QuanLySanPham";
+            btn_QuanLySanPham.Padding = new Padding(20, 0, 0, 0);
+            btn_QuanLySanPham.Size = new Size(296, 48);
+            btn_QuanLySanPham.TabIndex = 18;
+            btn_QuanLySanPham.Text = "Quản Lý Sản Phẩm";
+            btn_QuanLySanPham.UseVisualStyleBackColor = false;
+            btn_QuanLySanPham.Click += btn_QuanLySanPham_Click;
             // 
-            // button6
+            // btn_LichSuGiaoDich
             // 
-            button6.BackColor = SystemColors.ButtonFace;
-            button6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.ImageAlign = ContentAlignment.MiddleLeft;
-            button6.Location = new Point(21, 810);
-            button6.Name = "button6";
-            button6.Padding = new Padding(20, 0, 0, 0);
-            button6.Size = new Size(296, 48);
-            button6.TabIndex = 17;
-            button6.Text = "Lịch Sử Giao Dịch";
-            button6.UseVisualStyleBackColor = false;
+            btn_LichSuGiaoDich.BackColor = SystemColors.ButtonFace;
+            btn_LichSuGiaoDich.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_LichSuGiaoDich.Image = (Image)resources.GetObject("btn_LichSuGiaoDich.Image");
+            btn_LichSuGiaoDich.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_LichSuGiaoDich.Location = new Point(21, 737);
+            btn_LichSuGiaoDich.Name = "btn_LichSuGiaoDich";
+            btn_LichSuGiaoDich.Padding = new Padding(20, 0, 0, 0);
+            btn_LichSuGiaoDich.Size = new Size(296, 48);
+            btn_LichSuGiaoDich.TabIndex = 17;
+            btn_LichSuGiaoDich.Text = "Lịch Sử Giao Dịch";
+            btn_LichSuGiaoDich.UseVisualStyleBackColor = false;
+            btn_LichSuGiaoDich.Click += btn_LichSuGiaoDich_Click;
             // 
             // pictureBox2
             // 
@@ -210,19 +196,20 @@
             btn_QuanLyDonHang.UseVisualStyleBackColor = false;
             btn_QuanLyDonHang.Click += btn_QuanLyDonHang_Click;
             // 
-            // button2
+            // btn_DeXuatCauHinh
             // 
-            button2.BackColor = SystemColors.ButtonFace;
-            button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(21, 348);
-            button2.Name = "button2";
-            button2.Padding = new Padding(20, 0, 0, 0);
-            button2.Size = new Size(296, 48);
-            button2.TabIndex = 2;
-            button2.Text = "Đề Xuất Cấu Hình";
-            button2.UseVisualStyleBackColor = false;
+            btn_DeXuatCauHinh.BackColor = SystemColors.ButtonFace;
+            btn_DeXuatCauHinh.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_DeXuatCauHinh.Image = (Image)resources.GetObject("btn_DeXuatCauHinh.Image");
+            btn_DeXuatCauHinh.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_DeXuatCauHinh.Location = new Point(21, 348);
+            btn_DeXuatCauHinh.Name = "btn_DeXuatCauHinh";
+            btn_DeXuatCauHinh.Padding = new Padding(20, 0, 0, 0);
+            btn_DeXuatCauHinh.Size = new Size(296, 48);
+            btn_DeXuatCauHinh.TabIndex = 2;
+            btn_DeXuatCauHinh.Text = "Đề Xuất Cấu Hình";
+            btn_DeXuatCauHinh.UseVisualStyleBackColor = false;
+            btn_DeXuatCauHinh.Click += btn_DeXuatCauHinh_Click;
             // 
             // button1
             // 
@@ -272,12 +259,11 @@
         private Button btn_QuanLyKho;
         private Button btn_QuanLyLapRap;
         private Button btn_QuanLyDonHang;
-        private Button button2;
+        private Button btn_DeXuatCauHinh;
         private Button button1;
         private PictureBox pictureBox1;
         private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
+        private Button btn_QuanLySanPham;
+        private Button btn_LichSuGiaoDich;
     }
 }

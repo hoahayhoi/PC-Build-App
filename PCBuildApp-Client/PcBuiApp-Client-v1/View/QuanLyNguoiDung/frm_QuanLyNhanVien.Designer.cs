@@ -37,6 +37,7 @@ namespace PcBuiApp_Client_v1.View
             roundedUserControl3 = new UserControlCustom.RoundedUserControl();
             textBox1 = new TextBox();
             roundedUserControl4 = new UserControlCustom.RoundedUserControl();
+            btn_ThemNguoiDung = new Button();
             label3 = new Label();
             dataGridView_QLNV = new DataGridView();
             Column_ListAccountSTT = new DataGridViewTextBoxColumn();
@@ -46,7 +47,6 @@ namespace PcBuiApp_Client_v1.View
             Column_address = new DataGridViewTextBoxColumn();
             Column_ListAccountAction = new DataGridViewButtonColumn();
             panel1 = new Panel();
-            btn_ThemNguoiDung = new Button();
             roundedUserControl2.SuspendLayout();
             roundedUserControl3.SuspendLayout();
             roundedUserControl4.SuspendLayout();
@@ -126,6 +126,16 @@ namespace PcBuiApp_Client_v1.View
             roundedUserControl4.Size = new Size(1181, 667);
             roundedUserControl4.TabIndex = 19;
             // 
+            // btn_ThemNguoiDung
+            // 
+            btn_ThemNguoiDung.Location = new Point(1032, 29);
+            btn_ThemNguoiDung.Name = "btn_ThemNguoiDung";
+            btn_ThemNguoiDung.Size = new Size(129, 34);
+            btn_ThemNguoiDung.TabIndex = 2;
+            btn_ThemNguoiDung.Text = "Thêm";
+            btn_ThemNguoiDung.UseVisualStyleBackColor = true;
+            btn_ThemNguoiDung.Click += btn_ThemNguoiDung_Click;
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -198,16 +208,6 @@ namespace PcBuiApp_Client_v1.View
             panel1.Name = "panel1";
             panel1.Size = new Size(1194, 836);
             panel1.TabIndex = 20;
-            // 
-            // btn_ThemNguoiDung
-            // 
-            btn_ThemNguoiDung.Location = new Point(1033, 21);
-            btn_ThemNguoiDung.Name = "btn_ThemNguoiDung";
-            btn_ThemNguoiDung.Size = new Size(129, 51);
-            btn_ThemNguoiDung.TabIndex = 2;
-            btn_ThemNguoiDung.Text = "Thêm";
-            btn_ThemNguoiDung.UseVisualStyleBackColor = true;
-            btn_ThemNguoiDung.Click += btn_ThemNguoiDung_Click;
             // 
             // frm_QuanLyNhanVien
             // 
