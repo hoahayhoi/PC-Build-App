@@ -1,16 +1,11 @@
-﻿namespace PcBuiApp_Client_v1.View.QuanLySanPham
+﻿// View/QuanLySanPham/frm_ThemSanPham.Designer.cs
+
+namespace PcBuiApp_Client_v1.View.QuanLySanPham
 {
     partial class frm_ThemSanPham
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,31 +17,21 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
-            txtEmail = new TextBox();
-            btn_Cancel = new Button();
-            lblUserName = new Label();
-            btn_Save = new Button();
-            txtUserName = new TextBox();
-            txtPassword = new TextBox();
-            lblEmail = new Label();
-            lblPassword = new Label();
-            lblPhoneNumber = new Label();
-            cmbRole = new ComboBox();
-            txtPhoneNumber = new TextBox();
-            lblRole = new Label();
+            lblStock = new Label();
+            txtStock = new TextBox();
+            lblPrice = new Label();
+            txtPrice = new TextBox();
+            lblCategory = new Label();
+            cmbCategory = new ComboBox();
             lblName = new Label();
             txtName = new TextBox();
-            lblAddress = new Label();
-            txtAddress = new TextBox();
+            btn_Cancel = new Button();
+            btn_Save = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -74,160 +59,107 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(txtEmail);
-            panel2.Controls.Add(btn_Cancel);
-            panel2.Controls.Add(lblUserName);
-            panel2.Controls.Add(btn_Save);
-            panel2.Controls.Add(txtUserName);
-            panel2.Controls.Add(txtPassword);
-            panel2.Controls.Add(lblEmail);
-            panel2.Controls.Add(lblPassword);
-            panel2.Controls.Add(lblPhoneNumber);
-            panel2.Controls.Add(cmbRole);
-            panel2.Controls.Add(txtPhoneNumber);
-            panel2.Controls.Add(lblRole);
+            panel2.Controls.Add(lblStock);
+            panel2.Controls.Add(txtStock);
+            panel2.Controls.Add(lblPrice);
+            panel2.Controls.Add(txtPrice);
+            panel2.Controls.Add(lblCategory);
+            panel2.Controls.Add(cmbCategory);
             panel2.Controls.Add(lblName);
             panel2.Controls.Add(txtName);
-            panel2.Controls.Add(lblAddress);
-            panel2.Controls.Add(txtAddress);
+            panel2.Controls.Add(btn_Cancel);
+            panel2.Controls.Add(btn_Save);
             panel2.Location = new Point(14, 93);
             panel2.Name = "panel2";
             panel2.Size = new Size(940, 310);
             panel2.TabIndex = 17;
             // 
-            // txtEmail
+            // lblStock
             // 
-            txtEmail.Location = new Point(182, 81);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(273, 23);
-            txtEmail.TabIndex = 3;
+            lblStock.AutoSize = true;
+            lblStock.Location = new Point(507, 89);
+            lblStock.Name = "lblStock";
+            lblStock.Size = new Size(83, 15);
+            lblStock.TabIndex = 6;
+            lblStock.Text = "Số Lượng Tồn:";
+            // 
+            // txtStock
+            // 
+            txtStock.Location = new Point(627, 86);
+            txtStock.Name = "txtStock";
+            txtStock.Size = new Size(273, 23);
+            txtStock.TabIndex = 7;
+            // 
+            // lblPrice
+            // 
+            lblPrice.AutoSize = true;
+            lblPrice.Location = new Point(507, 49);
+            lblPrice.Name = "lblPrice";
+            lblPrice.Size = new Size(52, 15);
+            lblPrice.TabIndex = 4;
+            lblPrice.Text = "Giá Tiền:";
+            // 
+            // txtPrice
+            // 
+            txtPrice.Location = new Point(627, 46);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(273, 23);
+            txtPrice.TabIndex = 5;
+            // 
+            // lblCategory
+            // 
+            lblCategory.AutoSize = true;
+            lblCategory.Location = new Point(62, 84);
+            lblCategory.Name = "lblCategory";
+            lblCategory.Size = new Size(65, 15);
+            lblCategory.TabIndex = 2;
+            lblCategory.Text = "Danh Mục:";
+            // 
+            // cmbCategory
+            // 
+            cmbCategory.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbCategory.FormattingEnabled = true;
+            cmbCategory.Items.AddRange(new object[] { "CPU", "GPU", "RAM", "Mainboard", "Storage", "Laptop" });
+            cmbCategory.Location = new Point(182, 81);
+            cmbCategory.Name = "cmbCategory";
+            cmbCategory.Size = new Size(273, 23);
+            cmbCategory.TabIndex = 3;
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Location = new Point(62, 44);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(84, 15);
+            lblName.TabIndex = 0;
+            lblName.Text = "Tên Sản Phẩm:";
+            // 
+            // txtName
+            // 
+            txtName.Location = new Point(182, 41);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(273, 23);
+            txtName.TabIndex = 1;
             // 
             // btn_Cancel
             // 
-            btn_Cancel.Location = new Point(491, 205);
+            btn_Cancel.Location = new Point(529, 161);
             btn_Cancel.Name = "btn_Cancel";
             btn_Cancel.Size = new Size(123, 30);
             btn_Cancel.TabIndex = 13;
             btn_Cancel.Text = "Hủy";
             btn_Cancel.UseVisualStyleBackColor = true;
-            // 
-            // lblUserName
-            // 
-            lblUserName.AutoSize = true;
-            lblUserName.Location = new Point(62, 44);
-            lblUserName.Name = "lblUserName";
-            lblUserName.Size = new Size(88, 15);
-            lblUserName.TabIndex = 0;
-            lblUserName.Text = "Tên đăng nhập:";
+            btn_Cancel.Click += btn_Cancel_Click_1;
             // 
             // btn_Save
             // 
-            btn_Save.Location = new Point(332, 205);
+            btn_Save.Location = new Point(296, 161);
             btn_Save.Name = "btn_Save";
             btn_Save.Size = new Size(123, 30);
             btn_Save.TabIndex = 12;
             btn_Save.Text = "Lưu";
             btn_Save.UseVisualStyleBackColor = true;
-            // 
-            // txtUserName
-            // 
-            txtUserName.Location = new Point(182, 41);
-            txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(273, 23);
-            txtUserName.TabIndex = 1;
-            // 
-            // txtPassword
-            // 
-            txtPassword.Location = new Point(589, 121);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(273, 23);
-            txtPassword.TabIndex = 11;
-            txtPassword.UseSystemPasswordChar = true;
-            // 
-            // lblEmail
-            // 
-            lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(62, 84);
-            lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(39, 15);
-            lblEmail.TabIndex = 2;
-            lblEmail.Text = "Email:";
-            // 
-            // lblPassword
-            // 
-            lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(469, 124);
-            lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(60, 15);
-            lblPassword.TabIndex = 10;
-            lblPassword.Text = "Mật khẩu:";
-            // 
-            // lblPhoneNumber
-            // 
-            lblPhoneNumber.AutoSize = true;
-            lblPhoneNumber.Location = new Point(62, 124);
-            lblPhoneNumber.Name = "lblPhoneNumber";
-            lblPhoneNumber.Size = new Size(79, 15);
-            lblPhoneNumber.TabIndex = 4;
-            lblPhoneNumber.Text = "Số điện thoại:";
-            // 
-            // cmbRole
-            // 
-            cmbRole.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbRole.FormattingEnabled = true;
-            cmbRole.Items.AddRange(new object[] { "Admin", "SalesStaff", "Technician", "User" });
-            cmbRole.Location = new Point(589, 81);
-            cmbRole.Name = "cmbRole";
-            cmbRole.Size = new Size(273, 23);
-            cmbRole.TabIndex = 9;
-            // 
-            // txtPhoneNumber
-            // 
-            txtPhoneNumber.Location = new Point(182, 121);
-            txtPhoneNumber.Name = "txtPhoneNumber";
-            txtPhoneNumber.Size = new Size(273, 23);
-            txtPhoneNumber.TabIndex = 5;
-            // 
-            // lblRole
-            // 
-            lblRole.AutoSize = true;
-            lblRole.Location = new Point(469, 84);
-            lblRole.Name = "lblRole";
-            lblRole.Size = new Size(43, 15);
-            lblRole.TabIndex = 8;
-            lblRole.Text = "Vai trò:";
-            // 
-            // lblName
-            // 
-            lblName.AutoSize = true;
-            lblName.Location = new Point(469, 44);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(62, 15);
-            lblName.TabIndex = 6;
-            lblName.Text = "Họ và Tên:";
-            // 
-            // txtName
-            // 
-            txtName.Location = new Point(589, 41);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(273, 23);
-            txtName.TabIndex = 7;
-            // 
-            // lblAddress
-            // 
-            lblAddress.AutoSize = true;
-            lblAddress.Location = new Point(62, 164);
-            lblAddress.Name = "lblAddress";
-            lblAddress.Size = new Size(46, 15);
-            lblAddress.TabIndex = 6;
-            lblAddress.Text = "Địa chỉ:";
-            // 
-            // txtAddress
-            // 
-            txtAddress.Location = new Point(182, 161);
-            txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(273, 23);
-            txtAddress.TabIndex = 7;
+            btn_Save.Click += btn_Save_Click_1;
             // 
             // frm_ThemSanPham
             // 
@@ -248,24 +180,18 @@
 
         #endregion
 
-        private Panel panel1;
-        private Label label1;
-        private Panel panel2;
-        private TextBox txtEmail;
-        private Button btn_Cancel;
-        private Label lblUserName;
-        private Button btn_Save;
-        private TextBox txtUserName;
-        private TextBox txtPassword;
-        private Label lblEmail;
-        private Label lblPassword;
-        private Label lblPhoneNumber;
-        private ComboBox cmbRole;
-        private TextBox txtPhoneNumber;
-        private Label lblRole;
-        private Label lblName;
-        private TextBox txtName;
-        private Label lblAddress;
-        private TextBox txtAddress;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblStock;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.ComboBox cmbCategory;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btn_Cancel;
+        private System.Windows.Forms.Button btn_Save;
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace PcBuiApp_Client_v1.View
+﻿using System.Windows.Forms;
+
+namespace PcBuiApp_Client_v1.View.QuanLySanPham
 {
     partial class frm_QuanLySanPham
     {
@@ -35,13 +37,16 @@
             roundedUserControl3 = new UserControlCustom.RoundedUserControl();
             textBox1 = new TextBox();
             roundedUserControl4 = new UserControlCustom.RoundedUserControl();
+            btn_ThemSanPham = new Button();
             label3 = new Label();
             dataGridView1 = new DataGridView();
             Column_ListAccountSTT = new DataGridViewTextBoxColumn();
-            Column_ListAccountName = new DataGridViewTextBoxColumn();
-            Column_ListAccountAction = new DataGridViewTextBoxColumn();
+            Column_TenSanPham = new DataGridViewTextBoxColumn();
+            Column_GiaSanPham = new DataGridViewTextBoxColumn();
+            Column_DanhMucSanPham = new DataGridViewTextBoxColumn();
+            Column_SoLuongTon = new DataGridViewTextBoxColumn();
+            Column_HanhDongSanPham = new DataGridViewButtonColumn();
             panel1 = new Panel();
-            btn_ThemSanPham = new Button();
             roundedUserControl2.SuspendLayout();
             roundedUserControl3.SuspendLayout();
             roundedUserControl4.SuspendLayout();
@@ -121,6 +126,16 @@
             roundedUserControl4.Size = new Size(1181, 667);
             roundedUserControl4.TabIndex = 19;
             // 
+            // btn_ThemSanPham
+            // 
+            btn_ThemSanPham.Location = new Point(1033, 27);
+            btn_ThemSanPham.Name = "btn_ThemSanPham";
+            btn_ThemSanPham.Size = new Size(129, 38);
+            btn_ThemSanPham.TabIndex = 21;
+            btn_ThemSanPham.Text = "Thêm";
+            btn_ThemSanPham.UseVisualStyleBackColor = true;
+            btn_ThemSanPham.Click += btn_ThemSanPham_Click;
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -140,13 +155,14 @@
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column_ListAccountSTT, Column_ListAccountName, Column_ListAccountAction });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column_ListAccountSTT, Column_TenSanPham, Column_GiaSanPham, Column_DanhMucSanPham, Column_SoLuongTon, Column_HanhDongSanPham });
             dataGridView1.Dock = DockStyle.Bottom;
             dataGridView1.Location = new Point(0, 87);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(1181, 580);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += DataGridView1_CellContentClick;
             // 
             // Column_ListAccountSTT
             // 
@@ -154,15 +170,32 @@
             Column_ListAccountSTT.HeaderText = "STT";
             Column_ListAccountSTT.Name = "Column_ListAccountSTT";
             // 
-            // Column_ListAccountName
+            // Column_TenSanPham
             // 
-            Column_ListAccountName.HeaderText = "Tên Hàng Hóa";
-            Column_ListAccountName.Name = "Column_ListAccountName";
+            Column_TenSanPham.HeaderText = "Tên Sản Phẩm";
+            Column_TenSanPham.Name = "Column_TenSanPham";
             // 
-            // Column_ListAccountAction
+            // Column_GiaSanPham
             // 
-            Column_ListAccountAction.HeaderText = "Hành Động";
-            Column_ListAccountAction.Name = "Column_ListAccountAction";
+            Column_GiaSanPham.HeaderText = "Giá Tiền";
+            Column_GiaSanPham.Name = "Column_GiaSanPham";
+            // 
+            // Column_DanhMucSanPham
+            // 
+            Column_DanhMucSanPham.HeaderText = "Danh Mục";
+            Column_DanhMucSanPham.Name = "Column_DanhMucSanPham";
+            // 
+            // Column_SoLuongTon
+            // 
+            Column_SoLuongTon.HeaderText = "Số Lượng Tồn";
+            Column_SoLuongTon.Name = "Column_SoLuongTon";
+            // 
+            // Column_HanhDongSanPham
+            // 
+            Column_HanhDongSanPham.HeaderText = "Hành Động";
+            Column_HanhDongSanPham.Name = "Column_HanhDongSanPham";
+            Column_HanhDongSanPham.Resizable = DataGridViewTriState.True;
+            Column_HanhDongSanPham.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // panel1
             // 
@@ -173,24 +206,15 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1194, 836);
+            panel1.Size = new Size(1195, 836);
             panel1.TabIndex = 20;
-            // 
-            // btn_ThemSanPham
-            // 
-            btn_ThemSanPham.Location = new Point(1033, 27);
-            btn_ThemSanPham.Name = "btn_ThemSanPham";
-            btn_ThemSanPham.Size = new Size(129, 38);
-            btn_ThemSanPham.TabIndex = 21;
-            btn_ThemSanPham.Text = "Thêm";
-            btn_ThemSanPham.UseVisualStyleBackColor = true;
             // 
             // frm_QuanLySanPham
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1194, 836);
+            ClientSize = new Size(1195, 836);
             Controls.Add(btn_CloseLogin);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -220,9 +244,15 @@
         private DataGridView dataGridView1;
         private Label label3;
         private Panel panel1;
-        private DataGridViewTextBoxColumn Column_ListAccountSTT;
-        private DataGridViewTextBoxColumn Column_ListAccountName;
-        private DataGridViewTextBoxColumn Column_ListAccountAction;
         private Button btn_ThemSanPham;
+        private DataGridViewTextBoxColumn Column_ListAccountSTT;
+        private DataGridViewTextBoxColumn Column_TenSanPham;
+        private DataGridViewTextBoxColumn Column_GiaSanPham;
+        private DataGridViewTextBoxColumn Column_DanhMucSanPham;
+        private DataGridViewTextBoxColumn Column_SoLuongTon;
+        private DataGridViewButtonColumn Column_HanhDongSanPham;
+        private EventHandler btn_ThemSanPham_Click;
+        private DataGridViewCellEventHandler dataGridView1_CellContentClick;
+        private EventHandler btn_CloseLogin_Click;
     }
 }
