@@ -9,5 +9,6 @@ namespace api.Dtos.Configuration_
     {
         public string SuggestedComponents { get; set; } = string.Empty;
         public string Feedback { get; set; } = string.Empty;
+        public string Image { get; set; }
     }
 }

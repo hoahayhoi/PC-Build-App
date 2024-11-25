@@ -19,6 +19,7 @@ namespace api.Mappers
                 CreatedOn = configurationModel.CreatedOn,
                 Feedback = configurationModel.Feedback,
                 CustomerID = configurationModel.CustomerID,
+                Image = configurationModel.Image
             };
         }
 
@@ -31,6 +32,8 @@ namespace api.Mappers
                 Feedback = configurationDto.Feedback,
 
                 CustomerID = customerID,
+
+                Image = configurationDto.Image
             };
         }
     }

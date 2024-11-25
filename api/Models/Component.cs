@@ -16,7 +16,7 @@ namespace api.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
         public int Stock { get; set; }
-
+        public string Image { get; set; } 
         public int? SupplierID { get; set; }
         public Supplier? Supplier { get; set; }
         public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();

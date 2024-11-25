@@ -14,6 +14,8 @@ namespace api.Dtos.Component
         public decimal Price { get; set; }
         public int Stock { get; set; }
 
+        public string Image { get; set; }
+
         public int? SupplierID { get; set; }
         public List<OrderDetailDto> OrderDetails { get; set; } = new List<OrderDetailDto>();
     }

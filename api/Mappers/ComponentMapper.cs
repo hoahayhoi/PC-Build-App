@@ -19,6 +19,7 @@ namespace api.Mappers
                 Price = componentModel.Price,
                 Stock = componentModel.Stock,
                 SupplierID = componentModel.SupplierID,
+                Image = componentModel.Image,
                 OrderDetails = componentModel.OrderDetails.Select(c => c.ToOrderDetailDto()).ToList()
             };
         }
@@ -31,6 +32,7 @@ namespace api.Mappers
                 Category = componentDto.Category,
                 Price = componentDto.Price,
                 Stock = componentDto.Stock,
+                Image = componentDto.Image
             };
         }
     }
