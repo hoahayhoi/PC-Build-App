@@ -1,14 +1,18 @@
-﻿using PcBuiApp_Client_v1.View.QuanLySanPham;
+﻿using PcBuiApp_Client_v1.UserControlCustom;
+using PcBuiApp_Client_v1.View.QuanLyBaoCaoThongKe;
+using PcBuiApp_Client_v1.View.QuanLySanPham;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PcBuiApp_Client_v1.View
 {
@@ -37,6 +41,7 @@ namespace PcBuiApp_Client_v1.View
             navbar_Left1.DeXuatCauHinhClicked += navbar_Left1_DeXuatCauHinhClicked;
             navbar_Left1.QuanLySanPhamClicked += navbar_Left1_QuanLySanPhamClicked;
             navbar_Left1.LichSuGiaoDichClicked += navbar_Left1_LichSuGiaoDichClicked;
+            navbar_Left1.BaoCaoThongKeClicked += navbar_Left1_BaoCaoThongKeClicked;
         }
 
         // Phương thức hiển thị form trong panel
@@ -97,6 +102,12 @@ namespace PcBuiApp_Client_v1.View
             var lichSuGiaoDichForm = new frm_QuanLyLSGD();
             ShowFormInPanel(lichSuGiaoDichForm);
         }
+        
+        private void navbar_Left1_BaoCaoThongKeClicked(object sender, EventArgs e)
+        {
+            var baocaothongkeForm = new frm_BaoCaoThongKe();
+            ShowFormInPanel(baocaothongkeForm);
+        }
 
 
         private void btn_CloseLogin_Click(object sender, EventArgs e)
@@ -108,5 +119,11 @@ namespace PcBuiApp_Client_v1.View
         {
 
         }
+
+        public void SetUsername(string username)
+        {
+            this.navbar_Left1.SetUsername(username);
+        }
+
     }
 }

@@ -33,13 +33,14 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            btn_Cancel = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // btn_Edit
             // 
-            btn_Edit.Location = new Point(48, 34);
+            btn_Edit.Location = new Point(26, 36);
             btn_Edit.Name = "btn_Edit";
             btn_Edit.Size = new Size(123, 30);
             btn_Edit.TabIndex = 13;
@@ -49,7 +50,7 @@
             // 
             // btn_Delete
             // 
-            btn_Delete.Location = new Point(251, 34);
+            btn_Delete.Location = new Point(209, 36);
             btn_Delete.Name = "btn_Delete";
             btn_Delete.Size = new Size(123, 30);
             btn_Delete.TabIndex = 14;
@@ -64,7 +65,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(492, 46);
+            panel1.Size = new Size(564, 46);
             panel1.TabIndex = 15;
             // 
             // label1
@@ -72,7 +73,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(184, 9);
+            label1.Location = new Point(221, 0);
             label1.Name = "label1";
             label1.Size = new Size(126, 30);
             label1.TabIndex = 0;
@@ -80,18 +81,29 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(btn_Cancel);
             panel2.Controls.Add(btn_Edit);
             panel2.Controls.Add(btn_Delete);
-            panel2.Location = new Point(34, 62);
+            panel2.Location = new Point(12, 62);
             panel2.Name = "panel2";
-            panel2.Size = new Size(410, 92);
+            panel2.Size = new Size(529, 122);
             panel2.TabIndex = 16;
+            // 
+            // btn_Cancel
+            // 
+            btn_Cancel.Location = new Point(385, 36);
+            btn_Cancel.Name = "btn_Cancel";
+            btn_Cancel.Size = new Size(123, 30);
+            btn_Cancel.TabIndex = 15;
+            btn_Cancel.Text = "Hủy";
+            btn_Cancel.UseVisualStyleBackColor = true;
+            btn_Cancel.Click += btn_Cancel_Click;
             // 
             // frm_ChooseAction
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(492, 170);
+            ClientSize = new Size(564, 196);
             Controls.Add(panel1);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.None;
@@ -111,5 +123,6 @@
         private Panel panel1;
         private Label label1;
         private Panel panel2;
+        private Button btn_Cancel;
     }
 }

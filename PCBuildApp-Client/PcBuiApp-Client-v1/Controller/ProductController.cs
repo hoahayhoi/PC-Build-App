@@ -104,13 +104,17 @@ namespace PcBuiApp_Client_v1.Controllers
         }
 
         // Xóa sản phẩm
-        public async Task DeleteProductAsync(int id)
+        public async Task<bool> DeleteProductAsync(int id)
         {
             string url = $"api/components/delete/{id}";
 
             using (HttpResponseMessage response = await ApiHelper.ApiClient.DeleteAsync(url))
             {
-                if (!response.IsSuccessStatusCode)
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+                else
                 {
                     var error = await response.Content.ReadAsStringAsync();
                     throw new System.Exception("Không thể xóa sản phẩm: " + error);

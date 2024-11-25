@@ -34,5 +34,10 @@ namespace PcBuiApp_Client_v1.View
         {
             this.Close();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

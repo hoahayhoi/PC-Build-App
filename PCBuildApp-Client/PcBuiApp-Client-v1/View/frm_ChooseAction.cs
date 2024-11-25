@@ -37,6 +37,11 @@ namespace PcBuiApp_Client_v1.View
             SelectedAction = UserAction.Delete;
             this.Close();
         }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿// View/UserControlCustom/Navbar_Left.cs
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,7 @@ namespace PcBuiApp_Client_v1.UserControlCustom
 {
     public partial class Navbar_Left : UserControl
     {
-
-
+        // Các sự kiện đã được định nghĩa sẵn
         public event EventHandler QuanLyLapRapClicked;
         public event EventHandler QuanLyKhoClicked;
         public event EventHandler QuanLyTaiKhoanClicked;
@@ -21,7 +21,7 @@ namespace PcBuiApp_Client_v1.UserControlCustom
         public event EventHandler DeXuatCauHinhClicked;
         public event EventHandler QuanLySanPhamClicked;
         public event EventHandler LichSuGiaoDichClicked;
-
+        public event EventHandler BaoCaoThongKeClicked;
 
         public Navbar_Left()
         {
@@ -61,6 +61,32 @@ namespace PcBuiApp_Client_v1.UserControlCustom
         private void btn_LichSuGiaoDich_Click(object sender, EventArgs e)
         {
             LichSuGiaoDichClicked?.Invoke(this, e);
+        }
+
+        private void btn_BaoCaoThongKe_Click(object sender, EventArgs e)
+        {
+            BaoCaoThongKeClicked?.Invoke(this, e);
+        }
+
+        // Thêm các sự kiện mới cho avatar và logout
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            // Toggle visibility của panelLogout khi nhấn vào avatar
+            panelLogout.Visible = !panelLogout.Visible;
+        }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            // Thực hiện đăng xuất
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác Nhận Đăng Xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+        public void SetUsername(string username)
+        {
+            label1.Text = username;
         }
     }
 }

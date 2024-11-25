@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿// View/QuanLySanPham/frm_QuanLySanPham.Designer.cs
+
 
 namespace PcBuiApp_Client_v1.View.QuanLySanPham
 {
@@ -9,10 +10,30 @@ namespace PcBuiApp_Client_v1.View.QuanLySanPham
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        // Các Control
+        private System.Windows.Forms.Button btn_Close;
+        private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Panel panelSearch;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Panel panelActions;
+        private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.DataGridView dataGridViewProducts;
+        private System.Windows.Forms.Panel panelMain;
+
+        // Các cột cho DataGridView
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_TenSanPham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_GiaSanPham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_DanhMucSanPham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_SoLuongTon;
+        private System.Windows.Forms.DataGridViewButtonColumn Column_HanhDongSanPham;
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true nếu managed resources cần được dispose; false nếu không.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,237 +43,212 @@ namespace PcBuiApp_Client_v1.View.QuanLySanPham
             base.Dispose(disposing);
         }
 
+
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Required method for Designer support
         /// </summary>
         private void InitializeComponent()
         {
-            btn_CloseLogin = new Button();
-            panel3 = new Panel();
-            roundedUserControl2 = new UserControlCustom.RoundedUserControl();
-            label2 = new Label();
-            roundedUserControl3 = new UserControlCustom.RoundedUserControl();
-            textBox1 = new TextBox();
-            roundedUserControl4 = new UserControlCustom.RoundedUserControl();
-            btn_ThemSanPham = new Button();
-            label3 = new Label();
-            dataGridView1 = new DataGridView();
-            Column_ListAccountSTT = new DataGridViewTextBoxColumn();
+            btn_Close = new Button();
+            panelHeader = new Panel();
+            lblTitle = new Label();
+            panelSearch = new Panel();
+            txtSearch = new TextBox();
+            btnSearch = new Button();
+            panelActions = new Panel();
+            btn_Add = new Button();
+            dataGridViewProducts = new DataGridView();
+            Column_STT = new DataGridViewTextBoxColumn();
             Column_TenSanPham = new DataGridViewTextBoxColumn();
             Column_GiaSanPham = new DataGridViewTextBoxColumn();
             Column_DanhMucSanPham = new DataGridViewTextBoxColumn();
             Column_SoLuongTon = new DataGridViewTextBoxColumn();
             Column_HanhDongSanPham = new DataGridViewButtonColumn();
-            panel1 = new Panel();
-            roundedUserControl2.SuspendLayout();
-            roundedUserControl3.SuspendLayout();
-            roundedUserControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel1.SuspendLayout();
+            panelMain = new Panel();
+            panelHeader.SuspendLayout();
+            panelSearch.SuspendLayout();
+            panelActions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).BeginInit();
+            panelMain.SuspendLayout();
             SuspendLayout();
             // 
-            // btn_CloseLogin
+            // btn_Close
             // 
-            btn_CloseLogin.Location = new Point(1367, 12);
-            btn_CloseLogin.Margin = new Padding(4, 3, 4, 3);
-            btn_CloseLogin.Name = "btn_CloseLogin";
-            btn_CloseLogin.Size = new Size(34, 27);
-            btn_CloseLogin.TabIndex = 12;
-            btn_CloseLogin.Text = "X";
-            btn_CloseLogin.UseVisualStyleBackColor = true;
-            btn_CloseLogin.Click += btn_CloseLogin_Click;
+            btn_Close.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_Close.FlatAppearance.BorderSize = 0;
+            btn_Close.FlatStyle = FlatStyle.Flat;
+            btn_Close.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Close.ForeColor = Color.Red;
+            btn_Close.Location = new Point(1178, 12);
+            btn_Close.Name = "btn_Close";
+            btn_Close.Size = new Size(34, 27);
+            btn_Close.TabIndex = 0;
+            btn_Close.Text = "X";
+            btn_Close.UseVisualStyleBackColor = true;
+            btn_Close.Click += btn_Close_Click;
             // 
-            // panel3
+            // panelHeader
             // 
-            panel3.Location = new Point(3, 76);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1016, 64);
-            panel3.TabIndex = 17;
+            panelHeader.BackColor = SystemColors.MenuHighlight;
+            panelHeader.Controls.Add(lblTitle);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(0, 0);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1222, 65);
+            panelHeader.TabIndex = 1;
             // 
-            // roundedUserControl2
+            // lblTitle
             // 
-            roundedUserControl2.BackColor = Color.White;
-            roundedUserControl2.Controls.Add(label2);
-            roundedUserControl2.CornerRadius = 20;
-            roundedUserControl2.Location = new Point(0, 76);
-            roundedUserControl2.Name = "roundedUserControl2";
-            roundedUserControl2.Size = new Size(1182, 66);
-            roundedUserControl2.TabIndex = 0;
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(20, 20);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(191, 25);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Quản Lý Sản Phẩm";
             // 
-            // label2
+            // panelSearch
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ActiveCaption;
-            label2.Location = new Point(6, 21);
-            label2.Name = "label2";
-            label2.Size = new Size(106, 21);
-            label2.TabIndex = 0;
-            label2.Text = "Quản Lý Kho";
+            panelSearch.BackColor = Color.White;
+            panelSearch.Controls.Add(txtSearch);
+            panelSearch.Controls.Add(btnSearch);
+            panelSearch.Location = new Point(0, 80);
+            panelSearch.Name = "panelSearch";
+            panelSearch.Size = new Size(389, 50);
+            panelSearch.TabIndex = 2;
             // 
-            // roundedUserControl3
+            // txtSearch
             // 
-            roundedUserControl3.BackColor = Color.White;
-            roundedUserControl3.Controls.Add(textBox1);
-            roundedUserControl3.CornerRadius = 20;
-            roundedUserControl3.Location = new Point(3, 12);
-            roundedUserControl3.Name = "roundedUserControl3";
-            roundedUserControl3.Size = new Size(389, 50);
-            roundedUserControl3.TabIndex = 18;
+            txtSearch.BackColor = Color.White;
+            txtSearch.BorderStyle = BorderStyle.None;
+            txtSearch.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSearch.Location = new Point(10, 14);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderText = "Tìm kiếm...";
+            txtSearch.Size = new Size(279, 22);
+            txtSearch.TabIndex = 0;
             // 
-            // textBox1
+            // btnSearch
             // 
-            textBox1.BackColor = Color.White;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(10, 14);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Tìm kiếm...";
-            textBox1.Size = new Size(379, 22);
-            textBox1.TabIndex = 0;
+            btnSearch.Location = new Point(300, 10);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(75, 30);
+            btnSearch.TabIndex = 1;
+            btnSearch.Text = "Tìm";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
-            // roundedUserControl4
+            // panelActions
             // 
-            roundedUserControl4.BackColor = Color.White;
-            roundedUserControl4.Controls.Add(btn_ThemSanPham);
-            roundedUserControl4.Controls.Add(label3);
-            roundedUserControl4.Controls.Add(dataGridView1);
-            roundedUserControl4.CornerRadius = 50;
-            roundedUserControl4.Location = new Point(1, 169);
-            roundedUserControl4.Name = "roundedUserControl4";
-            roundedUserControl4.Size = new Size(1181, 667);
-            roundedUserControl4.TabIndex = 19;
+            panelActions.Controls.Add(btn_Add);
+            panelActions.Location = new Point(410, 80);
+            panelActions.Name = "panelActions";
+            panelActions.Size = new Size(200, 50);
+            panelActions.TabIndex = 3;
             // 
-            // btn_ThemSanPham
+            // btn_Add
             // 
-            btn_ThemSanPham.Location = new Point(1033, 27);
-            btn_ThemSanPham.Name = "btn_ThemSanPham";
-            btn_ThemSanPham.Size = new Size(129, 38);
-            btn_ThemSanPham.TabIndex = 21;
-            btn_ThemSanPham.Text = "Thêm";
-            btn_ThemSanPham.UseVisualStyleBackColor = true;
-            btn_ThemSanPham.Click += btn_ThemSanPham_Click;
+            btn_Add.Location = new Point(0, 10);
+            btn_Add.Name = "btn_Add";
+            btn_Add.Size = new Size(200, 30);
+            btn_Add.TabIndex = 0;
+            btn_Add.Text = "Thêm Sản Phẩm";
+            btn_Add.UseVisualStyleBackColor = true;
+            btn_Add.Click += btn_Add_Click;
             // 
-            // label3
+            // dataGridViewProducts
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ActiveCaption;
-            label3.Location = new Point(12, 34);
-            label3.Name = "label3";
-            label3.Size = new Size(171, 21);
-            label3.TabIndex = 1;
-            label3.Text = "Danh Sách Hàng Hóa";
+            dataGridViewProducts.AllowUserToAddRows = false;
+            dataGridViewProducts.AllowUserToDeleteRows = false;
+            dataGridViewProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewProducts.BackgroundColor = Color.White;
+            dataGridViewProducts.BorderStyle = BorderStyle.None;
+            dataGridViewProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewProducts.Columns.AddRange(new DataGridViewColumn[] { Column_STT, Column_TenSanPham, Column_GiaSanPham, Column_DanhMucSanPham, Column_SoLuongTon, Column_HanhDongSanPham });
+            dataGridViewProducts.Dock = DockStyle.Left;
+            dataGridViewProducts.Location = new Point(0, 0);
+            dataGridViewProducts.Name = "dataGridViewProducts";
+            dataGridViewProducts.ReadOnly = true;
+            dataGridViewProducts.RowTemplate.Height = 25;
+            dataGridViewProducts.Size = new Size(1222, 672);
+            dataGridViewProducts.TabIndex = 0;
+            dataGridViewProducts.CellClick += dataGridViewProducts_CellClick;
             // 
-            // dataGridView1
+            // Column_STT
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column_ListAccountSTT, Column_TenSanPham, Column_GiaSanPham, Column_DanhMucSanPham, Column_SoLuongTon, Column_HanhDongSanPham });
-            dataGridView1.Dock = DockStyle.Bottom;
-            dataGridView1.Location = new Point(0, 87);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1181, 580);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += DataGridView1_CellContentClick;
-            // 
-            // Column_ListAccountSTT
-            // 
-            Column_ListAccountSTT.FillWeight = 20F;
-            Column_ListAccountSTT.HeaderText = "STT";
-            Column_ListAccountSTT.Name = "Column_ListAccountSTT";
+            Column_STT.FillWeight = 20F;
+            Column_STT.HeaderText = "STT";
+            Column_STT.Name = "Column_STT";
+            Column_STT.ReadOnly = true;
             // 
             // Column_TenSanPham
             // 
-            Column_TenSanPham.HeaderText = "Tên Sản Phẩm";
+            Column_TenSanPham.HeaderText = "Tên Sản Phẩm";
             Column_TenSanPham.Name = "Column_TenSanPham";
+            Column_TenSanPham.ReadOnly = true;
             // 
             // Column_GiaSanPham
             // 
-            Column_GiaSanPham.HeaderText = "Giá Tiền";
+            Column_GiaSanPham.HeaderText = "Giá Tiền";
             Column_GiaSanPham.Name = "Column_GiaSanPham";
+            Column_GiaSanPham.ReadOnly = true;
             // 
             // Column_DanhMucSanPham
             // 
-            Column_DanhMucSanPham.HeaderText = "Danh Mục";
+            Column_DanhMucSanPham.HeaderText = "Danh Mục";
             Column_DanhMucSanPham.Name = "Column_DanhMucSanPham";
+            Column_DanhMucSanPham.ReadOnly = true;
             // 
             // Column_SoLuongTon
             // 
-            Column_SoLuongTon.HeaderText = "Số Lượng Tồn";
+            Column_SoLuongTon.HeaderText = "Số Lượng Tồn";
             Column_SoLuongTon.Name = "Column_SoLuongTon";
+            Column_SoLuongTon.ReadOnly = true;
             // 
             // Column_HanhDongSanPham
             // 
-            Column_HanhDongSanPham.HeaderText = "Hành Động";
+            Column_HanhDongSanPham.HeaderText = "Xóa";
             Column_HanhDongSanPham.Name = "Column_HanhDongSanPham";
-            Column_HanhDongSanPham.Resizable = DataGridViewTriState.True;
-            Column_HanhDongSanPham.SortMode = DataGridViewColumnSortMode.Automatic;
+            Column_HanhDongSanPham.ReadOnly = true;
+            Column_HanhDongSanPham.Text = "Xóa";
+            Column_HanhDongSanPham.UseColumnTextForButtonValue = true;
             // 
-            // panel1
+            // panelMain
             // 
-            panel1.Controls.Add(roundedUserControl4);
-            panel1.Controls.Add(roundedUserControl2);
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(roundedUserControl3);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1195, 836);
-            panel1.TabIndex = 20;
+            panelMain.Controls.Add(dataGridViewProducts);
+            panelMain.Location = new Point(0, 154);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(1242, 672);
+            panelMain.TabIndex = 4;
             // 
             // frm_QuanLySanPham
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1195, 836);
-            Controls.Add(btn_CloseLogin);
-            Controls.Add(panel1);
+            ClientSize = new Size(1222, 836);
+            Controls.Add(btn_Close);
+            Controls.Add(panelHeader);
+            Controls.Add(panelSearch);
+            Controls.Add(panelActions);
+            Controls.Add(panelMain);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 3, 4, 3);
             Name = "frm_QuanLySanPham";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
-            roundedUserControl2.ResumeLayout(false);
-            roundedUserControl2.PerformLayout();
-            roundedUserControl3.ResumeLayout(false);
-            roundedUserControl3.PerformLayout();
-            roundedUserControl4.ResumeLayout(false);
-            roundedUserControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel1.ResumeLayout(false);
+            Text = "Quản Lý Sản Phẩm";
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
+            panelSearch.ResumeLayout(false);
+            panelSearch.PerformLayout();
+            panelActions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).EndInit();
+            panelMain.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-        private System.Windows.Forms.Button btn_CloseLogin;
-        private Panel panel3;
-        private UserControlCustom.RoundedUserControl roundedUserControl2;
-        private UserControlCustom.RoundedUserControl roundedUserControl3;
-        private Label label2;
-        private TextBox textBox1;
-        private UserControlCustom.RoundedUserControl roundedUserControl4;
-        private DataGridView dataGridView1;
-        private Label label3;
-        private Panel panel1;
-        private Button btn_ThemSanPham;
-        private DataGridViewTextBoxColumn Column_ListAccountSTT;
-        private DataGridViewTextBoxColumn Column_TenSanPham;
-        private DataGridViewTextBoxColumn Column_GiaSanPham;
-        private DataGridViewTextBoxColumn Column_DanhMucSanPham;
-        private DataGridViewTextBoxColumn Column_SoLuongTon;
-        private DataGridViewButtonColumn Column_HanhDongSanPham;
-        private EventHandler btn_ThemSanPham_Click;
-        private DataGridViewCellEventHandler dataGridView1_CellContentClick;
-        private EventHandler btn_CloseLogin_Click;
     }
 }

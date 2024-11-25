@@ -30,11 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Navbar_Left));
             roundedUserControl1 = new RoundedUserControl();
-            button4 = new Button();
+            panelLogout = new Panel();
+            btn_BaoCaoThongKe = new Button();
             btn_QuanLySanPham = new Button();
             btn_LichSuGiaoDich = new Button();
             pictureBox2 = new PictureBox();
             label1 = new Label();
+            btn_Logout = new Button();
             btn_QuanLyTaiKhoan = new Button();
             btn_QuanLyKho = new Button();
             btn_QuanLyLapRap = new Button();
@@ -52,11 +54,12 @@
             roundedUserControl1.AutoScroll = true;
             roundedUserControl1.AutoScrollMinSize = new Size(361, 0);
             roundedUserControl1.BackColor = Color.White;
-            roundedUserControl1.Controls.Add(button4);
+            roundedUserControl1.Controls.Add(btn_BaoCaoThongKe);
             roundedUserControl1.Controls.Add(btn_QuanLySanPham);
             roundedUserControl1.Controls.Add(btn_LichSuGiaoDich);
             roundedUserControl1.Controls.Add(pictureBox2);
             roundedUserControl1.Controls.Add(label1);
+            roundedUserControl1.Controls.Add(btn_Logout);
             roundedUserControl1.Controls.Add(btn_QuanLyTaiKhoan);
             roundedUserControl1.Controls.Add(btn_QuanLyKho);
             roundedUserControl1.Controls.Add(btn_QuanLyLapRap);
@@ -64,6 +67,7 @@
             roundedUserControl1.Controls.Add(btn_DeXuatCauHinh);
             roundedUserControl1.Controls.Add(button1);
             roundedUserControl1.Controls.Add(pictureBox1);
+            roundedUserControl1.Controls.Add(panelLogout);
             roundedUserControl1.CornerRadius = 50;
             roundedUserControl1.Dock = DockStyle.Fill;
             roundedUserControl1.Location = new Point(0, 0);
@@ -71,19 +75,30 @@
             roundedUserControl1.Size = new Size(361, 929);
             roundedUserControl1.TabIndex = 16;
             // 
-            // button4
+            // panelLogout
             // 
-            button4.BackColor = SystemColors.ButtonFace;
-            button4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(21, 876);
-            button4.Name = "button4";
-            button4.Padding = new Padding(20, 0, 0, 0);
-            button4.Size = new Size(296, 48);
-            button4.TabIndex = 19;
-            button4.Text = "Báo Cáo Thống Kê";
-            button4.UseVisualStyleBackColor = false;
+            panelLogout.BackColor = Color.White;
+            panelLogout.BorderStyle = BorderStyle.FixedSingle;
+            panelLogout.Location = new Point(21, 174);
+            panelLogout.Name = "panelLogout";
+            panelLogout.Size = new Size(296, 78);
+            panelLogout.TabIndex = 20;
+            panelLogout.Visible = false;
+            // 
+            // btn_BaoCaoThongKe
+            // 
+            btn_BaoCaoThongKe.BackColor = SystemColors.ButtonFace;
+            btn_BaoCaoThongKe.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_BaoCaoThongKe.Image = (Image)resources.GetObject("btn_BaoCaoThongKe.Image");
+            btn_BaoCaoThongKe.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_BaoCaoThongKe.Location = new Point(21, 876);
+            btn_BaoCaoThongKe.Name = "btn_BaoCaoThongKe";
+            btn_BaoCaoThongKe.Padding = new Padding(20, 0, 0, 0);
+            btn_BaoCaoThongKe.Size = new Size(296, 48);
+            btn_BaoCaoThongKe.TabIndex = 19;
+            btn_BaoCaoThongKe.Text = "Báo Cáo Thống Kê";
+            btn_BaoCaoThongKe.UseVisualStyleBackColor = false;
+            btn_BaoCaoThongKe.Click += btn_BaoCaoThongKe_Click;
             // 
             // btn_QuanLySanPham
             // 
@@ -135,6 +150,16 @@
             label1.Size = new Size(162, 17);
             label1.TabIndex = 1;
             label1.Text = "homykim@gmail.com.vn";
+            // 
+            // btn_Logout
+            // 
+            btn_Logout.Location = new Point(111, 215);
+            btn_Logout.Name = "btn_Logout";
+            btn_Logout.Size = new Size(160, 25);
+            btn_Logout.TabIndex = 1;
+            btn_Logout.Text = "Đăng Xuất";
+            btn_Logout.UseVisualStyleBackColor = true;
+            btn_Logout.Click += btn_Logout_Click;
             // 
             // btn_QuanLyTaiKhoan
             // 
@@ -262,8 +287,10 @@
         private Button btn_DeXuatCauHinh;
         private Button button1;
         private PictureBox pictureBox1;
-        private Button button4;
+        private Button btn_BaoCaoThongKe;
         private Button btn_QuanLySanPham;
         private Button btn_LichSuGiaoDich;
+        private Panel panelLogout;
+        private Button btn_Logout;
     }
 }

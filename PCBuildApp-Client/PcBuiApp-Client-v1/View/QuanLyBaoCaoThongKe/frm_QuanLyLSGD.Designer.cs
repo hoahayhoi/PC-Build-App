@@ -107,7 +107,6 @@
             textBox1.PlaceholderText = "Tìm kiếm...";
             textBox1.Size = new Size(379, 22);
             textBox1.TabIndex = 0;
-            // 
             // roundedUserControl4
             // 
             roundedUserControl4.BackColor = Color.White;
@@ -124,7 +123,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ActiveCaption;
-            label3.Location = new Point(12, 34);
+            label3.Location = new Point(12, 39);
             label3.Name = "label3";
             label3.Size = new Size(171, 21);
             label3.TabIndex = 1;
@@ -145,6 +144,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(1181, 580);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column_ListAccountSTT
             // 

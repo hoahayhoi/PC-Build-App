@@ -12,6 +12,7 @@ using PcBuiApp_Client_v1.Models;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PcBuiApp_Client_v1.UserControlCustom;
 
 namespace PcBuiApp_Client_v1.View
 {
@@ -71,9 +72,9 @@ namespace PcBuiApp_Client_v1.View
                 string token = userResponse.Token;
 
                 MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 // Mở form chính của ứng dụng
                 var mainForm = new frm_QuanLyChinh(); // Giả sử bạn có form chính tên là MainForm
+                mainForm.SetUsername(username);
                 mainForm.Show();
                 this.Hide();
             }

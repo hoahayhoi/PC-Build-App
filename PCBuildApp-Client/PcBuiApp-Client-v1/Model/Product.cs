@@ -15,6 +15,6 @@ namespace PcBuiApp_Client_v1.Models
         public string category { get; set; }
         public decimal price { get; set; }
         public int stock { get; set; }
-        public int supplierID { get; set; }
+        public int? supplierID { get; set; }
     }
 }
