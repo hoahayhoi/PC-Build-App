@@ -76,3 +76,46 @@ D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-
 D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.pdb
 D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.genruntimeconfig.cache
 D:\Exercise File\Code\C#\ƯDTM\FrontEnd\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\ref\PcBuiApp-Client-v1.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\PcBuiApp-Client-v1.exe
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\PcBuiApp-Client-v1.deps.json
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\PcBuiApp-Client-v1.runtimeconfig.json
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\PcBuiApp-Client-v1.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\PcBuiApp-Client-v1.pdb
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\MaterialSkin.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.csproj.AssemblyReference.cache
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.Controllers.ReportController.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.Properties.Resources.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.UserControlCustom.Navbar_Left.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.UserControlCustom.RoundedUserControl.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_DangNhap.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_ChooseAction.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_QuanLyChinh.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.QuanLyBaoCaoThongKe.frm_BaoCaoThongKe.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_QuanLyLSGD.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_QuanLyChiTietDonHang.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_QuanLyDonHang.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_QuanLyKho.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_DeXuatCauHinh.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_DSLapRap.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_QuanLyLapRap.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_AddUser.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_EditUser.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.frm_QuanLyNhanVien.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.QuanLySanPham.frm_ChinhSuaSanPham.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.QuanLySanPham.frm_QuanLySanPham.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.QuanLySanPham.frm_ThemSanPham.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.csproj.GenerateResource.cache
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.AssemblyInfoInputs.cache
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.AssemblyInfo.cs
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.csproj.CoreCompileInputs.cache
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.sourcelink.json
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp.B49C9C86.Up2Date
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\refint\PcBuiApp-Client-v1.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.pdb
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp-Client-v1.genruntimeconfig.cache
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\ref\PcBuiApp-Client-v1.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.QuanLyDonHang.frm_ChiTietDonHang.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\PC-Build-App\PCBuildApp-Client\PcBuiApp-Client-v1\obj\Debug\net6.0-windows\PcBuiApp_Client_v1.View.QuanLyKho.frm_ChiTietDonHang.resources

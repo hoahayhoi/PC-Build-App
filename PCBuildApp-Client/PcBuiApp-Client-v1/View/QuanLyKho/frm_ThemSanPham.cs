@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace PcBuiApp_Client_v1.View.QuanLyKho
 {
-    public partial class frm_ThemSanPham : Form
+    public partial class frm_ChiTietDonHang : Form
     {
         private ProductController productController;
 
-        public frm_ThemSanPham()
+        public frm_ChiTietDonHang()
         {
             InitializeComponent();
             productController = new ProductController();

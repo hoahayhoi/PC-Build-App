@@ -2,6 +2,7 @@
 using PcBuiApp_Client_v1.Controllers;
 using PcBuiApp_Client_v1.Models;
 using PcBuiApp_Client_v1.View.QuanLyKho;
+using PcBuiApp_Client_v1.View.QuanLySanPham;
 using System;
 using System.Collections.Generic;
 using System.Linq;

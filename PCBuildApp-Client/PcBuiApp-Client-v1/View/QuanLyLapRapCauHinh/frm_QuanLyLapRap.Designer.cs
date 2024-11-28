@@ -36,15 +36,17 @@
             textBox1 = new TextBox();
             roundedUserControl4 = new UserControlCustom.RoundedUserControl();
             label3 = new Label();
-            dataGridView1 = new DataGridView();
+            dgv_DSLR = new DataGridView();
             Column_ListAccountSTT = new DataGridViewTextBoxColumn();
-            Column_ListAccountName = new DataGridViewTextBoxColumn();
+            Column_OrderId = new DataGridViewTextBoxColumn();
+            Column_Deadline = new DataGridViewTextBoxColumn();
+            Column_Status = new DataGridViewTextBoxColumn();
             Column_ListAccountAction = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
             roundedUserControl2.SuspendLayout();
             roundedUserControl3.SuspendLayout();
             roundedUserControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_DSLR).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -57,6 +59,7 @@
             btn_CloseLogin.TabIndex = 12;
             btn_CloseLogin.Text = "X";
             btn_CloseLogin.UseVisualStyleBackColor = true;
+            btn_CloseLogin.Click += btn_CloseLogin_Click;
             // 
             // panel3
             // 
@@ -111,7 +114,7 @@
             // 
             roundedUserControl4.BackColor = Color.White;
             roundedUserControl4.Controls.Add(label3);
-            roundedUserControl4.Controls.Add(dataGridView1);
+            roundedUserControl4.Controls.Add(dgv_DSLR);
             roundedUserControl4.CornerRadius = 50;
             roundedUserControl4.Location = new Point(1, 169);
             roundedUserControl4.Name = "roundedUserControl4";
@@ -125,25 +128,26 @@
             label3.ForeColor = SystemColors.ActiveCaption;
             label3.Location = new Point(12, 34);
             label3.Name = "label3";
-            label3.Size = new Size(166, 21);
+            label3.Size = new Size(220, 21);
             label3.TabIndex = 1;
-            label3.Text = "Danh Sách Linh Kiện";
+            label3.Text = "Danh Sách Yêu Cầu Lắp Ráp";
             // 
-            // dataGridView1
+            // dgv_DSLR
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column_ListAccountSTT, Column_ListAccountName, Column_ListAccountAction });
-            dataGridView1.Dock = DockStyle.Bottom;
-            dataGridView1.Location = new Point(0, 93);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1181, 574);
-            dataGridView1.TabIndex = 0;
+            dgv_DSLR.AllowUserToAddRows = false;
+            dgv_DSLR.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_DSLR.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+            dgv_DSLR.BackgroundColor = Color.White;
+            dgv_DSLR.BorderStyle = BorderStyle.None;
+            dgv_DSLR.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_DSLR.Columns.AddRange(new DataGridViewColumn[] { Column_ListAccountSTT, Column_OrderId, Column_Deadline, Column_Status, Column_ListAccountAction });
+            dgv_DSLR.Dock = DockStyle.Bottom;
+            dgv_DSLR.Location = new Point(0, 93);
+            dgv_DSLR.Name = "dgv_DSLR";
+            dgv_DSLR.RowTemplate.Height = 25;
+            dgv_DSLR.Size = new Size(1181, 574);
+            dgv_DSLR.TabIndex = 0;
+            dgv_DSLR.CellContentClick += dgv_DSLR_CellContentClick;
             // 
             // Column_ListAccountSTT
             // 
@@ -151,10 +155,20 @@
             Column_ListAccountSTT.HeaderText = "STT";
             Column_ListAccountSTT.Name = "Column_ListAccountSTT";
             // 
-            // Column_ListAccountName
+            // Column_OrderId
             // 
-            Column_ListAccountName.HeaderText = "Tên Linh Kiện";
-            Column_ListAccountName.Name = "Column_ListAccountName";
+            Column_OrderId.HeaderText = "Mã Đơn Hàng";
+            Column_OrderId.Name = "Column_OrderId";
+            // 
+            // Column_Deadline
+            // 
+            Column_Deadline.HeaderText = "Deadline";
+            Column_Deadline.Name = "Column_Deadline";
+            // 
+            // Column_Status
+            // 
+            Column_Status.HeaderText = "Trạng Thái";
+            Column_Status.Name = "Column_Status";
             // 
             // Column_ListAccountAction
             // 
@@ -170,7 +184,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1194, 836);
+            panel1.Size = new Size(1194, 788);
             panel1.TabIndex = 20;
             // 
             // frm_QuanLyLapRap
@@ -178,7 +192,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1194, 836);
+            ClientSize = new Size(1194, 788);
             Controls.Add(btn_CloseLogin);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -186,13 +200,14 @@
             Name = "frm_QuanLyLapRap";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += frm_QuanLyLapRap_Load;
             roundedUserControl2.ResumeLayout(false);
             roundedUserControl2.PerformLayout();
             roundedUserControl3.ResumeLayout(false);
             roundedUserControl3.PerformLayout();
             roundedUserControl4.ResumeLayout(false);
             roundedUserControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_DSLR).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -205,11 +220,13 @@
         private Label label2;
         private TextBox textBox1;
         private UserControlCustom.RoundedUserControl roundedUserControl4;
-        private DataGridView dataGridView1;
+        private DataGridView dgv_DSLR;
         private Label label3;
         private Panel panel1;
         private DataGridViewTextBoxColumn Column_ListAccountSTT;
-        private DataGridViewTextBoxColumn Column_ListAccountName;
+        private DataGridViewTextBoxColumn Column_OrderId;
+        private DataGridViewTextBoxColumn Column_Deadline;
+        private DataGridViewTextBoxColumn Column_Status;
         private DataGridViewTextBoxColumn Column_ListAccountAction;
     }
 }

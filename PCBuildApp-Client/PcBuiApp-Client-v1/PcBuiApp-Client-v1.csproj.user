@@ -1,10 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="View\frm_AddUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\frm_DSLapRap.cs">
+    <Compile Update="View\Auth\frm_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserControlCustom\Navbar_Left.cs">
@@ -13,25 +10,55 @@
     <Compile Update="UserControlCustom\RoundedUserControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="View\frm_DangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\frm_EditUser.cs">
+    <Compile Update="View\frm_ChooseAction.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\frm_QuanLyChinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\frm_QuanLyDonHang.cs">
+    <Compile Update="View\QuanLyBaoCaoThongKe\frm_BaoCaoThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\frm_QuanLyKho.cs">
+    <Compile Update="View\QuanLyBaoCaoThongKe\frm_QuanLyLSGD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\frm_QuanLyLapRap.cs">
+    <Compile Update="View\QuanLyDonHang\frm_QuanLyChiTietDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\frm_QuanLyNhanVien.cs">
+    <Compile Update="View\QuanLyDonHang\frm_QuanLyDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\QuanLyKho\frm_QuanLyKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\QuanLyKho\frm_ThemSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\QuanLyLapRapCauHinh\frm_DeXuatCauHinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\QuanLyLapRapCauHinh\frm_DSLapRap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\QuanLyLapRapCauHinh\frm_QuanLyLapRap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\QuanLyNguoiDung\frm_AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\QuanLyNguoiDung\frm_EditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\QuanLyNguoiDung\frm_QuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\QuanLySanPham\frm_ChinhSuaSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\QuanLySanPham\frm_QuanLySanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\QuanLySanPham\frm_ThemSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

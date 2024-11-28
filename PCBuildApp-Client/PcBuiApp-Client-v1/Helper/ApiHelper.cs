@@ -19,7 +19,7 @@ namespace PcBuiApp_Client_v1.Helpers
         private static void InitializeClient()
         {
             ApiClient = new HttpClient();
-            ApiClient.BaseAddress = new Uri("https://localhost:7067/");
+            ApiClient.BaseAddress = new Uri("http://localhost:5136/");
             ApiClient.DefaultRequestHeaders.Accept.Clear();
             ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }

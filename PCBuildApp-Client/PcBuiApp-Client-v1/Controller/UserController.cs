@@ -116,7 +116,7 @@ namespace PcBuiApp_Client_v1.Controllers
             }
         }
 
-        public async Task<AppUser> GetUserByIdAsync(int id)
+        public async Task<AppUser> GetUserByIdAsync(int? id)
         {
             string url = $"api/customers/{id}";
 

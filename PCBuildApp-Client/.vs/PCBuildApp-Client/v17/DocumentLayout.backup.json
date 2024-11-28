@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\PC-Build-App-Frontend\\PC-Build-App\\PCBuildApp-Client\\",
+  "WorkspaceRootPath": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\PCBuildApp-Client\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\pc-build-app-frontend\\pc-build-app\\pcbuildapp-client\\pcbuiapp-client-v1\\frm_dslaprap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|solutionrelative:pcbuiapp-client-v1\\frm_dslaprap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\frontend\\pc-build-app\\pcbuildapp-client\\pcbuiapp-client-v1\\controller\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|solutionrelative:pcbuiapp-client-v1\\controller\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\pc-build-app-frontend\\pc-build-app\\pcbuildapp-client\\pcbuiapp-client-v1\\frm_dslaprap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|solutionrelative:pcbuiapp-client-v1\\frm_dslaprap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\frontend\\pc-build-app\\pcbuildapp-client\\pcbuiapp-client-v1\\view\\quanlydonhang\\frm_chitietdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|solutionrelative:pcbuiapp-client-v1\\view\\quanlydonhang\\frm_chitietdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\frontend\\pc-build-app\\pcbuildapp-client\\pcbuiapp-client-v1\\view\\quanlydonhang\\frm_chitietdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB3AB685-6D07-40DF-BAD1-8ADC915B1CCF}|PcBuiApp-Client-v1\\PcBuiApp-Client-v1.csproj|solutionrelative:pcbuiapp-client-v1\\view\\quanlydonhang\\frm_chitietdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frm_DSLapRap.cs",
-              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\PC-Build-App-Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\frm_DSLapRap.cs",
-              "RelativeDocumentMoniker": "PcBuiApp-Client-v1\\frm_DSLapRap.cs",
-              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\PC-Build-App-Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\frm_DSLapRap.cs",
-              "RelativeToolTip": "PcBuiApp-Client-v1\\frm_DSLapRap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAjAAAAAAAAAA==",
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\Controller\\OrdersController.cs",
+              "RelativeDocumentMoniker": "PcBuiApp-Client-v1\\Controller\\OrdersController.cs",
+              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\Controller\\OrdersController.cs",
+              "RelativeToolTip": "PcBuiApp-Client-v1\\Controller\\OrdersController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAtwFoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T16:08:16.746Z",
+              "WhenOpened": "2024-11-28T13:19:21.524Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frm_DSLapRap.cs [Design]",
-              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\PC-Build-App-Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\frm_DSLapRap.cs",
-              "RelativeDocumentMoniker": "PcBuiApp-Client-v1\\frm_DSLapRap.cs",
-              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\PC-Build-App-Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\frm_DSLapRap.cs [Design]",
-              "RelativeToolTip": "PcBuiApp-Client-v1\\frm_DSLapRap.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "frm_ChiTietDonHang.cs [Design]",
+              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\View\\QuanLyDonHang\\frm_ChiTietDonHang.cs",
+              "RelativeDocumentMoniker": "PcBuiApp-Client-v1\\View\\QuanLyDonHang\\frm_ChiTietDonHang.cs",
+              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\View\\QuanLyDonHang\\frm_ChiTietDonHang.cs [Design]*",
+              "RelativeToolTip": "PcBuiApp-Client-v1\\View\\QuanLyDonHang\\frm_ChiTietDonHang.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T15:57:14.222Z",
+              "WhenOpened": "2024-11-28T13:10:14.926Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frm_ChiTietDonHang.cs",
+              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\View\\QuanLyDonHang\\frm_ChiTietDonHang.cs",
+              "RelativeDocumentMoniker": "PcBuiApp-Client-v1\\View\\QuanLyDonHang\\frm_ChiTietDonHang.cs",
+              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\PCBuildApp-Client\\PcBuiApp-Client-v1\\View\\QuanLyDonHang\\frm_ChiTietDonHang.cs*",
+              "RelativeToolTip": "PcBuiApp-Client-v1\\View\\QuanLyDonHang\\frm_ChiTietDonHang.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAmwDIAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T13:09:57.419Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,7 +1,7 @@
 ﻿// View/QuanLyKho/frm_ThemSanPham.Designer.cs
 namespace PcBuiApp_Client_v1.View.QuanLyKho
 {
-    partial class frm_ThemSanPham
+    partial class frm_ChiTietDonHang
     {
         /// <summary>
         /// Required designer variable.

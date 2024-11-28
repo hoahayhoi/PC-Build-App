@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PcBuiApp_Client_v1.Model;
+using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -15,7 +16,6 @@ namespace PcBuiApp_Client_v1.Models
 		public DateTime? DateCompleted { get; set; }
 		public decimal TotalPrice { get; set; }
 		public string Status { get; set; }
+		public List<OrderDetail> Details { get; set; }
 	}
-
-
 }
