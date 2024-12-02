@@ -86,7 +86,7 @@ namespace api.Controllers
         }
 
         [HttpPost("create")]
-        [Authorize]
+        // [Authorize]
 
         public async Task<IActionResult> Create([FromBody] CreateComponentRequestDto componentDto)
         {

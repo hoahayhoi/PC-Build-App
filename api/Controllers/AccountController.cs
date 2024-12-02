@@ -27,27 +27,28 @@ namespace api.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginDto loginDto) 
+        public async Task<IActionResult> Login(LoginDto loginDto)
         {
-            if (!ModelState.IsValid) {
+            if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
             }
 
             var user = _userManager.Users.FirstOrDefault(x => x.UserName == loginDto.Username.ToLower());
 
-            if (user == null) 
+            if (user == null)
             {
                 return Unauthorized("Invalid username");
             }
-            
+
             var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
-            if (!result.Succeeded) 
+            if (!result.Succeeded)
             {
                 return Unauthorized("Username not found and/or password incorrect");
             }
 
             return Ok(
-                new NewUserDto 
+                new NewUserDto
                 {
                     UserName = user.UserName,
                     Email = user.Email,
@@ -57,7 +58,7 @@ namespace api.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterDto registerDto) 
+        public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
         {
             try
             {
@@ -72,26 +73,26 @@ namespace api.Controllers
 
                 var createdUser = await _userManager.CreateAsync(appUser, registerDto.Password);
 
-                if (createdUser.Succeeded) 
+                if (createdUser.Succeeded)
                 {
                     var roleResult = await _userManager.AddToRoleAsync(appUser, "User");
-                    if (roleResult.Succeeded) 
+                    if (roleResult.Succeeded)
                     {
                         return Ok(
-                            new NewUserDto 
+                            new NewUserDto
                             {
                                 UserName = appUser.UserName,
                                 Email = appUser.Email,
                                 Token = _tokenService.CreateToken(appUser)
                             }
                         );
-                    } 
+                    }
                     else
                     {
-                        return StatusCode(500, roleResult.Errors);   
-                    } 
+                        return StatusCode(500, roleResult.Errors);
+                    }
                 }
-                else 
+                else
                 {
                     return StatusCode(500, createdUser.Errors);
                 }
@@ -99,6 +100,40 @@ namespace api.Controllers
             catch (Exception e)
             {
                 return StatusCode(500, e);
+            }
+        }
+
+        [HttpPost("change-password")]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDto changePasswordDto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
+
+                // Lấy user từ UserManager
+                var user = await _userManager.FindByNameAsync(changePasswordDto.Username);
+                if (user == null)
+                    return NotFound("User not found");
+
+                // Kiểm tra mật khẩu cũ
+                var passwordCheck = await _signInManager.CheckPasswordSignInAsync(user, changePasswordDto.OldPassword, false);
+                if (!passwordCheck.Succeeded)
+                    return Unauthorized("Invalid old password");
+
+                // Đổi mật khẩu
+                var result = await _userManager.ChangePasswordAsync(user, changePasswordDto.OldPassword, changePasswordDto.NewPassword);
+                if (!result.Succeeded)
+                {
+                    // Trả lỗi nếu không đổi được mật khẩu
+                    return BadRequest(new { errors = result.Errors });
+                }
+
+                return Ok("Password has been changed successfully");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
             }
         }
     }
