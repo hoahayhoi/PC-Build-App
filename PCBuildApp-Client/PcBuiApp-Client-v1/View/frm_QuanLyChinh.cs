@@ -1,6 +1,8 @@
 ﻿using PcBuiApp_Client_v1.UserControlCustom;
+using PcBuiApp_Client_v1.View.DeXuatCauHinh;
 using PcBuiApp_Client_v1.View.QuanLyBaoCaoThongKe;
 using PcBuiApp_Client_v1.View.QuanLySanPham;
+using PcBuiApp_Client_v1.View.TrangChu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +44,7 @@ namespace PcBuiApp_Client_v1.View
             navbar_Left1.QuanLySanPhamClicked += navbar_Left1_QuanLySanPhamClicked;
             navbar_Left1.LichSuGiaoDichClicked += navbar_Left1_LichSuGiaoDichClicked;
             navbar_Left1.BaoCaoThongKeClicked += navbar_Left1_BaoCaoThongKeClicked;
+            navbar_Left1.TrangChuClicked += navbar_Left1_TrangChuClicked;
         }
 
         // Phương thức hiển thị form trong panel
@@ -85,7 +88,7 @@ namespace PcBuiApp_Client_v1.View
         // Xử lý sự kiện khi click vào nút "Đề Xuất Cấu Hình"
         private void navbar_Left1_DeXuatCauHinhClicked(object sender, EventArgs e)
         {
-            var deXuatCauHinhForm = new frm_DeXuatCauHinh();
+            var deXuatCauHinhForm = new frm_dexuatcauhinh();
             ShowFormInPanel(deXuatCauHinhForm);
         }
 
@@ -115,9 +118,10 @@ namespace PcBuiApp_Client_v1.View
             this.Close();
         }
 
-        private void navbar_Left1_Load(object sender, EventArgs e)
+        private void navbar_Left1_TrangChuClicked(object sender, EventArgs e)
         {
-
+            var main = new frm_Main();
+            ShowFormInPanel(main);
         }
 
         public void SetUsername(string username)

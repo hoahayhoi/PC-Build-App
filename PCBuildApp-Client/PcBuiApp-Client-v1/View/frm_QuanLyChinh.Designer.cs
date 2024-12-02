@@ -60,7 +60,6 @@
             navbar_Left1.Name = "navbar_Left1";
             navbar_Left1.Size = new Size(344, 836);
             navbar_Left1.TabIndex = 21;
-            navbar_Left1.Load += navbar_Left1_Load;
             // 
             // frm_QuanLyChinh
             // 

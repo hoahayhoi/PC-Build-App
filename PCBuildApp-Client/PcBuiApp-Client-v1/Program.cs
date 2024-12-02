@@ -12,7 +12,7 @@ namespace PcBuiApp_Client_v1
 		{
 			ApplicationConfiguration.Initialize();
 			//Application.Run(new frm_QuanLyChinh());
-            Application.Run(new frm_DangNhap());
+            Application.Run(new frm_QuanLyChinh());
         }
 	}
 }

@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="UserControlCustom\PCconfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControlCustom\Usercontroldexuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="View\Auth\frm_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -9,6 +15,9 @@
     </Compile>
     <Compile Update="UserControlCustom\RoundedUserControl.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="View\DeXuatCauHinh\frm_dexuatcauhinh.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\frm_ChooseAction.cs">
       <SubType>Form</SubType>
@@ -59,6 +68,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\QuanLySanPham\frm_ThemSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\TrangChu\frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
