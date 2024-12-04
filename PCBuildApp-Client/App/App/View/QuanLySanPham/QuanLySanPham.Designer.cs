@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLySanPham));
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -75,32 +72,15 @@
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-borrow-book-32.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-analytics-32.png");
-            this.imageList1.Images.SetKeyName(2, "icons8-email-48.png");
-            this.imageList1.Images.SetKeyName(3, "icons8-notification-48.png");
-            this.imageList1.Images.SetKeyName(4, "icons8-typing-48.png");
-            this.imageList1.Images.SetKeyName(5, "icons8-table-32.png");
-            this.imageList1.Images.SetKeyName(6, "icons8-goal-48.png");
-            this.imageList1.Images.SetKeyName(7, "icons8-line-chart-48.png");
-            this.imageList1.Images.SetKeyName(8, "icons8-us-dollar-52.png");
-            this.imageList1.Images.SetKeyName(9, "icons8-home-48.png");
-            this.imageList1.Images.SetKeyName(10, "icons8-dashboard-48.png");
-            this.imageList1.Images.SetKeyName(11, "icons8-document-48.png");
-            // 
             // statusStrip1
             // 
             this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
             this.statusStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(3, 641);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 644);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(989, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(995, 22);
             this.statusStrip1.TabIndex = 18;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -114,7 +94,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trangChủToolStripMenuItem,
             this.sảnPhẩmToolStripMenuItem,
@@ -125,10 +105,11 @@
             this.nhàCungCấptoolStripMenuItem,
             this.tàiKhoảnToolStripMenuItem,
             this.hệThốngToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(3, 64);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.MinimumSize = new System.Drawing.Size(921, 35);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(989, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(995, 35);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -137,6 +118,7 @@
             this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
             this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.trangChủToolStripMenuItem.Text = "Trang chủ";
+            this.trangChủToolStripMenuItem.Click += new System.EventHandler(this.trangChủToolStripMenuItem_Click);
             // 
             // sảnPhẩmToolStripMenuItem
             // 
@@ -255,7 +237,6 @@
             this.materialFloatingActionButton3.Depth = 0;
             this.materialFloatingActionButton3.Icon = global::App.Properties.Resources.icons8_borrow_book_32;
             this.materialFloatingActionButton3.ImageKey = "icons8-borrow-book-32.png";
-            this.materialFloatingActionButton3.ImageList = this.imageList1;
             this.materialFloatingActionButton3.Location = new System.Drawing.Point(793, 117);
             this.materialFloatingActionButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFloatingActionButton3.Name = "materialFloatingActionButton3";
@@ -269,7 +250,6 @@
             this.materialFloatingActionButton2.Depth = 0;
             this.materialFloatingActionButton2.Icon = global::App.Properties.Resources.icons8_borrow_book_32;
             this.materialFloatingActionButton2.ImageKey = "icons8-borrow-book-32.png";
-            this.materialFloatingActionButton2.ImageList = this.imageList1;
             this.materialFloatingActionButton2.Location = new System.Drawing.Point(513, 117);
             this.materialFloatingActionButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFloatingActionButton2.Name = "materialFloatingActionButton2";
@@ -397,7 +377,6 @@
             this.materialFloatingActionButton1.Depth = 0;
             this.materialFloatingActionButton1.Icon = global::App.Properties.Resources.icons8_borrow_book_32;
             this.materialFloatingActionButton1.ImageKey = "icons8-borrow-book-32.png";
-            this.materialFloatingActionButton1.ImageList = this.imageList1;
             this.materialFloatingActionButton1.Location = new System.Drawing.Point(233, 117);
             this.materialFloatingActionButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFloatingActionButton1.Name = "materialFloatingActionButton1";
@@ -481,8 +460,9 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "QuanLySanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Trang Chủ";
+            this.Text = "Quản lý Sản phẩm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuanLySanPham_FormClosed);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -501,7 +481,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.MenuStrip menuStrip1;

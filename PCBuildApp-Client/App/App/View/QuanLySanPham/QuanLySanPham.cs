@@ -12,21 +12,28 @@ using System.Windows.Forms;
 
 namespace App.View.QuanLySanPham
 {
-    public partial class QuanLySanPham : MaterialForm
+    public partial class QuanLySanPham : Form
     {
         private CustomMenuStripRender _renderer;
         public QuanLySanPham()
         {
             InitializeComponent();
-            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey900, Primary.Blue900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
 
             _renderer = new CustomMenuStripRender();
             this.menuStrip1.Renderer = _renderer;
-            _renderer.CurrentItem = trangChủToolStripMenuItem.Text;
+            _renderer.CurrentItem = sảnPhẩmToolStripMenuItem.Text;
         }
 
+        private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Main f = new frm_Main();
+            f.Show();
+            this.Hide();
+        }
+
+        private void QuanLySanPham_FormClosed(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

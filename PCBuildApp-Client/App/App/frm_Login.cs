@@ -15,10 +15,14 @@ namespace App
 {
     public partial class frm_Login : MaterialForm
     {
+        DatabaseDataContext db = new DatabaseDataContext(Properties.Settings.Default.PCBuildConnectionString);
+        public static string CurrentUserRole;
+
         public frm_Login()
         {
             InitializeComponent();
         }
+
         private void frm_Login_Load(object sender, EventArgs e)
         {
             LoadLoginInfo();
@@ -28,6 +32,12 @@ namespace App
         {
             try
             {
+                var role = (from u in db.Users
+                           join ur in db.UserRoles on u.Id equals ur.UserId
+                           join r in db.Roles on ur.RoleId equals r.Id
+                           select new { Role = r.Name }).FirstOrDefault();
+                CurrentUserRole = role.Role.ToString();
+
                 var loginDto = new LoginDto
                 {
                     Username = txtTenDN.Text.Trim(),

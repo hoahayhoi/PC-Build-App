@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App.View.QuanLySanPham;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Login());
+            Application.Run(new frm_Main());
         }
     }
 }
