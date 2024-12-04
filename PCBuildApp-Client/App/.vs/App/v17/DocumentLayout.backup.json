@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\App\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\frontend\\pc-build-app\\app\\app\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|solutionrelative:app\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\frontend\\pc-build-app\\app\\app\\frm_main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|solutionrelative:app\\frm_main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\frontend\\pc-build-app\\app\\app\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|solutionrelative:app\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frm_Main.Designer.cs",
+              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\App\\App\\frm_Main.Designer.cs",
+              "RelativeDocumentMoniker": "App\\frm_Main.Designer.cs",
+              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\App\\App\\frm_Main.Designer.cs*",
+              "RelativeToolTip": "App\\frm_Main.Designer.cs*",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAtwKQAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T06:49:39.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frm_Main.cs [Design]",
+              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\App\\App\\frm_Main.cs",
+              "RelativeDocumentMoniker": "App\\frm_Main.cs",
+              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\App\\App\\frm_Main.cs [Design]*",
+              "RelativeToolTip": "App\\frm_Main.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T06:42:16.587Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frm_Main.cs",
+              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\App\\App\\frm_Main.cs",
+              "RelativeDocumentMoniker": "App\\frm_Main.cs",
+              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\PC-Build-App\\App\\App\\frm_Main.cs*",
+              "RelativeToolTip": "App\\frm_Main.cs*",
+              "ViewState": "AgIAABIAAAAAAAAAAAAtwCAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T06:02:42.839Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
