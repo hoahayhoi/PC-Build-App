@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Login));
             this.txtTenDN = new MaterialSkin.Controls.MaterialTextBox();
             this.txtMK = new MaterialSkin.Controls.MaterialTextBox();
-            this.ckbHienThiMK = new MaterialSkin.Controls.MaterialCheckbox();
+            this.ckbNhoMK = new MaterialSkin.Controls.MaterialCheckbox();
             this.btnDN = new MaterialSkin.Controls.MaterialButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,26 +68,28 @@
             this.txtMK.MouseState = MaterialSkin.MouseState.OUT;
             this.txtMK.Multiline = false;
             this.txtMK.Name = "txtMK";
+            this.txtMK.Password = true;
             this.txtMK.Size = new System.Drawing.Size(342, 50);
             this.txtMK.TabIndex = 1;
             this.txtMK.Text = "";
             this.txtMK.TrailingIcon = null;
             // 
-            // ckbHienThiMK
+            // ckbNhoMK
             // 
-            this.ckbHienThiMK.AutoSize = true;
-            this.ckbHienThiMK.Depth = 0;
-            this.ckbHienThiMK.Location = new System.Drawing.Point(401, 281);
-            this.ckbHienThiMK.Margin = new System.Windows.Forms.Padding(0);
-            this.ckbHienThiMK.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.ckbHienThiMK.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ckbHienThiMK.Name = "ckbHienThiMK";
-            this.ckbHienThiMK.ReadOnly = false;
-            this.ckbHienThiMK.Ripple = true;
-            this.ckbHienThiMK.Size = new System.Drawing.Size(160, 37);
-            this.ckbHienThiMK.TabIndex = 2;
-            this.ckbHienThiMK.Text = "Hiển thị mật khẩu";
-            this.ckbHienThiMK.UseVisualStyleBackColor = true;
+            this.ckbNhoMK.AutoSize = true;
+            this.ckbNhoMK.Depth = 0;
+            this.ckbNhoMK.Location = new System.Drawing.Point(401, 281);
+            this.ckbNhoMK.Margin = new System.Windows.Forms.Padding(0);
+            this.ckbNhoMK.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.ckbNhoMK.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ckbNhoMK.Name = "ckbNhoMK";
+            this.ckbNhoMK.ReadOnly = false;
+            this.ckbNhoMK.Ripple = true;
+            this.ckbNhoMK.Size = new System.Drawing.Size(135, 37);
+            this.ckbNhoMK.TabIndex = 2;
+            this.ckbNhoMK.Text = "Nhớ mật khẩu";
+            this.ckbNhoMK.UseVisualStyleBackColor = true;
+            this.ckbNhoMK.CheckedChanged += new System.EventHandler(this.ckbNhoMK_CheckedChanged);
             // 
             // btnDN
             // 
@@ -95,7 +98,7 @@
             this.btnDN.Depth = 0;
             this.btnDN.HighEmphasis = true;
             this.btnDN.Icon = null;
-            this.btnDN.Location = new System.Drawing.Point(638, 325);
+            this.btnDN.Location = new System.Drawing.Point(533, 324);
             this.btnDN.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDN.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDN.Name = "btnDN";
@@ -110,9 +113,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(52, 129);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 232);
+            this.pictureBox1.Size = new System.Drawing.Size(297, 189);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -123,13 +128,14 @@
             this.ClientSize = new System.Drawing.Size(793, 427);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDN);
-            this.Controls.Add(this.ckbHienThiMK);
+            this.Controls.Add(this.ckbNhoMK);
             this.Controls.Add(this.txtMK);
             this.Controls.Add(this.txtTenDN);
             this.Name = "frm_Login";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG NHẬP";
+            this.Load += new System.EventHandler(this.frm_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,7 +146,7 @@
 
         private MaterialSkin.Controls.MaterialTextBox txtTenDN;
         private MaterialSkin.Controls.MaterialTextBox txtMK;
-        private MaterialSkin.Controls.MaterialCheckbox ckbHienThiMK;
+        private MaterialSkin.Controls.MaterialCheckbox ckbNhoMK;
         private MaterialSkin.Controls.MaterialButton btnDN;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
