@@ -36,3 +36,12 @@ D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildAp
 D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.csproj.CoreCompileInputs.cache
 D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.exe
 D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.pdb
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLySanPham.QuanLySanPham.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\App.exe.config
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\App.exe
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\App.pdb
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\MaterialSkin.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\Newtonsoft.Json.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\Newtonsoft.Json.xml
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.csproj.Up2Date

@@ -22,5 +22,64 @@ namespace App.Properties {
                 return defaultInstance;
             }
         }
+
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=34.80.167.226,1433;Initial Catalog=PCBuild;User Id=sqlserver;Password" +
+            "=admin;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;Application" +
+            "Intent=ReadWrite;MultiSubnetFailover=False")]
+        public string DB_CONNECT
+        {
+            get
+            {
+                return ((string)(this["DB_CONNECT"]));
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Username
+        {
+            get
+            {
+                return ((string)(this["Username"]));
+            }
+            set
+            {
+                this["Username"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Password
+        {
+            get
+            {
+                return ((string)(this["Password"]));
+            }
+            set
+            {
+                this["Password"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool RememberLogin
+        {
+            get
+            {
+                return ((bool)(this["RememberLogin"]));
+            }
+            set
+            {
+                this["RememberLogin"] = value;
+            }
+        }
     }
 }
