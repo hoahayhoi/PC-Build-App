@@ -84,5 +84,23 @@ namespace App
             frm.Show();
             this.Hide();
         }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Bạn có chắc muốn đăng xuất không?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+
+                Properties.Settings.Default.Username = "";
+                Properties.Settings.Default.Password = "";
+                Properties.Settings.Default.Save();
+
+                this.Hide();  // Ẩn cửa sổ chính
+                frm_Login loginForm = new frm_Login();
+                loginForm.Show();  // Mở lại form đăng nhập
+            }
+        }
+
     }
 }
