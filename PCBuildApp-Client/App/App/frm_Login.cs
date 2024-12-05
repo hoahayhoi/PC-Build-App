@@ -35,6 +35,7 @@ namespace App
                 var role = (from u in db.Users
                            join ur in db.UserRoles on u.Id equals ur.UserId
                            join r in db.Roles on ur.RoleId equals r.Id
+                           where u.UserName == txtTenDN.Text
                            select new { Role = r.Name }).FirstOrDefault();
                 CurrentUserRole = role.Role.ToString();
 

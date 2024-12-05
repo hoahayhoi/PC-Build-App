@@ -38,9 +38,11 @@
             this.sảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đơnHàngtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phânCôngLắpRápToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýLắpRáptoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhàCungCấptoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,8 +69,6 @@
             this.materialProgressBar1 = new MaterialSkin.Controls.MaterialProgressBar();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.quảnLýLắpRáptoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngKêtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.materialCard4.SuspendLayout();
@@ -116,7 +116,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trangChủToolStripMenuItem,
             this.sảnPhẩmToolStripMenuItem,
@@ -140,58 +140,70 @@
             // trangChủToolStripMenuItem
             // 
             this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
-            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(96, 31);
+            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(85, 31);
             this.trangChủToolStripMenuItem.Text = "Trang chủ";
             // 
             // sảnPhẩmToolStripMenuItem
             // 
             this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
-            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(158, 31);
+            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(137, 31);
             this.sảnPhẩmToolStripMenuItem.Text = "Quản lý Sản phẩm";
             this.sảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.sảnPhẩmToolStripMenuItem_Click);
             // 
             // đơnHàngtoolStripMenuItem
             // 
             this.đơnHàngtoolStripMenuItem.Name = "đơnHàngtoolStripMenuItem";
-            this.đơnHàngtoolStripMenuItem.Size = new System.Drawing.Size(154, 31);
+            this.đơnHàngtoolStripMenuItem.Size = new System.Drawing.Size(135, 31);
             this.đơnHàngtoolStripMenuItem.Text = "Quản lý Đơn hàng";
             // 
             // phânCôngLắpRápToolStripMenuItem
             // 
             this.phânCôngLắpRápToolStripMenuItem.Name = "phânCôngLắpRápToolStripMenuItem";
-            this.phânCôngLắpRápToolStripMenuItem.Size = new System.Drawing.Size(162, 31);
+            this.phânCôngLắpRápToolStripMenuItem.Size = new System.Drawing.Size(141, 31);
             this.phânCôngLắpRápToolStripMenuItem.Text = "Phân công Lắp ráp";
+            // 
+            // quảnLýLắpRáptoolStripMenuItem
+            // 
+            this.quảnLýLắpRáptoolStripMenuItem.Name = "quảnLýLắpRáptoolStripMenuItem";
+            this.quảnLýLắpRáptoolStripMenuItem.Size = new System.Drawing.Size(122, 31);
+            this.quảnLýLắpRáptoolStripMenuItem.Text = "Quản lý Lắp ráp";
             // 
             // quảnLýNhânViênToolStripMenuItem
             // 
             this.quảnLýNhânViênToolStripMenuItem.Name = "quảnLýNhânViênToolStripMenuItem";
-            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(157, 31);
+            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(137, 31);
             this.quảnLýNhânViênToolStripMenuItem.Text = "Quản lý Nhân viên";
             // 
             // quảnLýKháchHàngToolStripMenuItem
             // 
             this.quảnLýKháchHàngToolStripMenuItem.Name = "quảnLýKháchHàngToolStripMenuItem";
-            this.quảnLýKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(171, 31);
+            this.quảnLýKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(149, 31);
             this.quảnLýKháchHàngToolStripMenuItem.Text = "Quản lý Khách hàng";
             // 
             // nhàCungCấptoolStripMenuItem
             // 
             this.nhàCungCấptoolStripMenuItem.Name = "nhàCungCấptoolStripMenuItem";
-            this.nhàCungCấptoolStripMenuItem.Size = new System.Drawing.Size(186, 31);
+            this.nhàCungCấptoolStripMenuItem.Size = new System.Drawing.Size(161, 31);
             this.nhàCungCấptoolStripMenuItem.Text = "Quản lý Nhà cung cấp";
+            // 
+            // thốngKêtoolStripMenuItem
+            // 
+            this.thốngKêtoolStripMenuItem.Name = "thốngKêtoolStripMenuItem";
+            this.thốngKêtoolStripMenuItem.Size = new System.Drawing.Size(80, 31);
+            this.thốngKêtoolStripMenuItem.Text = "Thống kê";
             // 
             // tàiKhoảnToolStripMenuItem
             // 
             this.tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.đổiMậtKhẩuToolStripMenuItem});
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(93, 31);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(83, 31);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             // 
             // hệThốngToolStripMenuItem
@@ -199,13 +211,13 @@
             this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.đăngXuấtToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(89, 31);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(78, 31);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // materialCard5
@@ -214,10 +226,10 @@
             this.materialCard5.Depth = 0;
             this.materialCard5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard5.Location = new System.Drawing.Point(586, 212);
-            this.materialCard5.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard5.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard5.Name = "materialCard5";
-            this.materialCard5.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard5.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard5.Size = new System.Drawing.Size(236, 256);
             this.materialCard5.TabIndex = 17;
             // 
@@ -229,10 +241,10 @@
             this.materialCard4.Depth = 0;
             this.materialCard4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard4.Location = new System.Drawing.Point(26, 212);
-            this.materialCard4.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard4.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard4.Name = "materialCard4";
-            this.materialCard4.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard4.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard4.Size = new System.Drawing.Size(543, 256);
             this.materialCard4.TabIndex = 16;
             // 
@@ -294,10 +306,10 @@
             this.materialCard3.Depth = 0;
             this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard3.Location = new System.Drawing.Point(586, 94);
-            this.materialCard3.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard3.Name = "materialCard3";
-            this.materialCard3.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard3.Size = new System.Drawing.Size(236, 100);
             this.materialCard3.TabIndex = 14;
             // 
@@ -351,10 +363,10 @@
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard2.Location = new System.Drawing.Point(306, 94);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard2.Size = new System.Drawing.Size(236, 100);
             this.materialCard2.TabIndex = 12;
             // 
@@ -422,10 +434,10 @@
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(26, 94);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(236, 100);
             this.materialCard1.TabIndex = 10;
             // 
@@ -468,18 +480,6 @@
             this.label2.Size = new System.Drawing.Size(121, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "$62,0076.00";
-            // 
-            // quảnLýLắpRáptoolStripMenuItem
-            // 
-            this.quảnLýLắpRáptoolStripMenuItem.Name = "quảnLýLắpRáptoolStripMenuItem";
-            this.quảnLýLắpRáptoolStripMenuItem.Size = new System.Drawing.Size(140, 31);
-            this.quảnLýLắpRáptoolStripMenuItem.Text = "Quản lý Lắp ráp";
-            // 
-            // thốngKêtoolStripMenuItem
-            // 
-            this.thốngKêtoolStripMenuItem.Name = "thốngKêtoolStripMenuItem";
-            this.thốngKêtoolStripMenuItem.Size = new System.Drawing.Size(89, 31);
-            this.thốngKêtoolStripMenuItem.Text = "Thống kê";
             // 
             // frm_Main
             // 
