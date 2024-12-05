@@ -1,4 +1,5 @@
-﻿using App.View.QuanLySanPham;
+﻿using App.View.QuanLyKhachHang;
+using App.View.QuanLySanPham;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using Newtonsoft.Json;
@@ -51,6 +52,14 @@ namespace App
         private void frm_Main_FormClosed(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyKhachHang frm = new QuanLyKhachHang();
+            frm.Show();
+            this.Hide();
+
         }
     }
 }

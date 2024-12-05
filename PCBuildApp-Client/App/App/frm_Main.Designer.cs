@@ -51,8 +51,6 @@
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.materialFloatingActionButton3 = new MaterialSkin.Controls.MaterialFloatingActionButton();
-            this.materialFloatingActionButton2 = new MaterialSkin.Controls.MaterialFloatingActionButton();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.materialProgressBar3 = new MaterialSkin.Controls.MaterialProgressBar();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,12 +61,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.label11 = new System.Windows.Forms.Label();
             this.materialProgressBar1 = new MaterialSkin.Controls.MaterialProgressBar();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.materialFloatingActionButton3 = new MaterialSkin.Controls.MaterialFloatingActionButton();
+            this.materialFloatingActionButton2 = new MaterialSkin.Controls.MaterialFloatingActionButton();
+            this.materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.materialCard4.SuspendLayout();
@@ -179,6 +179,7 @@
             this.quảnLýKháchHàngToolStripMenuItem.Name = "quảnLýKháchHàngToolStripMenuItem";
             this.quảnLýKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(149, 31);
             this.quảnLýKháchHàngToolStripMenuItem.Text = "Quản lý Khách hàng";
+            this.quảnLýKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.quảnLýKháchHàngToolStripMenuItem_Click);
             // 
             // nhàCungCấptoolStripMenuItem
             // 
@@ -267,34 +268,6 @@
             this.label1.Size = new System.Drawing.Size(141, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Revenue by location";
-            // 
-            // materialFloatingActionButton3
-            // 
-            this.materialFloatingActionButton3.Depth = 0;
-            this.materialFloatingActionButton3.Icon = global::App.Properties.Resources.icons8_borrow_book_32;
-            this.materialFloatingActionButton3.ImageKey = "icons8-borrow-book-32.png";
-            this.materialFloatingActionButton3.ImageList = this.imageList1;
-            this.materialFloatingActionButton3.Location = new System.Drawing.Point(793, 117);
-            this.materialFloatingActionButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFloatingActionButton3.Name = "materialFloatingActionButton3";
-            this.materialFloatingActionButton3.Size = new System.Drawing.Size(56, 56);
-            this.materialFloatingActionButton3.TabIndex = 15;
-            this.materialFloatingActionButton3.Text = "materialFloatingActionButton3";
-            this.materialFloatingActionButton3.UseVisualStyleBackColor = false;
-            // 
-            // materialFloatingActionButton2
-            // 
-            this.materialFloatingActionButton2.Depth = 0;
-            this.materialFloatingActionButton2.Icon = global::App.Properties.Resources.icons8_borrow_book_32;
-            this.materialFloatingActionButton2.ImageKey = "icons8-borrow-book-32.png";
-            this.materialFloatingActionButton2.ImageList = this.imageList1;
-            this.materialFloatingActionButton2.Location = new System.Drawing.Point(513, 117);
-            this.materialFloatingActionButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFloatingActionButton2.Name = "materialFloatingActionButton2";
-            this.materialFloatingActionButton2.Size = new System.Drawing.Size(56, 56);
-            this.materialFloatingActionButton2.TabIndex = 13;
-            this.materialFloatingActionButton2.Text = "materialFloatingActionButton2";
-            this.materialFloatingActionButton2.UseVisualStyleBackColor = false;
             // 
             // materialCard3
             // 
@@ -410,20 +383,6 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Borrowed";
             // 
-            // materialFloatingActionButton1
-            // 
-            this.materialFloatingActionButton1.Depth = 0;
-            this.materialFloatingActionButton1.Icon = global::App.Properties.Resources.icons8_borrow_book_32;
-            this.materialFloatingActionButton1.ImageKey = "icons8-borrow-book-32.png";
-            this.materialFloatingActionButton1.ImageList = this.imageList1;
-            this.materialFloatingActionButton1.Location = new System.Drawing.Point(233, 117);
-            this.materialFloatingActionButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFloatingActionButton1.Name = "materialFloatingActionButton1";
-            this.materialFloatingActionButton1.Size = new System.Drawing.Size(56, 56);
-            this.materialFloatingActionButton1.TabIndex = 11;
-            this.materialFloatingActionButton1.Text = "materialFloatingActionButton1";
-            this.materialFloatingActionButton1.UseVisualStyleBackColor = false;
-            // 
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -480,6 +439,48 @@
             this.label2.Size = new System.Drawing.Size(121, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "$62,0076.00";
+            // 
+            // materialFloatingActionButton3
+            // 
+            this.materialFloatingActionButton3.Depth = 0;
+            this.materialFloatingActionButton3.Icon = global::App.Properties.Resources.icons8_borrow_book_32;
+            this.materialFloatingActionButton3.ImageKey = "icons8-borrow-book-32.png";
+            this.materialFloatingActionButton3.ImageList = this.imageList1;
+            this.materialFloatingActionButton3.Location = new System.Drawing.Point(793, 117);
+            this.materialFloatingActionButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFloatingActionButton3.Name = "materialFloatingActionButton3";
+            this.materialFloatingActionButton3.Size = new System.Drawing.Size(56, 56);
+            this.materialFloatingActionButton3.TabIndex = 15;
+            this.materialFloatingActionButton3.Text = "materialFloatingActionButton3";
+            this.materialFloatingActionButton3.UseVisualStyleBackColor = false;
+            // 
+            // materialFloatingActionButton2
+            // 
+            this.materialFloatingActionButton2.Depth = 0;
+            this.materialFloatingActionButton2.Icon = global::App.Properties.Resources.icons8_borrow_book_32;
+            this.materialFloatingActionButton2.ImageKey = "icons8-borrow-book-32.png";
+            this.materialFloatingActionButton2.ImageList = this.imageList1;
+            this.materialFloatingActionButton2.Location = new System.Drawing.Point(513, 117);
+            this.materialFloatingActionButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFloatingActionButton2.Name = "materialFloatingActionButton2";
+            this.materialFloatingActionButton2.Size = new System.Drawing.Size(56, 56);
+            this.materialFloatingActionButton2.TabIndex = 13;
+            this.materialFloatingActionButton2.Text = "materialFloatingActionButton2";
+            this.materialFloatingActionButton2.UseVisualStyleBackColor = false;
+            // 
+            // materialFloatingActionButton1
+            // 
+            this.materialFloatingActionButton1.Depth = 0;
+            this.materialFloatingActionButton1.Icon = global::App.Properties.Resources.icons8_borrow_book_32;
+            this.materialFloatingActionButton1.ImageKey = "icons8-borrow-book-32.png";
+            this.materialFloatingActionButton1.ImageList = this.imageList1;
+            this.materialFloatingActionButton1.Location = new System.Drawing.Point(233, 117);
+            this.materialFloatingActionButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFloatingActionButton1.Name = "materialFloatingActionButton1";
+            this.materialFloatingActionButton1.Size = new System.Drawing.Size(56, 56);
+            this.materialFloatingActionButton1.TabIndex = 11;
+            this.materialFloatingActionButton1.Text = "materialFloatingActionButton1";
+            this.materialFloatingActionButton1.UseVisualStyleBackColor = false;
             // 
             // frm_Main
             // 
