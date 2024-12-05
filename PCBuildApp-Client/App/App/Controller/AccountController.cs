@@ -16,13 +16,33 @@ namespace App.Controller
             using SqlConnection conn = BackendHelper.GetConnection();
             conn.Open();
 
-            string query = "SELECT * FROM Users WHERE UserName = @username AND PasswordHash = @password";
+            // Lấy thông tin user và password hash
+            string query = "SELECT PasswordHash FROM Users WHERE UserName = @username";
             using SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@username", loginDto.Username);
-            cmd.Parameters.AddWithValue("@password", loginDto.Password);
 
             using SqlDataReader reader = cmd.ExecuteReader();
-            return reader.HasRows;
+            if (reader.Read())
+            {
+                string hashedPassword = reader["PasswordHash"].ToString();
+
+                // So sánh password dựa vào loại hash được sử dụng
+                if (hashedPassword.StartsWith("$2a$")) // BCrypt hash
+                {
+                    return BCrypt.Net.BCrypt.Verify(loginDto.Password, hashedPassword);
+                }
+                else if (hashedPassword.StartsWith("AQA")) // ASP.NET Identity hash
+                {
+                    // TODO: Implement ASP.NET Identity password verification
+                    return false;
+                }
+                else // Plain text
+                {
+                    return hashedPassword == loginDto.Password;
+                }
+            }
+
+            return false;
         }
     }
 }

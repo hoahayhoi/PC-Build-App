@@ -1,10 +1,12 @@
 ﻿using App.Controller;
+using App.Helper;
 using App.Model;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +19,7 @@ namespace App
     {
         DatabaseDataContext db = new DatabaseDataContext(Properties.Settings.Default.PCBuildConnectionString);
         public static string CurrentUserRole;
+        public static string CurrentUserID;
 
         public frm_Login()
         {
@@ -32,12 +35,8 @@ namespace App
         {
             try
             {
-                var role = (from u in db.Users
-                           join ur in db.UserRoles on u.Id equals ur.UserId
-                           join r in db.Roles on ur.RoleId equals r.Id
-                           where u.UserName == txtTenDN.Text
-                           select new { Role = r.Name }).FirstOrDefault();
-                CurrentUserRole = role.Role.ToString();
+                using SqlConnection conn = BackendHelper.GetConnection();
+                conn.Open();
 
                 var loginDto = new LoginDto
                 {
@@ -48,9 +47,31 @@ namespace App
                 var accountController = new AccountController();
                 if (accountController.Login(loginDto))
                 {
-                    var mainForm = new frm_Main();
-                    mainForm.Show();
-                    this.Hide();
+                    // Lấy role của user
+                    string roleQuery = @"SELECT u.Id as UserID, r.Name as Role 
+                               FROM Users u
+                               JOIN UserRoles ur ON u.Id = ur.UserId
+                               JOIN Roles r ON ur.RoleId = r.Id
+                               WHERE u.UserName = @username";
+
+                    using SqlCommand cmd = new SqlCommand(roleQuery, conn);
+                    cmd.Parameters.AddWithValue("@username", loginDto.Username);
+                    using SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string role = reader["Role"].ToString();
+                        string userID = reader["UserID"].ToString();
+                        CurrentUserRole = role;
+                        CurrentUserID = userID;
+                        var mainForm = new frm_Main();
+                        mainForm.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tài khoản chưa được phân quyền");
+                    }
                 }
                 else
                 {
@@ -94,7 +115,5 @@ namespace App
         {
             SaveLoginInfo(ckbNhoMK.Checked);
         }
-
-
     }
 }

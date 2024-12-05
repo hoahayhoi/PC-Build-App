@@ -1,5 +1,7 @@
 ﻿using App.View.QuanLyKhachHang;
+using App.View.QuanLyKho;
 using App.View.QuanLySanPham;
+using App.View.QuanLyTaiKhoan;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using Newtonsoft.Json;
@@ -60,6 +62,27 @@ namespace App
             frm.Show();
             this.Hide();
 
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DoiMatKhau frm = new DoiMatKhau(int.Parse(frm_Login.CurrentUserID));
+            frm.Show();
+            this.Hide();
+        }
+
+        private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyTaiKhoan frm = new QuanLyTaiKhoan();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void quảnLyKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyKho frm = new QuanLyKho();
+            frm.Show();
+            this.Hide();
         }
     }
 }

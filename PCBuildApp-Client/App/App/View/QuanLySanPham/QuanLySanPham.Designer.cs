@@ -1,4 +1,6 @@
-﻿namespace App.View.QuanLySanPham
+﻿using System.Windows.Forms;
+
+namespace App.View.QuanLySanPham
 {
     partial class QuanLySanPham
     {
@@ -30,49 +32,43 @@
         {
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
-            this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.materialFloatingActionButton3 = new MaterialSkin.Controls.MaterialFloatingActionButton();
-            this.materialFloatingActionButton2 = new MaterialSkin.Controls.MaterialFloatingActionButton();
-            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
-            this.materialProgressBar3 = new MaterialSkin.Controls.MaterialProgressBar();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            this.materialProgressBar2 = new MaterialSkin.Controls.MaterialProgressBar();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
-            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.label11 = new System.Windows.Forms.Label();
-            this.materialProgressBar1 = new MaterialSkin.Controls.MaterialProgressBar();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đơnHàngtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cấuHìnhtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đơnHàngtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phânCôngLắpRápToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýLắpRáptoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhàCungCấptoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngKêtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_XoaSanPham = new System.Windows.Forms.Button();
+            this.btn_CapNhap = new System.Windows.Forms.Button();
+            this.btn_SuaSanPham = new System.Windows.Forms.Button();
+            this.btn_ThemSanPham = new System.Windows.Forms.Button();
+            this.dataGridView_Components = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_ThemImage = new System.Windows.Forms.Button();
+            this.textBox_ImagePath = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cboCategory = new System.Windows.Forms.ComboBox();
+            this.txt_IdProduct = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.txt_Price = new System.Windows.Forms.TextBox();
+            this.txt_NameProduct = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.statusStrip1.SuspendLayout();
-            this.materialCard4.SuspendLayout();
-            this.materialCard3.SuspendLayout();
-            this.materialCard2.SuspendLayout();
-            this.materialCard1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Components)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -81,9 +77,9 @@
             this.statusStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 644);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 669);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(995, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1341, 22);
             this.statusStrip1.TabIndex = 18;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -95,355 +91,76 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(89, 17);
             this.toolStripStatusLabel1.Text = "Hello, Admin";
             // 
-            // materialCard5
-            // 
-            this.materialCard5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard5.Depth = 0;
-            this.materialCard5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard5.Location = new System.Drawing.Point(586, 212);
-            this.materialCard5.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard5.Name = "materialCard5";
-            this.materialCard5.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard5.Size = new System.Drawing.Size(236, 256);
-            this.materialCard5.TabIndex = 17;
-            // 
-            // materialCard4
-            // 
-            this.materialCard4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard4.Controls.Add(this.label10);
-            this.materialCard4.Controls.Add(this.label1);
-            this.materialCard4.Depth = 0;
-            this.materialCard4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard4.Location = new System.Drawing.Point(26, 212);
-            this.materialCard4.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard4.Name = "materialCard4";
-            this.materialCard4.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard4.Size = new System.Drawing.Size(543, 256);
-            this.materialCard4.TabIndex = 16;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(18, 32);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(252, 15);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Sales performance revenue based by country";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Revenue by location";
-            // 
-            // materialFloatingActionButton3
-            // 
-            this.materialFloatingActionButton3.Depth = 0;
-            this.materialFloatingActionButton3.Icon = global::App.Properties.Resources.icons8_borrow_book_32;
-            this.materialFloatingActionButton3.ImageKey = "icons8-borrow-book-32.png";
-            this.materialFloatingActionButton3.Location = new System.Drawing.Point(793, 117);
-            this.materialFloatingActionButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFloatingActionButton3.Name = "materialFloatingActionButton3";
-            this.materialFloatingActionButton3.Size = new System.Drawing.Size(56, 56);
-            this.materialFloatingActionButton3.TabIndex = 15;
-            this.materialFloatingActionButton3.Text = "materialFloatingActionButton3";
-            this.materialFloatingActionButton3.UseVisualStyleBackColor = false;
-            // 
-            // materialFloatingActionButton2
-            // 
-            this.materialFloatingActionButton2.Depth = 0;
-            this.materialFloatingActionButton2.Icon = global::App.Properties.Resources.icons8_borrow_book_32;
-            this.materialFloatingActionButton2.ImageKey = "icons8-borrow-book-32.png";
-            this.materialFloatingActionButton2.Location = new System.Drawing.Point(513, 117);
-            this.materialFloatingActionButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFloatingActionButton2.Name = "materialFloatingActionButton2";
-            this.materialFloatingActionButton2.Size = new System.Drawing.Size(56, 56);
-            this.materialFloatingActionButton2.TabIndex = 13;
-            this.materialFloatingActionButton2.Text = "materialFloatingActionButton2";
-            this.materialFloatingActionButton2.UseVisualStyleBackColor = false;
-            // 
-            // materialCard3
-            // 
-            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard3.Controls.Add(this.materialProgressBar3);
-            this.materialCard3.Controls.Add(this.label7);
-            this.materialCard3.Controls.Add(this.label8);
-            this.materialCard3.Controls.Add(this.label9);
-            this.materialCard3.Depth = 0;
-            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard3.Location = new System.Drawing.Point(586, 94);
-            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard3.Name = "materialCard3";
-            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard3.Size = new System.Drawing.Size(236, 100);
-            this.materialCard3.TabIndex = 14;
-            // 
-            // materialProgressBar3
-            // 
-            this.materialProgressBar3.Depth = 0;
-            this.materialProgressBar3.Location = new System.Drawing.Point(21, 64);
-            this.materialProgressBar3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialProgressBar3.Name = "materialProgressBar3";
-            this.materialProgressBar3.Size = new System.Drawing.Size(171, 5);
-            this.materialProgressBar3.TabIndex = 3;
-            this.materialProgressBar3.Value = 48;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(18, 72);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 15);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "48% target reached";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 37);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 24);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "$62,0076.00";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(18, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 18);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Borrowed";
-            // 
-            // materialCard2
-            // 
-            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.materialProgressBar2);
-            this.materialCard2.Controls.Add(this.label4);
-            this.materialCard2.Controls.Add(this.label5);
-            this.materialCard2.Controls.Add(this.label6);
-            this.materialCard2.Depth = 0;
-            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(306, 94);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(236, 100);
-            this.materialCard2.TabIndex = 12;
-            // 
-            // materialProgressBar2
-            // 
-            this.materialProgressBar2.Depth = 0;
-            this.materialProgressBar2.Location = new System.Drawing.Point(21, 64);
-            this.materialProgressBar2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialProgressBar2.Name = "materialProgressBar2";
-            this.materialProgressBar2.Size = new System.Drawing.Size(171, 5);
-            this.materialProgressBar2.TabIndex = 3;
-            this.materialProgressBar2.Value = 48;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(18, 72);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 15);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "48% target reached";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 24);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "$62,0076.00";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 14);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 18);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Borrowed";
-            // 
-            // materialFloatingActionButton1
-            // 
-            this.materialFloatingActionButton1.Depth = 0;
-            this.materialFloatingActionButton1.Icon = global::App.Properties.Resources.icons8_borrow_book_32;
-            this.materialFloatingActionButton1.ImageKey = "icons8-borrow-book-32.png";
-            this.materialFloatingActionButton1.Location = new System.Drawing.Point(233, 117);
-            this.materialFloatingActionButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFloatingActionButton1.Name = "materialFloatingActionButton1";
-            this.materialFloatingActionButton1.Size = new System.Drawing.Size(56, 56);
-            this.materialFloatingActionButton1.TabIndex = 11;
-            this.materialFloatingActionButton1.Text = "materialFloatingActionButton1";
-            this.materialFloatingActionButton1.UseVisualStyleBackColor = false;
-            // 
-            // materialCard1
-            // 
-            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.label11);
-            this.materialCard1.Controls.Add(this.materialProgressBar1);
-            this.materialCard1.Controls.Add(this.label3);
-            this.materialCard1.Controls.Add(this.label2);
-            this.materialCard1.Depth = 0;
-            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(26, 94);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(236, 100);
-            this.materialCard1.TabIndex = 10;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(18, 14);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 18);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Borrowed";
-            // 
-            // materialProgressBar1
-            // 
-            this.materialProgressBar1.Depth = 0;
-            this.materialProgressBar1.Location = new System.Drawing.Point(21, 64);
-            this.materialProgressBar1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialProgressBar1.Name = "materialProgressBar1";
-            this.materialProgressBar1.Size = new System.Drawing.Size(171, 5);
-            this.materialProgressBar1.TabIndex = 3;
-            this.materialProgressBar1.Value = 48;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "48% target reached";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "$62,0076.00";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trangChủToolStripMenuItem,
-            this.đơnHàngtoolStripMenuItem,
             this.sảnPhẩmToolStripMenuItem,
-            this.cấuHìnhtoolStripMenuItem,
+            this.đơnHàngtoolStripMenuItem,
             this.phânCôngLắpRápToolStripMenuItem,
-            this.quảnLýLắpRáptoolStripMenuItem,
             this.quảnLýNhânViênToolStripMenuItem,
             this.quảnLýKháchHàngToolStripMenuItem,
             this.nhàCungCấptoolStripMenuItem,
-            this.thốngKêtoolStripMenuItem,
             this.tàiKhoảnToolStripMenuItem,
             this.hệThốngToolStripMenuItem});
-            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.MinimumSize = new System.Drawing.Size(921, 35);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(995, 52);
-            this.menuStrip1.TabIndex = 37;
+            this.menuStrip1.Size = new System.Drawing.Size(1341, 35);
+            this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // trangChủToolStripMenuItem
             // 
             this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
-            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
+            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(96, 31);
             this.trangChủToolStripMenuItem.Text = "Trang chủ";
-            // 
-            // đơnHàngtoolStripMenuItem
-            // 
-            this.đơnHàngtoolStripMenuItem.Name = "đơnHàngtoolStripMenuItem";
-            this.đơnHàngtoolStripMenuItem.Size = new System.Drawing.Size(154, 24);
-            this.đơnHàngtoolStripMenuItem.Text = "Quản lý Đơn hàng";
             // 
             // sảnPhẩmToolStripMenuItem
             // 
             this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
-            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
+            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(158, 31);
             this.sảnPhẩmToolStripMenuItem.Text = "Quản lý Sản phẩm";
             // 
-            // cấuHìnhtoolStripMenuItem
+            // đơnHàngtoolStripMenuItem
             // 
-            this.cấuHìnhtoolStripMenuItem.Name = "cấuHìnhtoolStripMenuItem";
-            this.cấuHìnhtoolStripMenuItem.Size = new System.Drawing.Size(149, 24);
-            this.cấuHìnhtoolStripMenuItem.Text = "Quản lý Cấu hình";
+            this.đơnHàngtoolStripMenuItem.Name = "đơnHàngtoolStripMenuItem";
+            this.đơnHàngtoolStripMenuItem.Size = new System.Drawing.Size(154, 31);
+            this.đơnHàngtoolStripMenuItem.Text = "Quản lý Đơn hàng";
             // 
             // phânCôngLắpRápToolStripMenuItem
             // 
             this.phânCôngLắpRápToolStripMenuItem.Name = "phânCôngLắpRápToolStripMenuItem";
-            this.phânCôngLắpRápToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
+            this.phânCôngLắpRápToolStripMenuItem.Size = new System.Drawing.Size(162, 31);
             this.phânCôngLắpRápToolStripMenuItem.Text = "Phân công Lắp ráp";
-            // 
-            // quảnLýLắpRáptoolStripMenuItem
-            // 
-            this.quảnLýLắpRáptoolStripMenuItem.Name = "quảnLýLắpRáptoolStripMenuItem";
-            this.quảnLýLắpRáptoolStripMenuItem.Size = new System.Drawing.Size(140, 24);
-            this.quảnLýLắpRáptoolStripMenuItem.Text = "Quản lý Lắp ráp";
             // 
             // quảnLýNhânViênToolStripMenuItem
             // 
             this.quảnLýNhânViênToolStripMenuItem.Name = "quảnLýNhânViênToolStripMenuItem";
-            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(157, 24);
+            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(157, 31);
             this.quảnLýNhânViênToolStripMenuItem.Text = "Quản lý Nhân viên";
+            this.quảnLýNhânViênToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNhânViênToolStripMenuItem_Click);
             // 
             // quảnLýKháchHàngToolStripMenuItem
             // 
             this.quảnLýKháchHàngToolStripMenuItem.Name = "quảnLýKháchHàngToolStripMenuItem";
-            this.quảnLýKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.quảnLýKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(171, 31);
             this.quảnLýKháchHàngToolStripMenuItem.Text = "Quản lý Khách hàng";
             // 
             // nhàCungCấptoolStripMenuItem
             // 
             this.nhàCungCấptoolStripMenuItem.Name = "nhàCungCấptoolStripMenuItem";
-            this.nhàCungCấptoolStripMenuItem.Size = new System.Drawing.Size(186, 24);
+            this.nhàCungCấptoolStripMenuItem.Size = new System.Drawing.Size(186, 31);
             this.nhàCungCấptoolStripMenuItem.Text = "Quản lý Nhà cung cấp";
-            // 
-            // thốngKêtoolStripMenuItem
-            // 
-            this.thốngKêtoolStripMenuItem.Name = "thốngKêtoolStripMenuItem";
-            this.thốngKêtoolStripMenuItem.Size = new System.Drawing.Size(89, 24);
-            this.thốngKêtoolStripMenuItem.Text = "Thống kê";
             // 
             // tàiKhoảnToolStripMenuItem
             // 
             this.tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.đổiMậtKhẩuToolStripMenuItem});
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(93, 31);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // đổiMậtKhẩuToolStripMenuItem
@@ -457,7 +174,7 @@
             this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.đăngXuấtToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(89, 31);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
             // đăngXuấtToolStripMenuItem
@@ -466,83 +183,285 @@
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
+            // btn_XoaSanPham
+            // 
+            this.btn_XoaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XoaSanPham.Location = new System.Drawing.Point(1196, 640);
+            this.btn_XoaSanPham.Name = "btn_XoaSanPham";
+            this.btn_XoaSanPham.Size = new System.Drawing.Size(133, 26);
+            this.btn_XoaSanPham.TabIndex = 42;
+            this.btn_XoaSanPham.Text = "Xoá";
+            this.btn_XoaSanPham.UseVisualStyleBackColor = true;
+            this.btn_XoaSanPham.Click += new System.EventHandler(this.btn_XoaSanPham_Click);
+            // 
+            // btn_CapNhap
+            // 
+            this.btn_CapNhap.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CapNhap.Location = new System.Drawing.Point(273, 465);
+            this.btn_CapNhap.Name = "btn_CapNhap";
+            this.btn_CapNhap.Size = new System.Drawing.Size(133, 26);
+            this.btn_CapNhap.TabIndex = 41;
+            this.btn_CapNhap.Text = "Làm mới";
+            this.btn_CapNhap.UseVisualStyleBackColor = true;
+            this.btn_CapNhap.Click += new System.EventHandler(this.btn_CapNhap_Click);
+            // 
+            // btn_SuaSanPham
+            // 
+            this.btn_SuaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SuaSanPham.Location = new System.Drawing.Point(133, 465);
+            this.btn_SuaSanPham.Name = "btn_SuaSanPham";
+            this.btn_SuaSanPham.Size = new System.Drawing.Size(133, 26);
+            this.btn_SuaSanPham.TabIndex = 40;
+            this.btn_SuaSanPham.Text = "Cập nhật";
+            this.btn_SuaSanPham.UseVisualStyleBackColor = true;
+            this.btn_SuaSanPham.Click += new System.EventHandler(this.btn_SuaSanPham_Click);
+            // 
+            // btn_ThemSanPham
+            // 
+            this.btn_ThemSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThemSanPham.Location = new System.Drawing.Point(6, 465);
+            this.btn_ThemSanPham.Name = "btn_ThemSanPham";
+            this.btn_ThemSanPham.Size = new System.Drawing.Size(121, 26);
+            this.btn_ThemSanPham.TabIndex = 39;
+            this.btn_ThemSanPham.Text = "Thêm";
+            this.btn_ThemSanPham.UseVisualStyleBackColor = true;
+            this.btn_ThemSanPham.Click += new System.EventHandler(this.btn_ThemSanPham_Click);
+            // 
+            // dataGridView_Components
+            // 
+            this.dataGridView_Components.AllowUserToAddRows = false;
+            this.dataGridView_Components.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_Components.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Components.Location = new System.Drawing.Point(443, 110);
+            this.dataGridView_Components.Name = "dataGridView_Components";
+            this.dataGridView_Components.Size = new System.Drawing.Size(886, 512);
+            this.dataGridView_Components.TabIndex = 38;
+            this.dataGridView_Components.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Components_CellContentClick);
+            this.dataGridView_Components.SelectionChanged += new System.EventHandler(this.dataGridView_Components_SelectionChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btn_ThemImage);
+            this.groupBox1.Controls.Add(this.textBox_ImagePath);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.btn_CapNhap);
+            this.groupBox1.Controls.Add(this.cboCategory);
+            this.groupBox1.Controls.Add(this.btn_SuaSanPham);
+            this.groupBox1.Controls.Add(this.txt_IdProduct);
+            this.groupBox1.Controls.Add(this.btn_ThemSanPham);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.textBoxAddress);
+            this.groupBox1.Controls.Add(this.txt_Price);
+            this.groupBox1.Controls.Add(this.txt_NameProduct);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 103);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(413, 519);
+            this.groupBox1.TabIndex = 37;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Quản Lý Sản Phẩm";
+            // 
+            // btn_ThemImage
+            // 
+            this.btn_ThemImage.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThemImage.Location = new System.Drawing.Point(359, 411);
+            this.btn_ThemImage.Name = "btn_ThemImage";
+            this.btn_ThemImage.Size = new System.Drawing.Size(35, 26);
+            this.btn_ThemImage.TabIndex = 42;
+            this.btn_ThemImage.Text = "...";
+            this.btn_ThemImage.UseVisualStyleBackColor = true;
+            this.btn_ThemImage.Click += new System.EventHandler(this.btn_ThemImage_Click);
+            // 
+            // textBox_ImagePath
+            // 
+            this.textBox_ImagePath.Location = new System.Drawing.Point(151, 410);
+            this.textBox_ImagePath.Name = "textBox_ImagePath";
+            this.textBox_ImagePath.Size = new System.Drawing.Size(200, 27);
+            this.textBox_ImagePath.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(14, 410);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 18);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Hình Ảnh : ";
+            // 
+            // cboCategory
+            // 
+            this.cboCategory.FormattingEnabled = true;
+            this.cboCategory.Location = new System.Drawing.Point(151, 268);
+            this.cboCategory.Name = "cboCategory";
+            this.cboCategory.Size = new System.Drawing.Size(243, 27);
+            this.cboCategory.TabIndex = 10;
+            // 
+            // txt_IdProduct
+            // 
+            this.txt_IdProduct.Location = new System.Drawing.Point(151, 50);
+            this.txt_IdProduct.Name = "txt_IdProduct";
+            this.txt_IdProduct.ReadOnly = true;
+            this.txt_IdProduct.Size = new System.Drawing.Size(243, 27);
+            this.txt_IdProduct.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(14, 50);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 18);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Id : ";
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Location = new System.Drawing.Point(151, 342);
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(243, 27);
+            this.textBoxAddress.TabIndex = 7;
+            // 
+            // txt_Price
+            // 
+            this.txt_Price.Location = new System.Drawing.Point(151, 194);
+            this.txt_Price.Name = "txt_Price";
+            this.txt_Price.Size = new System.Drawing.Size(243, 27);
+            this.txt_Price.TabIndex = 5;
+            // 
+            // txt_NameProduct
+            // 
+            this.txt_NameProduct.Location = new System.Drawing.Point(151, 118);
+            this.txt_NameProduct.Name = "txt_NameProduct";
+            this.txt_NameProduct.Size = new System.Drawing.Size(243, 27);
+            this.txt_NameProduct.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(14, 342);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 18);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Tồn Kho : ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 268);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 18);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Danh Mục:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 194);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 18);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Giá Tiền:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(14, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên Sản Phẩm:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(531, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(229, 29);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Quản lý Sản Phẩm";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(1045, 84);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.ReadOnly = true;
+            this.txtSearch.Size = new System.Drawing.Size(243, 20);
+            this.txtSearch.TabIndex = 10;
+            // 
             // QuanLySanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 666);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(1341, 691);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btn_XoaSanPham);
+            this.Controls.Add(this.dataGridView_Components);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.materialCard5);
-            this.Controls.Add(this.materialCard4);
-            this.Controls.Add(this.materialFloatingActionButton3);
-            this.Controls.Add(this.materialFloatingActionButton2);
-            this.Controls.Add(this.materialCard3);
-            this.Controls.Add(this.materialCard2);
-            this.Controls.Add(this.materialFloatingActionButton1);
-            this.Controls.Add(this.materialCard1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "QuanLySanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý Sản phẩm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuanLySanPham_FormClosed);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.materialCard4.ResumeLayout(false);
-            this.materialCard4.PerformLayout();
-            this.materialCard3.ResumeLayout(false);
-            this.materialCard3.PerformLayout();
-            this.materialCard2.ResumeLayout(false);
-            this.materialCard2.PerformLayout();
-            this.materialCard1.ResumeLayout(false);
-            this.materialCard1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Components)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
         #endregion
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private MaterialSkin.Controls.MaterialCard materialCard5;
-        private MaterialSkin.Controls.MaterialCard materialCard4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label1;
-        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton3;
-        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton2;
-        private MaterialSkin.Controls.MaterialCard materialCard3;
-        private MaterialSkin.Controls.MaterialProgressBar materialProgressBar3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private MaterialSkin.Controls.MaterialCard materialCard2;
-        private MaterialSkin.Controls.MaterialProgressBar materialProgressBar2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton1;
-        private MaterialSkin.Controls.MaterialCard materialCard1;
-        private System.Windows.Forms.Label label11;
-        private MaterialSkin.Controls.MaterialProgressBar materialProgressBar1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đơnHàngtoolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sảnPhẩmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cấuHìnhtoolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phânCôngLắpRápToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýLắpRáptoolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýNhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýKháchHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhàCungCấptoolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thốngKêtoolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đơnHàngtoolStripMenuItem;
+        private System.Windows.Forms.Button btn_XoaSanPham;
+        private System.Windows.Forms.Button btn_CapNhap;
+        private System.Windows.Forms.Button btn_SuaSanPham;
+        private System.Windows.Forms.Button btn_ThemSanPham;
+        private System.Windows.Forms.DataGridView dataGridView_Components;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txt_IdProduct;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxAddress;
+        private System.Windows.Forms.TextBox txt_Price;
+        private System.Windows.Forms.TextBox txt_NameProduct;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private TextBox txtSearch;
+        private ComboBox cboCategory;
+        private TextBox textBox_ImagePath;
+        private Label label7;
+        private Button btn_ThemImage;
     }
 }
 

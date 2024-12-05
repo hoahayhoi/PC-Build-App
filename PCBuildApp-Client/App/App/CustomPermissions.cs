@@ -18,6 +18,7 @@ namespace App
                     "Quản lý Nhà cung cấp", 
                     "Quản lý Nhân viên", 
                     "Quản lý Khách hàng",
+                    "Quản lý Kho",
                     "Phân công Lắp ráp",
                     "Quản lý Lắp ráp",
                     "Thống kê",
@@ -30,6 +31,7 @@ namespace App
                     "Trang chủ",
                     "Quản lý Đơn hàng",
                     "Quản lý Khách hàng",
+                    "Quản lý Kho",
                     "Tài khoản",
                     "Hệ thống",
                 }
