@@ -1,4 +1,5 @@
-﻿using App.Controller;
+﻿using App.View.QuanLySanPham;
+using App.Controller;
 using App.Model;
 using System;
 using System.CodeDom;
@@ -15,10 +16,28 @@ namespace App.View.QuanLyKhachHang
 {
     public partial class QuanLyKhachHang : Form
     {
+        private CustomMenuStripRender _renderer;
+        private CustomPermissions phanQuyen;
+
         public QuanLyKhachHang()
         {
             InitializeComponent();
             loadCustomers();
+
+            _renderer = new CustomMenuStripRender();
+            this.menuStrip1.Renderer = _renderer;
+            _renderer.CurrentItem = quảnLýKháchHàngToolStripMenuItem.Text;
+
+            phanQuyen = new CustomPermissions();
+            ApplyPermissions();
+        }
+
+        private void ApplyPermissions()
+        {
+            foreach (ToolStripMenuItem item in this.menuStrip1.Items)
+            {
+                item.Visible = phanQuyen.permissions[frm_Login.CurrentUserRole].Contains(item.Text);
+            }
         }
 
         public void loadCustomers()
@@ -105,6 +124,20 @@ namespace App.View.QuanLyKhachHang
                 refresh();
             }
 
+        }
+
+        private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Main f = new frm_Main();
+            f.Show();
+            this.Hide();
+        }
+
+        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLySanPham.QuanLySanPham f = new QuanLySanPham.QuanLySanPham();
+            f.Show();
+            this.Hide();
         }
     }
 }

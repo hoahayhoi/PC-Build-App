@@ -63,3 +63,4 @@ D:\Document\PTrienPMUD-ThongMinh\PC-Build-App-Frontend\PC-Build-App\PCBuildApp-C
 D:\Document\PTrienPMUD-ThongMinh\PC-Build-App-Frontend\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.exe
 D:\Document\PTrienPMUD-ThongMinh\PC-Build-App-Frontend\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.pdb
 D:\Document\PTrienPMUD-ThongMinh\PC-Build-App-Frontend\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyKhachHang.QuanLyKhachHang.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyKhachHang.QuanLyKhachHang.resources

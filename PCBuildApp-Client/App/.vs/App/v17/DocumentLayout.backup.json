@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|solutionrelative:app\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\frontend\\new app\\pc-build-app\\pcbuildapp-client\\app\\app\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|solutionrelative:app\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\frontend\\new app\\pc-build-app\\pcbuildapp-client\\app\\app\\view\\quanlykhachhang\\quanlykhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|solutionrelative:app\\view\\quanlykhachhang\\quanlykhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\frontend\\new app\\pc-build-app\\pcbuildapp-client\\app\\app\\view\\quanlykhachhang\\quanlykhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|solutionrelative:app\\view\\quanlykhachhang\\quanlykhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|d:\\personal\\huit_baitap\\hk7\\ptpmudtm\\new\\frontend\\new app\\pc-build-app\\pcbuildapp-client\\app\\app\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54CD7A21-6250-4032-85C9-7740ABD5CECC}|App\\App.csproj|solutionrelative:app\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,21 +37,46 @@
               "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\New App\\PC-Build-App\\PCBuildApp-Client\\App\\App\\frm_Main.cs [Design]*",
               "RelativeToolTip": "App\\frm_Main.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T03:31:39.842Z",
+              "WhenOpened": "2024-12-05T08:17:32.506Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frm_Login.cs",
-              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\New App\\PC-Build-App\\PCBuildApp-Client\\App\\App\\frm_Login.cs",
-              "RelativeDocumentMoniker": "App\\frm_Login.cs",
-              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\New App\\PC-Build-App\\PCBuildApp-Client\\App\\App\\frm_Login.cs",
-              "RelativeToolTip": "App\\frm_Login.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAvAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "frm_Main.cs",
+              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\New App\\PC-Build-App\\PCBuildApp-Client\\App\\App\\frm_Main.cs",
+              "RelativeDocumentMoniker": "App\\frm_Main.cs",
+              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\New App\\PC-Build-App\\PCBuildApp-Client\\App\\App\\frm_Main.cs*",
+              "RelativeToolTip": "App\\frm_Main.cs*",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAB4AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T03:40:23.736Z",
+              "WhenOpened": "2024-12-05T08:04:17.424Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QuanLyKhachHang.cs",
+              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\New App\\PC-Build-App\\PCBuildApp-Client\\App\\App\\View\\QuanLyKhachHang\\QuanLyKhachHang.cs",
+              "RelativeDocumentMoniker": "App\\View\\QuanLyKhachHang\\QuanLyKhachHang.cs",
+              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\New App\\PC-Build-App\\PCBuildApp-Client\\App\\App\\View\\QuanLyKhachHang\\QuanLyKhachHang.cs",
+              "RelativeToolTip": "App\\View\\QuanLyKhachHang\\QuanLyKhachHang.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T08:03:19.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuanLyKhachHang.cs [Design]",
+              "DocumentMoniker": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\New App\\PC-Build-App\\PCBuildApp-Client\\App\\App\\View\\QuanLyKhachHang\\QuanLyKhachHang.cs",
+              "RelativeDocumentMoniker": "App\\View\\QuanLyKhachHang\\QuanLyKhachHang.cs",
+              "ToolTip": "D:\\Personal\\HUIT_Baitap\\HK7\\PTPMUDTM\\new\\Frontend\\New App\\PC-Build-App\\PCBuildApp-Client\\App\\App\\View\\QuanLyKhachHang\\QuanLyKhachHang.cs [Design]",
+              "RelativeToolTip": "App\\View\\QuanLyKhachHang\\QuanLyKhachHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T07:57:45.047Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
