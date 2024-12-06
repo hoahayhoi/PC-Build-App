@@ -172,6 +172,7 @@
             this.phânCôngLắpRápToolStripMenuItem.Name = "phânCôngLắpRápToolStripMenuItem";
             this.phânCôngLắpRápToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
             this.phânCôngLắpRápToolStripMenuItem.Text = "Phân công Lắp ráp";
+            this.phânCôngLắpRápToolStripMenuItem.Click += new System.EventHandler(this.phânCôngLắpRápToolStripMenuItem_Click);
             // 
             // quảnLýLắpRáptoolStripMenuItem
             // 
@@ -238,7 +239,7 @@
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 

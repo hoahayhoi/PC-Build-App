@@ -16,6 +16,7 @@ namespace App
                     "Quản lý Sản phẩm", 
                     "Quản lý Đơn hàng", 
                     "Quản lý Nhà cung cấp", 
+                    "Quản lý Cấu hình",
                     "Quản lý Nhân viên", 
                     "Quản lý Khách hàng",
                     "Quản lý Kho",

@@ -1,5 +1,6 @@
 ﻿using App.View.QuanLyKhachHang;
 using App.View.QuanLyKho;
+using App.View.QuanLyLapRap;
 using App.View.QuanLySanPham;
 using App.View.QuanLyTaiKhoan;
 using MaterialSkin;
@@ -102,5 +103,11 @@ namespace App
             }
         }
 
+        private void phânCôngLắpRápToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_PhanCongLapRap f = new frm_PhanCongLapRap();
+            this.Hide();
+            f.Show();
+        }
     }
 }

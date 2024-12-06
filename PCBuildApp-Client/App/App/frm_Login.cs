@@ -20,6 +20,7 @@ namespace App
         DatabaseDataContext db = new DatabaseDataContext(Properties.Settings.Default.PCBuildConnectionString);
         public static string CurrentUserRole;
         public static string CurrentUserID;
+        public static string CurrentUserName;
 
         public frm_Login()
         {
@@ -48,7 +49,7 @@ namespace App
                 if (accountController.Login(loginDto))
                 {
                     // Lấy role của user
-                    string roleQuery = @"SELECT u.Id as UserID, r.Name as Role 
+                    string roleQuery = @"SELECT u.Id as UserID, r.Name as Role, u.UserName 
                                FROM Users u
                                JOIN UserRoles ur ON u.Id = ur.UserId
                                JOIN Roles r ON ur.RoleId = r.Id
@@ -62,6 +63,8 @@ namespace App
                     {
                         string role = reader["Role"].ToString();
                         string userID = reader["UserID"].ToString();
+                        CurrentUserName = reader["UserName"].ToString();
+                        CurrentUserRole = role;
                         CurrentUserRole = role;
                         CurrentUserID = userID;
                         var mainForm = new frm_Main();

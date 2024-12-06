@@ -64,3 +64,17 @@ D:\Document\PTrienPMUD-ThongMinh\PC-Build-App-Frontend\PC-Build-App\PCBuildApp-C
 D:\Document\PTrienPMUD-ThongMinh\PC-Build-App-Frontend\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.pdb
 D:\Document\PTrienPMUD-ThongMinh\PC-Build-App-Frontend\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyKhachHang.QuanLyKhachHang.resources
 D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyKhachHang.QuanLyKhachHang.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\BCrypt.Net-Next.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Buffers.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Memory.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Numerics.Vectors.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\BCrypt.Net-Next.xml
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Buffers.xml
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Memory.xml
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Numerics.Vectors.xml
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyKho.QuanLyKho.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyLapRap.frm_PhanCongLapRap.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyTaiKhoan.DoiMatKhau.resources
+D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyTaiKhoan.QuanLyTaiKhoan.resources
