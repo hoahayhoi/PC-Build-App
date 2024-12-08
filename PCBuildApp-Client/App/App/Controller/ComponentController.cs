@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 using App.Helper;
+using App.Model;
 
 namespace App.Controller
 {
@@ -129,6 +132,66 @@ namespace App.Controller
                     MessageBox.Show($"Lỗi khi xóa sản phẩm: {ex.Message}");
                     return false;
                 }
+            }
+        }
+
+        public static ComponentDto getComponentById(int componentId)
+        {
+            using (var db = new DatabaseDataContext(Properties.Settings.Default.PCBuildConnectionString))
+            {
+                // Tìm kiếm component dựa trên componentId
+                var component = (from c in db.Components
+                                 where c.Id == componentId
+                                 select new ComponentDto
+                                 {
+                                     Id = c.Id,
+                                     Name = c.Name,
+                                     CategoryID = c.CategoryID,
+                                     Price = c.Price,
+                                     Stock = c.Stock,
+                                     SupplierID = c.SupplierID,
+                                     Image = c.Image
+                                 }).SingleOrDefault(); // Lấy phần tử duy nhất hoặc null nếu không tìm thấy
+
+                // Trả về component tìm được, hoặc null nếu không có
+                return component;
+            }
+        }
+
+        public static List<ComponentDto> getComponentByCategoryId(int categoryId)
+        {
+            using (var db = new DatabaseDataContext(Properties.Settings.Default.PCBuildConnectionString))
+            {
+                // Lấy danh sách các component thuộc Category ID được truyền vào
+                var components = from component in db.Components
+                                 where component.CategoryID == categoryId
+                                 select new ComponentDto
+                                 {
+                                     Id = component.Id,
+                                     Name = component.Name,
+                                     CategoryID = component.CategoryID,
+                                     Price = component.Price,
+                                     Stock = component.Stock,
+                                     SupplierID = component.SupplierID,
+                                     Image = component.Image
+                                 };
+
+                // Trả về danh sách các ComponentDto
+                return components.ToList();
+            }
+        }
+
+
+        public static decimal CalculateTotalPrice(List<int> componentIds)
+        {
+            using (var db = new DatabaseDataContext(Properties.Settings.Default.PCBuildConnectionString))
+            {
+                // Truy vấn danh sách các component theo danh sách ID
+                var totalPrice = db.Components
+                                    .Where(c => componentIds.Contains(c.Id)) // Lọc theo danh sách ID
+                                    .Sum(c => c.Price); // Tính tổng giá
+
+                return totalPrice; // Trả về tổng tiền
             }
         }
     }

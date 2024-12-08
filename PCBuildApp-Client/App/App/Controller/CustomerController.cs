@@ -9,9 +9,7 @@ namespace App.Controller
 {
     public class CustomerController
     {
-        DatabaseDataContext db = new DatabaseDataContext(Properties.Settings.Default.PCBuildConnectionString);
-
-        public static List<CustomerDto>getListCustomer ()
+        public static List<CustomerDto> getListCustomer()
         {
             using (var db = new DatabaseDataContext(Properties.Settings.Default.PCBuildConnectionString))
             {
@@ -28,6 +26,27 @@ namespace App.Controller
 
                 // Chuyển đổi kết quả thành một List và trả về
                 return list.ToList();
+            }
+        }
+
+        public static CustomerDto GetCustomerByPhone(string phone)
+        {
+            using (var db = new DatabaseDataContext(Properties.Settings.Default.PCBuildConnectionString))
+            {
+                // Truy vấn tìm khách hàng với số điện thoại chính xác
+                var customer = db.Customers
+                                 .Where(c => c.Phone == phone)
+                                 .Select(c => new CustomerDto
+                                 {
+                                     Id = c.Id,
+                                     Name = c.Name,
+                                     Email = c.Email,
+                                     Phone = c.Phone,
+                                     Address = c.Address
+                                 })
+                                 .SingleOrDefault(); // Vì số điện thoại là duy nhất, sử dụng SingleOrDefault
+
+                return customer; // Trả về khách hàng hoặc null nếu không tìm thấy
             }
         }
 
@@ -100,6 +119,15 @@ namespace App.Controller
                     // Xử lý khi không tìm thấy khách hàng, có thể thông báo lỗi hoặc thực hiện hành động khác
                     throw new Exception("Customer not found");
                 }
+            }
+        }
+
+        public static bool IsExist(string phone)
+        {
+            using (var db = new DatabaseDataContext(Properties.Settings.Default.PCBuildConnectionString))
+            {
+                // Tìm khách hàng có số điện thoại trùng khớp
+                return db.Customers.Any(c => c.Phone == phone);
             }
         }
 

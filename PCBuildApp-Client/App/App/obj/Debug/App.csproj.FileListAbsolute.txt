@@ -78,3 +78,35 @@ D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildAp
 D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyLapRap.frm_PhanCongLapRap.resources
 D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyTaiKhoan.DoiMatKhau.resources
 D:\Personal\HUIT_Baitap\HK7\PTPMUDTM\new\Frontend\New App\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyTaiKhoan.QuanLyTaiKhoan.resources
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.csproj.AssemblyReference.cache
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.frm_Login.resources
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.frm_Main.resources
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.Properties.Resources.resources
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyKhachHang.QuanLyKhachHang.resources
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyKho.QuanLyKho.resources
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyLapRap.frm_PhanCongLapRap.resources
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLySanPham.QuanLySanPham.resources
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyTaiKhoan.DoiMatKhau.resources
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.View.QuanLyTaiKhoan.QuanLyTaiKhoan.resources
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.csproj.GenerateResource.cache
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.csproj.CoreCompileInputs.cache
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.exe
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.pdb
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\App.exe.config
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\App.exe
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\App.pdb
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\BCrypt.Net-Next.dll
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\MaterialSkin.dll
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\Newtonsoft.Json.dll
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Buffers.dll
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Memory.dll
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Numerics.Vectors.dll
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\BCrypt.Net-Next.xml
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\Newtonsoft.Json.xml
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Buffers.xml
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Memory.xml
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Numerics.Vectors.xml
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Personal\Zalo Received Files\test-pc-app\PC-Build-App\PCBuildApp-Client\App\App\obj\Debug\App.csproj.Up2Date

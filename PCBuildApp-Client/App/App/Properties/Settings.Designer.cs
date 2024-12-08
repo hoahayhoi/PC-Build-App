@@ -69,5 +69,16 @@ namespace App.Properties {
                 return ((string)(this["PCBuildConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=34.80.167.226;Initial Catalog=PCBuild;Persist Security Info=True;User" +
+            " ID=sqlserver;Password=admin;Encrypt=True;TrustServerCertificate=True")]
+        public string PCBuildConnectionString1 {
+            get {
+                return ((string)(this["PCBuildConnectionString1"]));
+            }
+        }
     }
 }

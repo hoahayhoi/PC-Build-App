@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PCBuild" Class="DatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=34.80.167.226;Initial Catalog=PCBuild;Persist Security Info=True;User ID=sqlserver;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="App.Properties.Settings" SettingsPropertyName="PCBuildConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.AssemblyAssignment" Member="AssemblyAssignments">
     <Type Name="AssemblyAssignment">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -7,25 +8,8 @@
       <Column Name="CompletionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Status" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="OrderDetailID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="User_AssemblyAssignment" Member="User" ThisKey="TechnicianID" OtherKey="Id" Type="User" IsForeignKey="true" />
       <Association Name="OrderDetail_AssemblyAssignment" Member="OrderDetail" ThisKey="OrderDetailID" OtherKey="Id" Type="OrderDetail" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Users" Member="Users">
-    <Type Name="User">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="Phone" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
-      <Column Name="UserName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
-      <Column Name="NormalizedUserName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
-      <Column Name="NormalizedEmail" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
-      <Column Name="PasswordHash" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
-      <Column Name="AccessFailedCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="User_AssemblyAssignment" Member="AssemblyAssignments" ThisKey="Id" OtherKey="TechnicianID" Type="AssemblyAssignment" />
-      <Association Name="User_Order" Member="Orders" ThisKey="Id" OtherKey="SalesStaffID" Type="Order" />
-      <Association Name="User_UserRole" Member="UserRoles" ThisKey="Id" OtherKey="UserId" Type="UserRole" />
+      <Association Name="User_AssemblyAssignment" Member="User" ThisKey="TechnicianID" OtherKey="Id" Type="User" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CategoryComponent" Member="CategoryComponents">
@@ -45,7 +29,10 @@
       <Column Name="SupplierID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Image" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
       <Association Name="Component_ComponentConfiguration" Member="ComponentConfigurations" ThisKey="Id" OtherKey="ComponentID" Type="ComponentConfiguration" />
+      <Association Name="Component_InventoryExport" Member="InventoryExports" ThisKey="Id" OtherKey="ComponentID" Type="InventoryExport" />
+      <Association Name="Component_InventoryImport" Member="InventoryImports" ThisKey="Id" OtherKey="ComponentID" Type="InventoryImport" />
       <Association Name="Component_OrderDetail" Member="OrderDetails" ThisKey="Id" OtherKey="ComponentID" Type="OrderDetail" />
+      <Association Name="Component_PurchaseOrderDetail" Member="PurchaseOrderDetails" ThisKey="Id" OtherKey="ComponentID" Type="PurchaseOrderDetail" />
       <Association Name="CategoryComponent_Component" Member="CategoryComponent" ThisKey="CategoryID" OtherKey="CategoryID" Type="CategoryComponent" IsForeignKey="true" />
       <Association Name="Supplier_Component" Member="Supplier" ThisKey="SupplierID" OtherKey="Id" Type="Supplier" IsForeignKey="true" />
     </Type>
@@ -61,7 +48,7 @@
   <Table Name="dbo.Configuration" Member="Configurations">
     <Type Name="Configuration">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="SuggestedComponents" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
       <Column Name="Feedback" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Purpose" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
@@ -78,6 +65,35 @@
       <Column Name="Phone" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
       <Column Name="Address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Association Name="Customer_Order" Member="Orders" ThisKey="Id" OtherKey="CustomerID" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InventoryExport" Member="InventoryExports">
+    <Type Name="InventoryExport">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ComponentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExportDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OrderDetailID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ExportedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Component_InventoryExport" Member="Component" ThisKey="ComponentID" OtherKey="Id" Type="Component" IsForeignKey="true" />
+      <Association Name="OrderDetail_InventoryExport" Member="OrderDetail" ThisKey="OrderDetailID" OtherKey="Id" Type="OrderDetail" IsForeignKey="true" />
+      <Association Name="User_InventoryExport" Member="User" ThisKey="ExportedBy" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InventoryImport" Member="InventoryImports">
+    <Type Name="InventoryImport">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ComponentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ImportDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SupplierID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PricePerUnit" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ImportedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Component_InventoryImport" Member="Component" ThisKey="ComponentID" OtherKey="Id" Type="Component" IsForeignKey="true" />
+      <Association Name="Supplier_InventoryImport" Member="Supplier" ThisKey="SupplierID" OtherKey="Id" Type="Supplier" IsForeignKey="true" />
+      <Association Name="User_InventoryImport" Member="User" ThisKey="ImportedBy" OtherKey="Id" Type="User" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.[Order]" Member="Orders">
@@ -104,9 +120,34 @@
       <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
       <Association Name="OrderDetail_AssemblyAssignment" Member="AssemblyAssignments" ThisKey="Id" OtherKey="OrderDetailID" Type="AssemblyAssignment" />
+      <Association Name="OrderDetail_InventoryExport" Member="InventoryExports" ThisKey="Id" OtherKey="OrderDetailID" Type="InventoryExport" />
       <Association Name="Component_OrderDetail" Member="Component" ThisKey="ComponentID" OtherKey="Id" Type="Component" IsForeignKey="true" DeleteRule="CASCADE" />
       <Association Name="Configuration_OrderDetail" Member="Configuration" ThisKey="ConfigurationID" OtherKey="Id" Type="Configuration" IsForeignKey="true" DeleteRule="CASCADE" />
       <Association Name="Order_OrderDetail" Member="Order" ThisKey="OrderID" OtherKey="Id" Type="Order" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PurchaseOrder" Member="PurchaseOrders">
+    <Type Name="PurchaseOrder">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SupplierID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrderDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PurchaseOrder_PurchaseOrderDetail" Member="PurchaseOrderDetails" ThisKey="Id" OtherKey="PurchaseOrderID" Type="PurchaseOrderDetail" />
+      <Association Name="Supplier_PurchaseOrder" Member="Supplier" ThisKey="SupplierID" OtherKey="Id" Type="Supplier" IsForeignKey="true" />
+      <Association Name="User_PurchaseOrder" Member="User" ThisKey="CreatedBy" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PurchaseOrderDetail" Member="PurchaseOrderDetails">
+    <Type Name="PurchaseOrderDetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PurchaseOrderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ComponentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PricePerUnit" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="Component_PurchaseOrderDetail" Member="Component" ThisKey="ComponentID" OtherKey="Id" Type="Component" IsForeignKey="true" />
+      <Association Name="PurchaseOrder_PurchaseOrderDetail" Member="PurchaseOrder" ThisKey="PurchaseOrderID" OtherKey="Id" Type="PurchaseOrder" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Roles" Member="Roles">
@@ -125,6 +166,8 @@
       <Column Name="Contact" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Association Name="Supplier_Component" Member="Components" ThisKey="Id" OtherKey="SupplierID" Type="Component" />
+      <Association Name="Supplier_InventoryImport" Member="InventoryImports" ThisKey="Id" OtherKey="SupplierID" Type="InventoryImport" />
+      <Association Name="Supplier_PurchaseOrder" Member="PurchaseOrders" ThisKey="Id" OtherKey="SupplierID" Type="PurchaseOrder" />
     </Type>
   </Table>
   <Table Name="dbo.UserRoles" Member="UserRoles">
@@ -133,6 +176,26 @@
       <Column Name="RoleId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="Role_UserRole" Member="Role" ThisKey="RoleId" OtherKey="Id" Type="Role" IsForeignKey="true" />
       <Association Name="User_UserRole" Member="User" ThisKey="UserId" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="NormalizedUserName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="NormalizedEmail" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PasswordHash" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="AccessFailedCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="User_AssemblyAssignment" Member="AssemblyAssignments" ThisKey="Id" OtherKey="TechnicianID" Type="AssemblyAssignment" />
+      <Association Name="User_InventoryExport" Member="InventoryExports" ThisKey="Id" OtherKey="ExportedBy" Type="InventoryExport" />
+      <Association Name="User_InventoryImport" Member="InventoryImports" ThisKey="Id" OtherKey="ImportedBy" Type="InventoryImport" />
+      <Association Name="User_Order" Member="Orders" ThisKey="Id" OtherKey="SalesStaffID" Type="Order" />
+      <Association Name="User_PurchaseOrder" Member="PurchaseOrders" ThisKey="Id" OtherKey="CreatedBy" Type="PurchaseOrder" />
+      <Association Name="User_UserRole" Member="UserRoles" ThisKey="Id" OtherKey="UserId" Type="UserRole" />
     </Type>
   </Table>
 </Database>
