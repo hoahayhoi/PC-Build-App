@@ -25,20 +25,20 @@ namespace App.View.QuanLyKhachHang
             loadCustomers();
 
             _renderer = new CustomMenuStripRender();
-            this.menuStrip1.Renderer = _renderer;
-            _renderer.CurrentItem = quảnLýKháchHàngToolStripMenuItem.Text;
+            //this.menuStrip1.Renderer = _renderer;
+            //_renderer.CurrentItem = quảnLýKháchHàngToolStripMenuItem.Text;
 
             phanQuyen = new CustomPermissions();
-            ApplyPermissions();
+            //ApplyPermissions();
         }
 
-        private void ApplyPermissions()
-        {
-            foreach (ToolStripMenuItem item in this.menuStrip1.Items)
-            {
-                item.Visible = phanQuyen.permissions[frm_Login.CurrentUserRole].Contains(item.Text);
-            }
-        }
+        //private void ApplyPermissions()
+        //{
+        //    foreach (ToolStripMenuItem item in this.menuStrip1.Items)
+        //    {
+        //        item.Visible = phanQuyen.permissions[frm_Login.CurrentUserRole].Contains(item.Text);
+        //    }
+        //}
 
         public void loadCustomers()
         {
@@ -138,6 +138,19 @@ namespace App.View.QuanLyKhachHang
             QuanLySanPham.QuanLySanPham f = new QuanLySanPham.QuanLySanPham();
             f.Show();
             this.Hide();
+        }
+
+        private void button_Thoat_Click(object sender, EventArgs e)
+        {
+            // Ẩn cửa sổ hiện tại
+            this.Hide();
+
+            // Tạo và hiển thị lại form chính (hoặc form trang chủ)
+            frm_Main homeForm = new frm_Main(); // Giả sử bạn có một form trang chủ tên là FormHome
+            homeForm.Show();  // Hiển thị form trang chủ
+
+            // Nếu bạn muốn đóng form hiện tại thay vì chỉ ẩn, bạn có thể sử dụng:
+            // this.Close();
         }
     }
 }
