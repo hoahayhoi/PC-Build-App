@@ -55,16 +55,17 @@
             this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxPhone = new System.Windows.Forms.TextBox();
+            this.textBoxCustomerName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxCustomerName = new System.Windows.Forms.TextBox();
-            this.textBoxPhone = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.QuảnLýKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewComponent)).BeginInit();
@@ -99,7 +100,7 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 622);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(922, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1314, 22);
             this.statusStrip1.TabIndex = 18;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -119,6 +120,7 @@
             this.trangChủToolStripMenuItem,
             this.sảnPhẩmToolStripMenuItem,
             this.đơnHàngtoolStripMenuItem,
+            this.QuảnLýKhoToolStripMenuItem,
             this.phânCôngLắpRápToolStripMenuItem,
             this.quảnLýLắpRáptoolStripMenuItem,
             this.quảnLýNhânViênToolStripMenuItem,
@@ -132,7 +134,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(922, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(1314, 35);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -191,6 +193,7 @@
             this.thốngKêtoolStripMenuItem.Name = "thốngKêtoolStripMenuItem";
             this.thốngKêtoolStripMenuItem.Size = new System.Drawing.Size(80, 31);
             this.thốngKêtoolStripMenuItem.Text = "Thống kê";
+            this.thốngKêtoolStripMenuItem.Click += new System.EventHandler(this.thốngKêtoolStripMenuItem_Click);
             // 
             // tàiKhoảnToolStripMenuItem
             // 
@@ -224,7 +227,7 @@
             // 
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Location = new System.Drawing.Point(25, 67);
-            this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(164, 21);
             this.comboBoxCategory.TabIndex = 20;
@@ -234,7 +237,7 @@
             // 
             this.dataGridViewComponent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewComponent.Location = new System.Drawing.Point(25, 115);
-            this.dataGridViewComponent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewComponent.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewComponent.Name = "dataGridViewComponent";
             this.dataGridViewComponent.RowHeadersWidth = 51;
             this.dataGridViewComponent.RowTemplate.Height = 24;
@@ -245,7 +248,7 @@
             // 
             this.dataGridViewItemOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewItemOrder.Location = new System.Drawing.Point(645, 111);
-            this.dataGridViewItemOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewItemOrder.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewItemOrder.Name = "dataGridViewItemOrder";
             this.dataGridViewItemOrder.RowHeadersWidth = 51;
             this.dataGridViewItemOrder.RowTemplate.Height = 24;
@@ -256,7 +259,7 @@
             // 
             this.buttonAdd.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdd.Location = new System.Drawing.Point(420, 60);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(113, 37);
             this.buttonAdd.TabIndex = 23;
@@ -267,7 +270,7 @@
             // buttonCreateOrder
             // 
             this.buttonCreateOrder.Location = new System.Drawing.Point(648, 583);
-            this.buttonCreateOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCreateOrder.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCreateOrder.Name = "buttonCreateOrder";
             this.buttonCreateOrder.Size = new System.Drawing.Size(113, 37);
             this.buttonCreateOrder.TabIndex = 25;
@@ -278,7 +281,7 @@
             // numericUpDownQuantity
             // 
             this.numericUpDownQuantity.Location = new System.Drawing.Point(342, 72);
-            this.numericUpDownQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownQuantity.Name = "numericUpDownQuantity";
             this.numericUpDownQuantity.Size = new System.Drawing.Size(47, 20);
             this.numericUpDownQuantity.TabIndex = 26;
@@ -305,13 +308,41 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(27, 387);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(590, 234);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Location = new System.Drawing.Point(212, 166);
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(326, 20);
+            this.textBoxAddress.TabIndex = 7;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(212, 125);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(326, 20);
+            this.textBoxEmail.TabIndex = 6;
+            // 
+            // textBoxPhone
+            // 
+            this.textBoxPhone.Location = new System.Drawing.Point(212, 90);
+            this.textBoxPhone.Name = "textBoxPhone";
+            this.textBoxPhone.Size = new System.Drawing.Size(326, 20);
+            this.textBoxPhone.TabIndex = 5;
+            // 
+            // textBoxCustomerName
+            // 
+            this.textBoxCustomerName.Location = new System.Drawing.Point(212, 47);
+            this.textBoxCustomerName.Name = "textBoxCustomerName";
+            this.textBoxCustomerName.Size = new System.Drawing.Size(326, 20);
+            this.textBoxCustomerName.TabIndex = 4;
             // 
             // label5
             // 
@@ -357,34 +388,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên khách hàng : ";
             // 
-            // textBoxCustomerName
-            // 
-            this.textBoxCustomerName.Location = new System.Drawing.Point(212, 47);
-            this.textBoxCustomerName.Name = "textBoxCustomerName";
-            this.textBoxCustomerName.Size = new System.Drawing.Size(326, 20);
-            this.textBoxCustomerName.TabIndex = 4;
-            // 
-            // textBoxPhone
-            // 
-            this.textBoxPhone.Location = new System.Drawing.Point(212, 90);
-            this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(326, 20);
-            this.textBoxPhone.TabIndex = 5;
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Location = new System.Drawing.Point(212, 125);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(326, 20);
-            this.textBoxEmail.TabIndex = 6;
-            // 
-            // textBoxAddress
-            // 
-            this.textBoxAddress.Location = new System.Drawing.Point(212, 166);
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(326, 20);
-            this.textBoxAddress.TabIndex = 7;
-            // 
             // buttonDelete
             // 
             this.buttonDelete.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -406,11 +409,18 @@
             this.label6.TabIndex = 30;
             this.label6.Text = "Sản phẩm đã chọn:";
             // 
+            // QuảnLýKhoToolStripMenuItem
+            // 
+            this.QuảnLýKhoToolStripMenuItem.Name = "QuảnLýKhoToolStripMenuItem";
+            this.QuảnLýKhoToolStripMenuItem.Size = new System.Drawing.Size(103, 31);
+            this.QuảnLýKhoToolStripMenuItem.Text = "Quản Lý Kho";
+            this.QuảnLýKhoToolStripMenuItem.Click += new System.EventHandler(this.quảnLýKhoToolStripMenuItem_Click);
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 644);
+            this.ClientSize = new System.Drawing.Size(1314, 644);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.groupBox1);
@@ -478,6 +488,7 @@
         private System.Windows.Forms.TextBox textBoxCustomerName;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolStripMenuItem QuảnLýKhoToolStripMenuItem;
     }
 }
 

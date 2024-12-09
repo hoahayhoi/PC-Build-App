@@ -256,5 +256,32 @@ namespace App.View.QuanLyTaiKhoan
             // Nếu bạn muốn đóng form hiện tại thay vì chỉ ẩn, bạn có thể sử dụng:
             // this.Close();
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Text.ToLower();
+            FilterInventory(searchTerm);
+        }
+
+        private void FilterInventory(string searchTerm)
+        {
+            if (dataGridViewUsers.DataSource != null)
+            {
+                DataTable dt = (DataTable)dataGridViewUsers.DataSource;
+
+                if (string.IsNullOrEmpty(searchTerm))
+                {
+                    dataGridViewUsers.DataSource = dt;
+                    LoadUsers();
+                }
+                else
+                {
+                    DataView dv = dt.DefaultView;
+                    dv.RowFilter = string.Format("Name LIKE '%{0}%'", searchTerm);
+
+                    dataGridViewUsers.DataSource = dv.ToTable();
+                }
+            }
+        }
     }
 }

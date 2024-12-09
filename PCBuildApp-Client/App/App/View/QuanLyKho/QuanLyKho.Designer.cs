@@ -81,7 +81,7 @@ namespace App.View.QuanLyKho
             this.btnLoadInventory.Name = "btnLoadInventory";
             this.btnLoadInventory.Size = new System.Drawing.Size(100, 30);
             this.btnLoadInventory.TabIndex = 2;
-            this.btnLoadInventory.Text = "Load Inventory";
+            this.btnLoadInventory.Text = "Tải Kho Hàng";
             this.btnLoadInventory.UseVisualStyleBackColor = true;
             this.btnLoadInventory.Click += new System.EventHandler(this.btnLoadInventory_Click);
             // 
@@ -91,7 +91,7 @@ namespace App.View.QuanLyKho
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(100, 30);
             this.btnImport.TabIndex = 3;
-            this.btnImport.Text = "Import";
+            this.btnImport.Text = "Nhập";
             this.btnImport.UseVisualStyleBackColor = true;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
@@ -101,7 +101,7 @@ namespace App.View.QuanLyKho
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(100, 30);
             this.btnExport.TabIndex = 4;
-            this.btnExport.Text = "Export";
+            this.btnExport.Text = "Xuất";
             this.btnExport.UseVisualStyleBackColor = true;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
@@ -146,45 +146,45 @@ namespace App.View.QuanLyKho
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Location = new System.Drawing.Point(20, 76);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(49, 13);
+            this.lblQuantity.Size = new System.Drawing.Size(52, 13);
             this.lblQuantity.TabIndex = 7;
-            this.lblQuantity.Text = "Quantity:";
+            this.lblQuantity.Text = "Số lượng:";
             // 
             // lblNote
             // 
             this.lblNote.AutoSize = true;
             this.lblNote.Location = new System.Drawing.Point(20, 120);
             this.lblNote.Name = "lblNote";
-            this.lblNote.Size = new System.Drawing.Size(33, 13);
+            this.lblNote.Size = new System.Drawing.Size(48, 13);
             this.lblNote.TabIndex = 9;
-            this.lblNote.Text = "Note:";
+            this.lblNote.Text = "Ghi Chú:";
             // 
             // lblComponent
             // 
             this.lblComponent.AutoSize = true;
             this.lblComponent.Location = new System.Drawing.Point(20, 30);
             this.lblComponent.Name = "lblComponent";
-            this.lblComponent.Size = new System.Drawing.Size(64, 13);
+            this.lblComponent.Size = new System.Drawing.Size(59, 13);
             this.lblComponent.TabIndex = 11;
-            this.lblComponent.Text = "Component:";
+            this.lblComponent.Text = "Sản Phẩm:";
             // 
             // lblFromDate
             // 
             this.lblFromDate.AutoSize = true;
             this.lblFromDate.Location = new System.Drawing.Point(20, 162);
             this.lblFromDate.Name = "lblFromDate";
-            this.lblFromDate.Size = new System.Drawing.Size(59, 13);
+            this.lblFromDate.Size = new System.Drawing.Size(51, 13);
             this.lblFromDate.TabIndex = 13;
-            this.lblFromDate.Text = "From Date:";
+            this.lblFromDate.Text = "Từ Ngày:";
             // 
             // lblToDate
             // 
             this.lblToDate.AutoSize = true;
             this.lblToDate.Location = new System.Drawing.Point(20, 192);
             this.lblToDate.Name = "lblToDate";
-            this.lblToDate.Size = new System.Drawing.Size(49, 13);
+            this.lblToDate.Size = new System.Drawing.Size(58, 13);
             this.lblToDate.TabIndex = 15;
-            this.lblToDate.Text = "To Date:";
+            this.lblToDate.Text = "Đến Ngày:";
             // 
             // groupBoxInventory
             // 
@@ -194,7 +194,7 @@ namespace App.View.QuanLyKho
             this.groupBoxInventory.Size = new System.Drawing.Size(856, 471);
             this.groupBoxInventory.TabIndex = 1;
             this.groupBoxInventory.TabStop = false;
-            this.groupBoxInventory.Text = "Inventory List";
+            this.groupBoxInventory.Text = "Thông Tin Kho Hàng";
             // 
             // groupBoxActions
             // 
@@ -206,7 +206,7 @@ namespace App.View.QuanLyKho
             this.groupBoxActions.Size = new System.Drawing.Size(413, 80);
             this.groupBoxActions.TabIndex = 5;
             this.groupBoxActions.TabStop = false;
-            this.groupBoxActions.Text = "Actions";
+            this.groupBoxActions.Text = "Hành Động";
             // 
             // groupBoxFilters
             // 
@@ -225,14 +225,14 @@ namespace App.View.QuanLyKho
             this.groupBoxFilters.Size = new System.Drawing.Size(413, 297);
             this.groupBoxFilters.TabIndex = 16;
             this.groupBoxFilters.TabStop = false;
-            this.groupBoxFilters.Text = "Filters";
+            this.groupBoxFilters.Text = "Lọc";
             this.groupBoxFilters.Enter += new System.EventHandler(this.groupBoxFilters_Enter);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(532, 56);
+            this.label1.Location = new System.Drawing.Point(651, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 29);
             this.label1.TabIndex = 37;
@@ -240,7 +240,7 @@ namespace App.View.QuanLyKho
             // 
             // textBox_SearchKho
             // 
-            this.textBox_SearchKho.Location = new System.Drawing.Point(1129, 95);
+            this.textBox_SearchKho.Location = new System.Drawing.Point(1129, 85);
             this.textBox_SearchKho.Name = "textBox_SearchKho";
             this.textBox_SearchKho.Size = new System.Drawing.Size(155, 20);
             this.textBox_SearchKho.TabIndex = 16;
@@ -250,9 +250,9 @@ namespace App.View.QuanLyKho
             // 
             this.button_Thoat.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Thoat.Location = new System.Drawing.Point(1152, 34);
+            this.button_Thoat.Location = new System.Drawing.Point(1186, 12);
             this.button_Thoat.Name = "button_Thoat";
-            this.button_Thoat.Size = new System.Drawing.Size(132, 36);
+            this.button_Thoat.Size = new System.Drawing.Size(98, 36);
             this.button_Thoat.TabIndex = 38;
             this.button_Thoat.Text = "Thoát";
             this.button_Thoat.UseVisualStyleBackColor = false;
@@ -268,7 +268,7 @@ namespace App.View.QuanLyKho
             this.Controls.Add(this.groupBoxActions);
             this.Controls.Add(this.groupBoxInventory);
             this.Name = "QuanLyKho";
-            this.Text = "Inventory Management";
+            this.Text = "Quản Lý Kho";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.QuanLyKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();

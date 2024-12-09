@@ -211,5 +211,18 @@ namespace App.View.QuanLyBaoCaoThongKe
             dgvTonKho.Columns["TotalStock"].HeaderText = "Tổng tồn kho";
             dgvTonKho.Columns["TotalValue"].HeaderText = "Giá trị tồn kho";
         }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            // Ẩn cửa sổ hiện tại
+            this.Hide();
+
+            // Tạo và hiển thị lại form chính (hoặc form trang chủ)
+            frm_Main homeForm = new frm_Main(); // Giả sử bạn có một form trang chủ tên là FormHome
+            homeForm.Show();  // Hiển thị form trang chủ
+
+            // Nếu bạn muốn đóng form hiện tại thay vì chỉ ẩn, bạn có thể sử dụng:
+            // this.Close();
+        }
     }
 }

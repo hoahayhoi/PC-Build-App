@@ -282,7 +282,7 @@ namespace App.View.QuanLySanPham
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(531, 48);
+            this.label1.Location = new System.Drawing.Point(508, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 29);
             this.label1.TabIndex = 36;
@@ -290,11 +290,11 @@ namespace App.View.QuanLySanPham
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(1045, 84);
+            this.txtSearch.Location = new System.Drawing.Point(1051, 64);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.ReadOnly = true;
             this.txtSearch.Size = new System.Drawing.Size(243, 20);
             this.txtSearch.TabIndex = 10;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btn_Thoat
             // 

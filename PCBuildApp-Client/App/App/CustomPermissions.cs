@@ -19,7 +19,7 @@ namespace App
                     "Quản lý Cấu hình",
                     "Quản lý Nhân viên", 
                     "Quản lý Khách hàng",
-                    "Quản lý Kho",
+                    "Quản Lý Kho",
                     "Phân công Lắp ráp",
                     "Quản lý Lắp ráp",
                     "Thống kê",
@@ -32,7 +32,7 @@ namespace App
                     "Trang chủ",
                     "Quản lý Đơn hàng",
                     "Quản lý Khách hàng",
-                    "Quản lý Kho",
+                    "Quản Lý Kho",
                     "Tài khoản",
                     "Hệ thống",
                 }

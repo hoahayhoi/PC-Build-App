@@ -70,6 +70,7 @@ namespace App.View.QuanLyTaiKhoan
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.button_Thoat = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
@@ -253,10 +254,10 @@ namespace App.View.QuanLyTaiKhoan
             this.dataGridViewUsers.AllowUserToAddRows = false;
             this.dataGridViewUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUsers.ColumnHeadersHeight = 29;
-            this.dataGridViewUsers.Location = new System.Drawing.Point(443, 66);
+            this.dataGridViewUsers.Location = new System.Drawing.Point(443, 109);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.RowHeadersWidth = 51;
-            this.dataGridViewUsers.Size = new System.Drawing.Size(731, 467);
+            this.dataGridViewUsers.Size = new System.Drawing.Size(774, 424);
             this.dataGridViewUsers.TabIndex = 2;
             this.dataGridViewUsers.SelectionChanged += new System.EventHandler(this.dataGridViewUsers_SelectionChanged);
             // 
@@ -311,9 +312,18 @@ namespace App.View.QuanLyTaiKhoan
             this.button_Thoat.UseVisualStyleBackColor = false;
             this.button_Thoat.Click += new System.EventHandler(this.button_Thoat_Click);
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(974, 77);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(243, 20);
+            this.txtSearch.TabIndex = 11;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
             // QuanLyTaiKhoan
             // 
             this.ClientSize = new System.Drawing.Size(1229, 628);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.button_Thoat);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -339,5 +349,6 @@ namespace App.View.QuanLyTaiKhoan
         }
 
         private Button button_Thoat;
+        private TextBox txtSearch;
     }
 }

@@ -1,6 +1,8 @@
 ﻿using App.Controller;
 using App.Model;
+using App.View.QuanLyBaoCaoThongKe;
 using App.View.QuanLyKhachHang;
+using App.View.QuanLyKho;
 using App.View.QuanLySanPham;
 using MaterialSkin;
 using MaterialSkin.Controls;
@@ -61,15 +63,16 @@ namespace App
         {
             foreach (ToolStripMenuItem item in this.menuStrip1.Items)
             {
-                item.Visible = phanQuyen.permissions[frm_Login.CurrentUserRole].Contains(item.Text);
+                item.Visible = phanQuyen.permissions[frm_Login.CurrentUserRole]
+                    .Any(p => p.Equals(item.Text, StringComparison.OrdinalIgnoreCase));
             }
         }
 
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             QuanLySanPham f = new QuanLySanPham();
-            f.Show();
             this.Hide();
+            f.Show();
         }
 
         private void frm_Main_FormClosed(object sender, FormClosingEventArgs e)
@@ -357,5 +360,18 @@ namespace App
             }
         }
 
+        private void thốngKêtoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BaoCaoThongKe frm = new BaoCaoThongKe();
+            this.Hide();
+            frm.Show();
+        }
+
+        private void quảnLýKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyKho frm = new QuanLyKho();
+            this.Hide();
+            frm.Show();
+        }
     }
 }

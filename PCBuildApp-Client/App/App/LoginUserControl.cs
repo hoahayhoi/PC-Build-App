@@ -50,6 +50,7 @@ namespace App
                     cmd.Parameters.AddWithValue("@username", loginDto.Username);
                     using SqlDataReader reader = cmd.ExecuteReader();
 
+
                     if (reader.Read())
                     {
                         // Lưu thông tin người dùng vào các biến tĩnh để có thể sử dụng ở chỗ khác
@@ -59,6 +60,15 @@ namespace App
 
                         // Kích hoạt sự kiện đăng nhập thành công
                         LoginSuccessful?.Invoke(this, EventArgs.Empty);
+
+                        if (ckbNhoMK.Checked)
+                        {
+                            SaveLoginInfo(true);
+                        }
+                        else
+                        {
+                            SaveLoginInfo(false);
+                        }
                     }
                     else
                     {

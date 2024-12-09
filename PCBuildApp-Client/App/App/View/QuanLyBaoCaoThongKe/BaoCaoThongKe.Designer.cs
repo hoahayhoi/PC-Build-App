@@ -43,6 +43,7 @@
             this.btnCapNhatTonKho = new System.Windows.Forms.Button();
             this.btnXuatExcelTonKho = new System.Windows.Forms.Button();
             this.dgvTonKho = new System.Windows.Forms.DataGridView();
+            this.btn_Thoat = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabDoanhThu.SuspendLayout();
             this.panelDoanhThu.SuspendLayout();
@@ -87,6 +88,7 @@
             // 
             // panelDoanhThu
             // 
+            this.panelDoanhThu.Controls.Add(this.btn_Thoat);
             this.panelDoanhThu.Controls.Add(this.groupBoxDoanhThu);
             this.panelDoanhThu.Controls.Add(this.dgvDoanhThu);
             this.panelDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -394,6 +396,20 @@
             this.dgvTonKho.Size = new System.Drawing.Size(1217, 591);
             this.dgvTonKho.TabIndex = 1;
             // 
+            // btn_Thoat
+            // 
+            this.btn_Thoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btn_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Thoat.ForeColor = System.Drawing.Color.White;
+            this.btn_Thoat.Location = new System.Drawing.Point(1010, 31);
+            this.btn_Thoat.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Thoat.Name = "btn_Thoat";
+            this.btn_Thoat.Size = new System.Drawing.Size(90, 28);
+            this.btn_Thoat.TabIndex = 4;
+            this.btn_Thoat.Text = "Thoát";
+            this.btn_Thoat.UseVisualStyleBackColor = false;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            // 
             // BaoCaoThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,5 +465,6 @@
         private System.Windows.Forms.Button btnXuatExcelSanPham;
         private System.Windows.Forms.Button btnCapNhatTonKho;
         private System.Windows.Forms.Button btnXuatExcelTonKho;
+        private System.Windows.Forms.Button btn_Thoat;
     }
 }
