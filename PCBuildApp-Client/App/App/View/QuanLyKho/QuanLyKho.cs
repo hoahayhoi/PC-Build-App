@@ -30,26 +30,60 @@ namespace App.View.QuanLyKho
         // Thực hiện nhập kho
         private void btnImport_Click(object sender, EventArgs e)
         {
+            if (cbComponent.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn linh kiện!");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtQuantity.Text))
+            {
+                MessageBox.Show("Vui lòng nhập số lượng!");
+                return;
+            }
+
+            if (!int.TryParse(txtQuantity.Text, out int quantity) || quantity <= 0)
+            {
+                MessageBox.Show("Số lượng phải là số nguyên dương!");
+                return;
+            }
+
             int componentId = (int)cbComponent.SelectedValue;
-            int quantity = int.Parse(txtQuantity.Text);
             string note = txtNote.Text;
             int importedBy = 1; // Giả sử người nhập kho là UserID = 1
 
             bool result = _inventoryController.ImportInventory(componentId, quantity, 1, 100, note, importedBy);
             LoadInventory();
-            MessageBox.Show(result ? "Thêm thành công!" : "Vui lòng kiểm tra lại!");
+            MessageBox.Show(result ? "Thêm thành công!" : "Vui lòng kiểm tra lại!");
         }
 
         // Thực hiện xuất kho
         private void btnExport_Click(object sender, EventArgs e)
         {
+            if (cbComponent.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn linh kiện!");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtQuantity.Text))
+            {
+                MessageBox.Show("Vui lòng nhập số lượng!");
+                return;
+            }
+
+            if (!int.TryParse(txtQuantity.Text, out int quantity) || quantity <= 0)
+            {
+                MessageBox.Show("Số lượng phải là số nguyên dương!");
+                return;
+            }
+
             int componentId = (int)cbComponent.SelectedValue;
-            int quantity = int.Parse(txtQuantity.Text);
             string note = txtNote.Text;
-            int exportedBy = 1; // Giả sử người xuất kho là UserID = 1
+            int exportedBy = 1;
 
             bool result = _inventoryController.ExportInventory(componentId, quantity, null, note, exportedBy);
-            MessageBox.Show(result ? "Xuất kho thành công!" : "Vui lòng kiểm tra lại!");
+            MessageBox.Show(result ? "Xuất kho thành công!" : "Vui lòng kiểm tra lại!");
             LoadInventory();
         }
 

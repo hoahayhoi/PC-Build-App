@@ -43,7 +43,7 @@ namespace App.View.QuanLyTaiKhoan
             // Kiểm tra mật khẩu mới và xác nhận mật khẩu
             if (newPassword != confirmPassword)
             {
-                MessageBox.Show("New password and confirm password do not match.");
+                MessageBox.Show("Xác nhận mật khẩu không trùng với mật khẩu mới.");
                 return;
             }
 
@@ -52,15 +52,19 @@ namespace App.View.QuanLyTaiKhoan
 
             if (result)
             {
-                MessageBox.Show("Password changed successfully.");
+                MessageBox.Show("Mật khẩu đã được thay đổi thành công.");
                 // Clear the textboxes after success
                 txtCurrentPassword.Clear();
                 txtNewPassword.Clear();
                 txtConfirmPassword.Clear();
+
+                frm_Login loginForm = new frm_Login();
+                loginForm.Show();
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Current password is incorrect or an error occurred.");
+                MessageBox.Show("Mật khẩu hiện tại không đúng. Có lỗi xảy ra !");
             }
         }
 

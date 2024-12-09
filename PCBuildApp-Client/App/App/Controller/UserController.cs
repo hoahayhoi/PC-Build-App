@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using App.Model;
 using System.Windows;
+using App.Helper;
 
 namespace App.Controller
 {
@@ -309,33 +310,36 @@ namespace App.Controller
 
         public bool ChangePassword(int userId, string currentPassword, string newPassword)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
+                using SqlConnection conn = BackendHelper.GetConnection();
                 conn.Open();
-                string query = "SELECT PasswordHash FROM Users WHERE Id = @id";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+
+                // First verify the current password hash exists
+                string getHashQuery = "SELECT PasswordHash FROM Users WHERE Id = @userId";
+                using SqlCommand getHashCmd = new SqlCommand(getHashQuery, conn);
+                getHashCmd.Parameters.AddWithValue("@userId", userId);
+                string currentHash = (string)getHashCmd.ExecuteScalar();
+
+                if (currentHash == null)
                 {
-                    cmd.Parameters.AddWithValue("@id", userId);
-                    string hashedPassword = (string)cmd.ExecuteScalar();
-
-                    // Kiểm tra mật khẩu cũ
-                    if (BCrypt.Net.BCrypt.Verify(currentPassword, hashedPassword))
-                    {
-                        // Mã hóa mật khẩu mới
-                        string hashedNewPassword = BCrypt.Net.BCrypt.HashPassword(newPassword);
-
-                        // Cập nhật mật khẩu mới
-                        string updateQuery = "UPDATE Users SET PasswordHash = @password WHERE Id = @id";
-                        using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn))
-                        {
-                            updateCmd.Parameters.AddWithValue("@password", hashedNewPassword);
-                            updateCmd.Parameters.AddWithValue("@id", userId);
-                            updateCmd.ExecuteNonQuery();
-                            return true;
-                        }
-                    }
                     return false;
                 }
+
+                // Generate new hash for the new password
+                string newHash = BCrypt.Net.BCrypt.HashPassword(newPassword);
+
+                // Update password
+                string updateQuery = "UPDATE Users SET PasswordHash = @newHash WHERE Id = @userId";
+                using SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
+                updateCmd.Parameters.AddWithValue("@newHash", newHash);
+                updateCmd.Parameters.AddWithValue("@userId", userId);
+
+                return updateCmd.ExecuteNonQuery() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
 

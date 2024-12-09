@@ -63,9 +63,9 @@ namespace App.View.QuanLyTaiKhoan
             this.lblUserName.AutoSize = true;
             this.lblUserName.Location = new System.Drawing.Point(10, 20);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(76, 16);
+            this.lblUserName.Size = new System.Drawing.Size(101, 16);
             this.lblUserName.TabIndex = 0;
-            this.lblUserName.Text = "Username: ";
+            this.lblUserName.Text = "Tên đăng nhập:";
             // 
             // lblEmail
             // 
@@ -81,9 +81,9 @@ namespace App.View.QuanLyTaiKhoan
             this.lblPhone.AutoSize = true;
             this.lblPhone.Location = new System.Drawing.Point(10, 100);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(52, 16);
+            this.lblPhone.Size = new System.Drawing.Size(88, 16);
             this.lblPhone.TabIndex = 2;
-            this.lblPhone.Text = "Phone: ";
+            this.lblPhone.Text = "Số điện thoại:";
             // 
             // panelRight
             // 
@@ -105,27 +105,27 @@ namespace App.View.QuanLyTaiKhoan
             this.lblCurrentPassword.AutoSize = true;
             this.lblCurrentPassword.Location = new System.Drawing.Point(35, 20);
             this.lblCurrentPassword.Name = "lblCurrentPassword";
-            this.lblCurrentPassword.Size = new System.Drawing.Size(118, 16);
+            this.lblCurrentPassword.Size = new System.Drawing.Size(84, 16);
             this.lblCurrentPassword.TabIndex = 0;
-            this.lblCurrentPassword.Text = "Current Password: ";
+            this.lblCurrentPassword.Text = "Mật Khẩu Cũ:";
             // 
             // lblNewPassword
             // 
             this.lblNewPassword.AutoSize = true;
             this.lblNewPassword.Location = new System.Drawing.Point(35, 60);
             this.lblNewPassword.Name = "lblNewPassword";
-            this.lblNewPassword.Size = new System.Drawing.Size(103, 16);
+            this.lblNewPassword.Size = new System.Drawing.Size(93, 16);
             this.lblNewPassword.TabIndex = 1;
-            this.lblNewPassword.Text = "New Password: ";
+            this.lblNewPassword.Text = "Mật Khẩu Mới: ";
             // 
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
             this.lblConfirmPassword.Location = new System.Drawing.Point(35, 100);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(121, 16);
+            this.lblConfirmPassword.Size = new System.Drawing.Size(122, 16);
             this.lblConfirmPassword.TabIndex = 2;
-            this.lblConfirmPassword.Text = "Confirm Password: ";
+            this.lblConfirmPassword.Text = "Nhập Lại Mật Khẩu:";
             // 
             // txtCurrentPassword
             // 
@@ -153,11 +153,11 @@ namespace App.View.QuanLyTaiKhoan
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.Location = new System.Drawing.Point(155, 140);
+            this.btnChangePassword.Location = new System.Drawing.Point(155, 176);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(200, 30);
             this.btnChangePassword.TabIndex = 6;
-            this.btnChangePassword.Text = "Change Password";
+            this.btnChangePassword.Text = "Đổi Mật Khẩu";
             this.btnChangePassword.UseVisualStyleBackColor = true;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 

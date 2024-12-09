@@ -4,6 +4,7 @@ using App.View.QuanLyBaoCaoThongKe;
 using App.View.QuanLyKhachHang;
 using App.View.QuanLyKho;
 using App.View.QuanLySanPham;
+using App.View.QuanLyTaiKhoan;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using Newtonsoft.Json;
@@ -372,6 +373,32 @@ namespace App
             QuanLyKho frm = new QuanLyKho();
             this.Hide();
             frm.Show();
+        }
+
+        private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyTaiKhoan frm = new QuanLyTaiKhoan();
+            this.Hide();
+            frm.Show();
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DoiMatKhau frm = new DoiMatKhau(int.Parse(frm_Login.CurrentUserID));
+            this.Hide();
+            frm.Show();
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                frm_Login loginForm = new frm_Login();
+                loginForm.Show();
+                this.Hide();
+            }
         }
     }
 }
