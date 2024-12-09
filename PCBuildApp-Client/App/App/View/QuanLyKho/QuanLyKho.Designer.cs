@@ -67,11 +67,11 @@ namespace App.View.QuanLyKho
             this.dgvInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInventory.Location = new System.Drawing.Point(3, 18);
+            this.dgvInventory.Location = new System.Drawing.Point(3, 16);
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.RowHeadersWidth = 51;
             this.dgvInventory.RowTemplate.Height = 25;
-            this.dgvInventory.Size = new System.Drawing.Size(850, 450);
+            this.dgvInventory.Size = new System.Drawing.Size(850, 452);
             this.dgvInventory.TabIndex = 0;
             this.dgvInventory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventory_CellContentClick_1);
             // 
@@ -109,14 +109,14 @@ namespace App.View.QuanLyKho
             // 
             this.txtQuantity.Location = new System.Drawing.Point(120, 76);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(100, 22);
+            this.txtQuantity.Size = new System.Drawing.Size(100, 20);
             this.txtQuantity.TabIndex = 6;
             // 
             // txtNote
             // 
             this.txtNote.Location = new System.Drawing.Point(120, 120);
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(200, 22);
+            this.txtNote.Size = new System.Drawing.Size(200, 20);
             this.txtNote.TabIndex = 8;
             // 
             // cbComponent
@@ -124,21 +124,21 @@ namespace App.View.QuanLyKho
             this.cbComponent.FormattingEnabled = true;
             this.cbComponent.Location = new System.Drawing.Point(120, 30);
             this.cbComponent.Name = "cbComponent";
-            this.cbComponent.Size = new System.Drawing.Size(200, 24);
+            this.cbComponent.Size = new System.Drawing.Size(200, 21);
             this.cbComponent.TabIndex = 10;
             // 
             // dtpFromDate
             // 
             this.dtpFromDate.Location = new System.Drawing.Point(120, 162);
             this.dtpFromDate.Name = "dtpFromDate";
-            this.dtpFromDate.Size = new System.Drawing.Size(200, 22);
+            this.dtpFromDate.Size = new System.Drawing.Size(200, 20);
             this.dtpFromDate.TabIndex = 12;
             // 
             // dtpToDate
             // 
             this.dtpToDate.Location = new System.Drawing.Point(120, 192);
             this.dtpToDate.Name = "dtpToDate";
-            this.dtpToDate.Size = new System.Drawing.Size(200, 22);
+            this.dtpToDate.Size = new System.Drawing.Size(200, 20);
             this.dtpToDate.TabIndex = 14;
             // 
             // lblQuantity
@@ -146,7 +146,7 @@ namespace App.View.QuanLyKho
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Location = new System.Drawing.Point(20, 76);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(58, 16);
+            this.lblQuantity.Size = new System.Drawing.Size(49, 13);
             this.lblQuantity.TabIndex = 7;
             this.lblQuantity.Text = "Quantity:";
             // 
@@ -155,7 +155,7 @@ namespace App.View.QuanLyKho
             this.lblNote.AutoSize = true;
             this.lblNote.Location = new System.Drawing.Point(20, 120);
             this.lblNote.Name = "lblNote";
-            this.lblNote.Size = new System.Drawing.Size(39, 16);
+            this.lblNote.Size = new System.Drawing.Size(33, 13);
             this.lblNote.TabIndex = 9;
             this.lblNote.Text = "Note:";
             // 
@@ -164,7 +164,7 @@ namespace App.View.QuanLyKho
             this.lblComponent.AutoSize = true;
             this.lblComponent.Location = new System.Drawing.Point(20, 30);
             this.lblComponent.Name = "lblComponent";
-            this.lblComponent.Size = new System.Drawing.Size(79, 16);
+            this.lblComponent.Size = new System.Drawing.Size(64, 13);
             this.lblComponent.TabIndex = 11;
             this.lblComponent.Text = "Component:";
             // 
@@ -173,7 +173,7 @@ namespace App.View.QuanLyKho
             this.lblFromDate.AutoSize = true;
             this.lblFromDate.Location = new System.Drawing.Point(20, 162);
             this.lblFromDate.Name = "lblFromDate";
-            this.lblFromDate.Size = new System.Drawing.Size(73, 16);
+            this.lblFromDate.Size = new System.Drawing.Size(59, 13);
             this.lblFromDate.TabIndex = 13;
             this.lblFromDate.Text = "From Date:";
             // 
@@ -182,7 +182,7 @@ namespace App.View.QuanLyKho
             this.lblToDate.AutoSize = true;
             this.lblToDate.Location = new System.Drawing.Point(20, 192);
             this.lblToDate.Name = "lblToDate";
-            this.lblToDate.Size = new System.Drawing.Size(59, 16);
+            this.lblToDate.Size = new System.Drawing.Size(49, 13);
             this.lblToDate.TabIndex = 15;
             this.lblToDate.Text = "To Date:";
             // 
@@ -234,7 +234,7 @@ namespace App.View.QuanLyKho
             this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(532, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 36);
+            this.label1.Size = new System.Drawing.Size(157, 29);
             this.label1.TabIndex = 37;
             this.label1.Text = "Quản lý Kho";
             // 
@@ -242,7 +242,7 @@ namespace App.View.QuanLyKho
             // 
             this.textBox_SearchKho.Location = new System.Drawing.Point(1129, 95);
             this.textBox_SearchKho.Name = "textBox_SearchKho";
-            this.textBox_SearchKho.Size = new System.Drawing.Size(155, 22);
+            this.textBox_SearchKho.Size = new System.Drawing.Size(155, 20);
             this.textBox_SearchKho.TabIndex = 16;
             this.textBox_SearchKho.TextChanged += new System.EventHandler(this.textBox_SearchKho_TextChanged);
             // 
@@ -269,6 +269,7 @@ namespace App.View.QuanLyKho
             this.Controls.Add(this.groupBoxInventory);
             this.Name = "QuanLyKho";
             this.Text = "Inventory Management";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.QuanLyKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             this.groupBoxInventory.ResumeLayout(false);

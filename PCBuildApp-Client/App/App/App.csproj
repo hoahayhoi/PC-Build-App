@@ -113,7 +113,14 @@
     <Compile Include="frm_Main.Designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalUserInfo.cs" />
     <Compile Include="Helper\BackendHelper.cs" />
+    <Compile Include="LoginUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginUserControl.Designer.cs">
+      <DependentUpon>LoginUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\CategoryDto.cs" />
     <Compile Include="Model\ComponentDto.cs" />
     <Compile Include="Model\ComponentOrder.cs" />
@@ -171,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginUserControl.resx">
+      <DependentUpon>LoginUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

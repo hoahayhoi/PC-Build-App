@@ -402,8 +402,9 @@
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BaoCaoThongKe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Báo Cáo Thống Kê";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.tabControl1.ResumeLayout(false);
             this.tabDoanhThu.ResumeLayout(false);
             this.panelDoanhThu.ResumeLayout(false);

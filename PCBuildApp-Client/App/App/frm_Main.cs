@@ -25,11 +25,11 @@ namespace App
     {
         private CustomMenuStripRender _renderer;
         private CustomPermissions phanQuyen;
+        private LoginUserControl loginControl;
 
         public frm_Main()
         {
             InitializeComponent();
-
             _renderer = new CustomMenuStripRender();
             this.menuStrip1.Renderer = _renderer;
             _renderer.CurrentItem = trangChủToolStripMenuItem.Text;

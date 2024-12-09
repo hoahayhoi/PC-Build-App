@@ -326,6 +326,7 @@ namespace App.View.QuanLyTaiKhoan
             this.Name = "QuanLyTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý tài khoản";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.QuanLyTaiKhoan_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
