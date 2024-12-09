@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using App.Model;
+using System.Windows;
 
 namespace App.Controller
 {
@@ -55,50 +56,112 @@ namespace App.Controller
 
         public bool AddUser(UserDto user, List<string> roles)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                conn.Open();
-                using (SqlTransaction transaction = conn.BeginTransaction())
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    try
+                    conn.Open();
+                    using (SqlTransaction transaction = conn.BeginTransaction())
                     {
-                        // Add user
-                        string userQuery = @"INSERT INTO Users (Name, UserName, Email, Phone, PasswordHash) 
-                                       VALUES (@name, @username, @email, @phone, @password);
+                        try
+                        {
+                            // Kiểm tra username đã tồn tại chưa
+                            string checkQuery = "SELECT COUNT(*) FROM Users WHERE UserName = @username";
+                            using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn, transaction))
+                            {
+                                checkCmd.Parameters.AddWithValue("@username", user.UserName);
+                                int count = (int)checkCmd.ExecuteScalar();
+                                if (count > 0)
+                                {
+                                    transaction.Rollback();
+                                    return false;
+                                }
+                            }
+
+                            // Thêm user với AccessFailedCount = 0
+                            string userQuery = @"INSERT INTO Users (
+                                           Name, 
+                                           UserName, 
+                                           Email, 
+                                           Phone, 
+                                           PasswordHash,
+                                           AccessFailedCount,
+                                           NormalizedUserName,
+                                           NormalizedEmail
+                                       ) 
+                                       VALUES (
+                                           @name, 
+                                           @username, 
+                                           @email, 
+                                           @phone, 
+                                           @password,
+                                           0,
+                                           @normalizedUsername,
+                                           @normalizedEmail
+                                       );
                                        SELECT SCOPE_IDENTITY()";
 
-                        SqlCommand cmd = new SqlCommand(userQuery, conn, transaction);
-                        cmd.Parameters.AddWithValue("@name", user.Name);
-                        cmd.Parameters.AddWithValue("@username", user.UserName);
-                        cmd.Parameters.AddWithValue("@email", user.Email);
-                        cmd.Parameters.AddWithValue("@phone", user.Phone);
-                        cmd.Parameters.AddWithValue("@password", BCrypt.Net.BCrypt.HashPassword(user.Password));
+                            SqlCommand cmd = new SqlCommand(userQuery, conn, transaction);
 
-                        int userId = Convert.ToInt32(cmd.ExecuteScalar());
+                            // Xử lý các tham số
+                            cmd.Parameters.AddWithValue("@name", user.Name);
+                            cmd.Parameters.AddWithValue("@username", user.UserName);
 
-                        // Add roles
-                        foreach (string role in roles)
-                        {
-                            string roleQuery = @"INSERT INTO UserRoles (UserId, RoleId)
+                            // Xử lý email
+                            if (string.IsNullOrEmpty(user.Email))
+                            {
+                                cmd.Parameters.AddWithValue("@email", DBNull.Value);
+                                cmd.Parameters.AddWithValue("@normalizedEmail", DBNull.Value);
+                            }
+                            else
+                            {
+                                cmd.Parameters.AddWithValue("@email", user.Email);
+                                cmd.Parameters.AddWithValue("@normalizedEmail", user.Email.ToUpper());
+                            }
+
+                            // Xử lý phone
+                            if (string.IsNullOrEmpty(user.Phone))
+                            {
+                                cmd.Parameters.AddWithValue("@phone", DBNull.Value);
+                            }
+                            else
+                            {
+                                cmd.Parameters.AddWithValue("@phone", user.Phone);
+                            }
+
+                            cmd.Parameters.AddWithValue("@password", BCrypt.Net.BCrypt.HashPassword(user.Password));
+                            cmd.Parameters.AddWithValue("@normalizedUsername", user.UserName.ToUpper());
+
+                            int userId = Convert.ToInt32(cmd.ExecuteScalar());
+
+                            // Thêm role
+                            if (roles.Any())
+                            {
+                                string roleQuery = @"INSERT INTO UserRoles (UserId, RoleId)
                                           SELECT @userId, Id FROM Roles WHERE Name = @role";
-                            cmd = new SqlCommand(roleQuery, conn, transaction);
-                            cmd.Parameters.AddWithValue("@userId", userId);
-                            cmd.Parameters.AddWithValue("@role", role);
-                            cmd.ExecuteNonQuery();
-                        }
+                                cmd = new SqlCommand(roleQuery, conn, transaction);
+                                cmd.Parameters.AddWithValue("@userId", userId);
+                                cmd.Parameters.AddWithValue("@role", roles.First());
+                                cmd.ExecuteNonQuery();
+                            }
 
-                        transaction.Commit();
-                        return true;
-                    }
-                    catch (Exception)
-                    {
-                        transaction.Rollback();
-                        return false;
+                            transaction.Commit();
+                            return true;
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback();
+                            throw new Exception($"Lỗi khi thêm user: {ex.Message}");
+                        }
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}");
+                return false;
+            }
         }
-
         public bool UpdateUser(int id, UserDto user, List<string> roles)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))

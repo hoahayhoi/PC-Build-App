@@ -80,25 +80,25 @@ namespace App.View.QuanLyTaiKhoan
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 547);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 606);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1283, 24);
+            this.statusStrip1.Size = new System.Drawing.Size(1229, 22);
             this.statusStrip1.TabIndex = 8;
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(103, 18);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(89, 17);
             this.toolStripStatusLabel1.Text = "Hello, Admin";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(464, 46);
+            this.label1.Location = new System.Drawing.Point(466, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 36);
+            this.label1.Size = new System.Drawing.Size(221, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý tài khoản";
             // 
@@ -121,7 +121,7 @@ namespace App.View.QuanLyTaiKhoan
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(12, 59);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(400, 474);
+            this.groupBox1.Size = new System.Drawing.Size(425, 474);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tài khoản";
@@ -132,7 +132,7 @@ namespace App.View.QuanLyTaiKhoan
             this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F);
             this.label2.Location = new System.Drawing.Point(14, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 23);
+            this.label2.Size = new System.Drawing.Size(49, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên : ";
             // 
@@ -142,7 +142,7 @@ namespace App.View.QuanLyTaiKhoan
             this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F);
             this.label3.Location = new System.Drawing.Point(14, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 23);
+            this.label3.Size = new System.Drawing.Size(124, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "Tên đăng nhập : ";
             // 
@@ -152,7 +152,7 @@ namespace App.View.QuanLyTaiKhoan
             this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F);
             this.label4.Location = new System.Drawing.Point(14, 223);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 23);
+            this.label4.Size = new System.Drawing.Size(56, 18);
             this.label4.TabIndex = 2;
             this.label4.Text = "Email : ";
             // 
@@ -162,7 +162,7 @@ namespace App.View.QuanLyTaiKhoan
             this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F);
             this.label5.Location = new System.Drawing.Point(14, 274);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 23);
+            this.label5.Size = new System.Drawing.Size(87, 18);
             this.label5.TabIndex = 3;
             this.label5.Text = "Điện thoại : ";
             // 
@@ -172,7 +172,7 @@ namespace App.View.QuanLyTaiKhoan
             this.label6.Font = new System.Drawing.Font("Tahoma", 11.25F);
             this.label6.Location = new System.Drawing.Point(14, 50);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 23);
+            this.label6.Size = new System.Drawing.Size(37, 18);
             this.label6.TabIndex = 4;
             this.label6.Text = "Id : ";
             // 
@@ -182,7 +182,7 @@ namespace App.View.QuanLyTaiKhoan
             this.label7.Font = new System.Drawing.Font("Tahoma", 11.25F);
             this.label7.Location = new System.Drawing.Point(14, 333);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 23);
+            this.label7.Size = new System.Drawing.Size(84, 18);
             this.label7.TabIndex = 5;
             this.label7.Text = "Mật khẩu : ";
             // 
@@ -192,7 +192,7 @@ namespace App.View.QuanLyTaiKhoan
             this.label8.Font = new System.Drawing.Font("Tahoma", 11.25F);
             this.label8.Location = new System.Drawing.Point(14, 397);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 23);
+            this.label8.Size = new System.Drawing.Size(100, 18);
             this.label8.TabIndex = 6;
             this.label8.Text = "Phân quyền : ";
             // 
@@ -201,14 +201,14 @@ namespace App.View.QuanLyTaiKhoan
             this.txtId.Location = new System.Drawing.Point(151, 50);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(243, 32);
+            this.txtId.Size = new System.Drawing.Size(243, 27);
             this.txtId.TabIndex = 7;
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(151, 105);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(243, 32);
+            this.txtName.Size = new System.Drawing.Size(243, 27);
             this.txtName.TabIndex = 8;
             // 
             // checkedListBoxRoles
@@ -216,7 +216,7 @@ namespace App.View.QuanLyTaiKhoan
             this.checkedListBoxRoles.CheckOnClick = true;
             this.checkedListBoxRoles.Location = new System.Drawing.Point(151, 396);
             this.checkedListBoxRoles.Name = "checkedListBoxRoles";
-            this.checkedListBoxRoles.Size = new System.Drawing.Size(243, 58);
+            this.checkedListBoxRoles.Size = new System.Drawing.Size(243, 48);
             this.checkedListBoxRoles.TabIndex = 13;
             this.checkedListBoxRoles.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxRoles_ItemCheck);
             // 
@@ -224,28 +224,28 @@ namespace App.View.QuanLyTaiKhoan
             // 
             this.txtUsername.Location = new System.Drawing.Point(151, 165);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(243, 32);
+            this.txtUsername.Size = new System.Drawing.Size(243, 27);
             this.txtUsername.TabIndex = 9;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(151, 333);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(243, 32);
+            this.txtPassword.Size = new System.Drawing.Size(243, 27);
             this.txtPassword.TabIndex = 10;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(151, 223);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(243, 32);
+            this.txtEmail.Size = new System.Drawing.Size(243, 27);
             this.txtEmail.TabIndex = 11;
             // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(151, 274);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(243, 32);
+            this.txtPhone.Size = new System.Drawing.Size(243, 27);
             this.txtPhone.TabIndex = 12;
             // 
             // dataGridViewUsers
@@ -253,10 +253,10 @@ namespace App.View.QuanLyTaiKhoan
             this.dataGridViewUsers.AllowUserToAddRows = false;
             this.dataGridViewUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUsers.ColumnHeadersHeight = 29;
-            this.dataGridViewUsers.Location = new System.Drawing.Point(443, 102);
+            this.dataGridViewUsers.Location = new System.Drawing.Point(443, 66);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.RowHeadersWidth = 51;
-            this.dataGridViewUsers.Size = new System.Drawing.Size(731, 431);
+            this.dataGridViewUsers.Size = new System.Drawing.Size(731, 467);
             this.dataGridViewUsers.TabIndex = 2;
             this.dataGridViewUsers.SelectionChanged += new System.EventHandler(this.dataGridViewUsers_SelectionChanged);
             // 
@@ -273,7 +273,7 @@ namespace App.View.QuanLyTaiKhoan
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnUpdate.Location = new System.Drawing.Point(139, 560);
+            this.btnUpdate.Location = new System.Drawing.Point(158, 560);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(133, 39);
             this.btnUpdate.TabIndex = 4;
@@ -283,7 +283,7 @@ namespace App.View.QuanLyTaiKhoan
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnRefresh.Location = new System.Drawing.Point(279, 560);
+            this.btnRefresh.Location = new System.Drawing.Point(304, 560);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(133, 39);
             this.btnRefresh.TabIndex = 5;
@@ -313,7 +313,7 @@ namespace App.View.QuanLyTaiKhoan
             // 
             // QuanLyTaiKhoan
             // 
-            this.ClientSize = new System.Drawing.Size(1283, 571);
+            this.ClientSize = new System.Drawing.Size(1229, 628);
             this.Controls.Add(this.button_Thoat);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);

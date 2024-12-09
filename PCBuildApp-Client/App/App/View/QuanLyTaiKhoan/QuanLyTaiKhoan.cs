@@ -27,17 +27,24 @@ namespace App.View.QuanLyTaiKhoan
 
         private void LoadUsers()
         {
-            dataGridViewUsers.DataSource = userController.GetAllUsers();
-            dataGridViewUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        }
+            try
+            {
+                var dt = userController.GetAllUsers();
+                dataGridViewUsers.DataSource = dt;
 
-        private void LoadRoles()
-        {
-            var roles = userController.GetAllRoles();
-            checkedListBoxRoles.Items.Clear();
-            checkedListBoxRoles.Items.AddRange(roles.ToArray());
+                // Format lại tên cột
+                if (dataGridViewUsers.Columns["Id"] != null) dataGridViewUsers.Columns["Id"].HeaderText = "Mã";
+                if (dataGridViewUsers.Columns["Name"] != null) dataGridViewUsers.Columns["Name"].HeaderText = "Họ Tên";
+                if (dataGridViewUsers.Columns["UserName"] != null) dataGridViewUsers.Columns["UserName"].HeaderText = "Tên đăng nhập";
+                if (dataGridViewUsers.Columns["Email"] != null) dataGridViewUsers.Columns["Email"].HeaderText = "Email";
+                if (dataGridViewUsers.Columns["Phone"] != null) dataGridViewUsers.Columns["Phone"].HeaderText = "Điện thoại";
+                if (dataGridViewUsers.Columns["Roles"] != null) dataGridViewUsers.Columns["Roles"].HeaderText = "Vai trò";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải danh sách: {ex.Message}");
+            }
         }
-
 
         private void ClearInputs()
         {
@@ -47,19 +54,35 @@ namespace App.View.QuanLyTaiKhoan
             txtEmail.Clear();
             txtPhone.Clear();
             txtPassword.Clear();
+
+            // Bỏ chọn tất cả roles
             for (int i = 0; i < checkedListBoxRoles.Items.Count; i++)
             {
                 checkedListBoxRoles.SetItemChecked(i, false);
             }
         }
 
-        private bool ValidateInputs()
+        private void LoadRoles()
+        {
+            var roles = userController.GetAllRoles();
+            checkedListBoxRoles.Items.Clear();
+            checkedListBoxRoles.Items.AddRange(roles.ToArray());
+        }
+
+        private bool ValidateInputs(bool isUpdate = false)
         {
             if (string.IsNullOrEmpty(txtName.Text) ||
                 string.IsNullOrEmpty(txtUsername.Text) ||
-                string.IsNullOrEmpty(txtPassword.Text))
+                (!isUpdate && string.IsNullOrEmpty(txtPassword.Text))) // Chỉ kiểm tra password khi thêm mới
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin bắt buộc!");
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin bắt buộc (Tên, Tên đăng nhập" +
+                    (!isUpdate ? ", Mật khẩu" : "") + ")!");
+                return false;
+            }
+
+            if (checkedListBoxRoles.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn ít nhất một vai trò!");
                 return false;
             }
             return true;
@@ -93,27 +116,39 @@ namespace App.View.QuanLyTaiKhoan
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            if (!ValidateInputs() || string.IsNullOrEmpty(txtId.Text)) return;
-
-            var user = new UserDto(
-                txtName.Text,
-                txtUsername.Text,
-                txtEmail.Text,
-                txtPhone.Text,
-                txtPassword.Text
-            );
-
-            var selectedRoles = checkedListBoxRoles.CheckedItems.Cast<string>().ToList();
-
-            if (userController.UpdateUser(int.Parse(txtId.Text), user, selectedRoles))
+            try
             {
-                MessageBox.Show("Cập nhật thành công!");
-                LoadUsers();
-                ClearInputs();
+                if (!ValidateInputs(true)) return;
+                if (string.IsNullOrEmpty(txtId.Text))
+                {
+                    MessageBox.Show("Vui lòng chọn tài khoản cần cập nhật!");
+                    return;
+                }
+
+                var user = new UserDto(
+                    txtName.Text.Trim(),
+                    txtUsername.Text.Trim(),
+                    txtEmail.Text.Trim(),
+                    txtPhone.Text.Trim(),
+                    string.IsNullOrEmpty(txtPassword.Text) ? null : txtPassword.Text.Trim() // Chỉ cập nhật password nếu có nhập
+                );
+
+                var selectedRoles = checkedListBoxRoles.CheckedItems.Cast<string>().ToList();
+
+                if (userController.UpdateUser(int.Parse(txtId.Text), user, selectedRoles))
+                {
+                    MessageBox.Show("Cập nhật thành công!");
+                    LoadUsers();
+                    ClearInputs();
+                }
+                else
+                {
+                    MessageBox.Show("Không thể cập nhật tài khoản! Vui lòng kiểm tra lại thông tin.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Có lỗi xảy ra!");
+                MessageBox.Show($"Lỗi: {ex.Message}");
             }
         }
 
