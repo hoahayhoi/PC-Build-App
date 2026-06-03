@@ -1,0 +1,77 @@
+services:
+  # ===== SQL Server =====
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: pcbuild-sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Admin@123456"   # Mật khẩu SA (phải đủ mạnh: chữ hoa, số, ký tự đặc biệt)
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"               # Expose ra ngoài để dùng SSMS/Azure Data Studio
+    volumes:
+      - sqlserver_data:/var/opt/mssql  # Lưu dữ liệu persistent
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U SA -P 'Admin@123456' -Q 'SELECT 1' -No 2>/dev/null || /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Admin@123456' -Q 'SELECT 1' 2>/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  # ===== .NET 8 API =====
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: pcbuild-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "http://+:8080"
+      # Override connection string trỏ vào SQL Server trong Docker
+      ConnectionStrings__DefaultConnection: "${DB_DOCKER_CONNECTION_STRING}"
+      JWT__Issuer: "http://localhost:8080"
+      JWT__Audience: "http://localhost:8080"
+      JWT__SigningKey: "${JWT_SIGNING_KEY}"
+      CloudinarySettings__CloudName: "dzht6bfr8"
+      CloudinarySettings__ApiKey: "${CLOUDINARY_API_KEY}"
+      CloudinarySettings__ApiSecret: "${CLOUDINARY_API_SECRET}"
+    ports:
+      - "8080:8080"               # API chạy tại http://localhost:8080
+    depends_on:
+      sqlserver:
+        condition: service_healthy  # Chờ SQL Server healthy mới khởi động API
+    restart: unless-stopped
+
+  # ===== .NET 8 API (HOT RELOAD - chỉ dùng khi dev) =====
+  api-dev:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.dev
+    container_name: pcbuild-api-dev
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "http://+:8080"
+      ConnectionStrings__DefaultConnection: "${DB_DOCKER_CONNECTION_STRING}"
+      JWT__Issuer: "http://localhost:8080"
+      JWT__Audience: "http://localhost:8080"
+      JWT__SigningKey: "${JWT_SIGNING_KEY}"
+      CloudinarySettings__CloudName: "dzht6bfr8"
+      CloudinarySettings__ApiKey: "${CLOUDINARY_API_KEY}"
+      CloudinarySettings__ApiSecret: "${CLOUDINARY_API_SECRET}"
+    ports:
+      - "8080:8080"
+    volumes:
+      # Mount source code local vào container → dotnet watch tự detect thay đổi
+      - ./api:/app
+      # Giữ lại packages đã restore trong container (không bị override)
+      - /app/bin
+      - /app/obj
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    profiles:
+      - dev                          # Chỉ chạy khi dùng --profile dev
+
+volumes:
+  sqlserver_data:
+    driver: local

@@ -110,14 +110,19 @@ builder.Services.AddScoped<ICloudStorageService, CloudStorageService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// Tự động chạy migration khi khởi động (hữu ích khi dùng Docker)
+using (var scope = app.Services.CreateScope())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDBContext>();
+    db.Database.Migrate();
 }
 
-app.UseHttpsRedirection();
+// Configure the HTTP request pipeline.
+// Bật Swagger ở mọi môi trường (bao gồm Docker)
+app.UseSwagger();
+app.UseSwaggerUI();
+
+// app.UseHttpsRedirection(); // Tắt redirect HTTPS trong Docker (dùng HTTP port 8080)
 
 app.UseAuthentication();
 app.UseAuthorization();

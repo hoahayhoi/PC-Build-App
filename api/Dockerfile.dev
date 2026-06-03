@@ -1,0 +1,16 @@
+# Dùng SDK image (có đủ tools để watch & compile)
+FROM mcr.microsoft.com/dotnet/sdk:8.0
+
+WORKDIR /app
+
+# Copy project file và restore trước (cache layer này)
+COPY api.csproj ./
+RUN dotnet restore
+
+# Copy toàn bộ source (sẽ được override bằng volume mount)
+COPY . ./
+
+EXPOSE 8080
+
+# dotnet watch sẽ tự reload khi file thay đổi
+ENTRYPOINT ["dotnet", "watch", "run", "--urls", "http://+:8080", "--no-hot-reload"]
